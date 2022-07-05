@@ -12,7 +12,7 @@ LinkedList<T>::LinkedList()
 template <typename T>
 void LinkedList<T>::push(T data)
 {
-    Node<T>* newNode = new Node(data);
+    Node<T>* newNode = new Node<T>(data);
     if (head == NULL)
     {
         head = newNode;
@@ -20,12 +20,14 @@ void LinkedList<T>::push(T data)
     }
 
     Node<T>* temp = head;
-    while (temp != NULL)
+    
+    while (temp->next != NULL)
     {
         temp = temp->next;
     }
 
     temp->next = newNode;
+
 }
 
 template <typename T>
@@ -119,7 +121,7 @@ void LinkedList<T>::print()
         return;
     }
 
-    Node<T>* temp = head;
+    Node<T>* temp;
 
     for (temp = head; temp != NULL; temp = temp->next)
         std::cout << temp->data << "-->";

@@ -7,18 +7,23 @@ int main()
 {
     LinkedList<int> linkedList;
 
-    std::cout << linkedList.length() << std::endl;
+    //std::cout << linkedList.length() << std::endl;
 
     linkedList.push(1);
-    /*
-    linkedList.push(2);
-    linkedList.push(3);
-    linkedList.push(4);
-    linkedList.push(5);
-    */
-    std::cout << linkedList.length() << std::endl;
-
     linkedList.print();
+    linkedList.push(2);
+    linkedList.print();
+    linkedList.push(3);
+    linkedList.print();
+    linkedList.push(4);
+    linkedList.print();
+    linkedList.push(5);
+    linkedList.print();
+    
+    
+    //std::cout << linkedList.length() << std::endl;
+
+    
 
     
 }
