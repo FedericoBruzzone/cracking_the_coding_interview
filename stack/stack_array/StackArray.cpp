@@ -35,7 +35,7 @@ bool StackArray<T>::push(T value)
 }
 
 template <typename T>
-int StackArray<T>::pop()
+T StackArray<T>::pop()
 {
     if (top < 0)
     {
@@ -49,7 +49,7 @@ int StackArray<T>::pop()
 }
 
 template <typename T>
-int StackArray<T>::peek()
+T StackArray<T>::peek()
 {
     if (top < 0)
     {

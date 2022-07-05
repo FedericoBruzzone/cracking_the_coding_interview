@@ -1,5 +1,4 @@
 #pragma once
-#include <iostream>
 #include <vector>
 
 #define MAX_LENGTH 1000
@@ -20,8 +19,8 @@ public:
     ~StackArray();
 
     bool push(T value);
-    int pop();
-    int peek();
+    T pop();
+    T peek();
     bool isEmpty();
     int length();
 };

@@ -2,7 +2,6 @@
 
 #include "Node.h"
 #include "Node.cpp"
-#include <iostream>
 
 template <typename T>
 class LinkedList
