@@ -1,1 +1,4 @@
-*.exe
+linkedList/class/*.exe
+linkedList/class/*.exe
+
+.vscode
