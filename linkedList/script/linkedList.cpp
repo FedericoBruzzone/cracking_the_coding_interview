@@ -74,34 +74,41 @@ Node<T>* deleteLastNode(Node<T>* head)
 int main()
 {
     Node<int>* head = NULL;
-
-    // create linked list
+    
+    // Create linked list
     push(&head, 2);
     push(&head, 4);
     push(&head, 6);
     push(&head, 8);
     push(&head, 10);
- 
-    Node<int>* temp;
- 
-    std::cout<<"Linked list created "<<std::endl; for (temp = head; temp != NULL; temp = temp->next)
-    std::cout << temp->value << "-->";
-    if(temp == NULL)
-    std::cout<<"NULL"<<std::endl;
- 
-    //delete first node
-    head = deleteFirstNode(head);
-    std::cout<<"Linked list after deleting head node"<<std::endl; for (temp = head; temp != NULL; temp = temp->next)
-    std::cout << temp->value << "-->";
-    if(temp == NULL)
-    std::cout<<"NULL"<<std::endl;
- 
-    //delete last node
-    head = deleteLastNode(head);
-    std::cout<<"Linked list after deleting last node"<<std::endl; for (temp = head; temp != NULL; temp = temp->next)
-    std::cout << temp->value << "-->";
-    if(temp == NULL)
-    std::cout<<"NULL";
+    std::cout<< std::endl;
 
+    Node<int>* aus;
+ 
+    std::cout<<"Linked list created "<<std::endl; 
+    for (aus = head; aus != NULL; aus = aus->next)
+        std::cout << aus->value << "-->";
+    if(aus == NULL)
+        std::cout<<"NULL"<<std::endl;
+    std::cout<< std::endl;
+
+    // Delete first node
+    head = deleteFirstNode(head);
+    std::cout<<"Linked list after deleting head node"<<std::endl; 
+    for (aus = head; aus != NULL; aus = aus->next)
+        std::cout << aus->value << "-->";
+    if(aus == NULL)
+        std::cout<<"NULL"<<std::endl;
+    std::cout<< std::endl;
+
+    // Delete last node
+    head = deleteLastNode(head);
+    std::cout<<"Linked list after deleting last node"<<std::endl; 
+    for (aus = head; aus != NULL; aus = aus->next)
+        std::cout << aus->value << "-->";
+    if(aus == NULL)
+        std::cout<<"NULL";
+    std::cout<< std::endl;
+    
     return 0;
 }
