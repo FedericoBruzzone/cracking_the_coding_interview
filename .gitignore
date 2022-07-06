@@ -2,4 +2,8 @@
 .vscode
 
 #file
-*.exe
+linked_list/class/*.exe
+linked_list/script/*.exe
+
+linked_list/stack/stack_array/*.exe
+linked_list/stack/stack_linked_list/*.exe
