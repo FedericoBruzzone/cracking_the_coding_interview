@@ -5,5 +5,5 @@
 linked_list/class/*.exe
 linked_list/script/*.exe
 
-linked_list/stack/stack_array/*.exe
-linked_list/stack/stack_linked_list/*.exe
+stack/stack_array/*.exe
+stack/stack_linked_list/*.exe
