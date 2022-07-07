@@ -3,14 +3,14 @@
 #include "../../linked_list/class/Node.cpp"
 
 template <typename T>
-class StackLinkedList
+class Stack
 {
 private:
     Node<T>* stack;
 
 public:
-    StackLinkedList();
-    ~StackLinkedList();
+    Stack();
+    ~Stack();
 
     void push(T data);
     T pop();

@@ -5,7 +5,7 @@
 
 //template <typename T, size_t N>
 template <typename T>
-class StackArray
+class Stack
 {
 private:
     int top = -1;
@@ -14,9 +14,9 @@ private:
     //T stack[MAX_LENGTH];
 
 public:
-    StackArray();
-    StackArray(size_t length);
-    ~StackArray();
+    Stack();
+    Stack(size_t length);
+    ~Stack();
 
     bool push(T value);
     T pop();

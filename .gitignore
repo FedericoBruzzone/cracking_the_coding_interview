@@ -13,3 +13,6 @@ hash_table/hash_table_list/*.exe
 hash_table/hash_table_templated/*.exe
 
 array_list/*exe
+
+string_builder/string_builder/*exe
+string_builder/string_builder_templated/*exe

@@ -1,20 +1,21 @@
 #include "HashTableList.h"
+#include <iostream>
 
-HashTableList::HashTableList(int buket)
+HashTable::HashTable(int buket)
 {
     this->buket = buket;
     table = new std::list<int>[buket];
 }
 
-HashTableList::~HashTableList() {}
+HashTable::~HashTable() {}
 
-void HashTableList::insertItem(int item)
+void HashTable::insertItem(int item)
 {
     int index = hashFunction(item);
     table[index].push_back(item);
 }
 
-void HashTableList::deleteItem(int key)
+void HashTable::deleteItem(int key)
 {
     int index = hashFunction(key);
 
@@ -30,7 +31,7 @@ void HashTableList::deleteItem(int key)
         table[index].erase(i);
 }
 
-void HashTableList::displayHashTable()
+void HashTable::displayHashTable()
 {
     for (int i=0; i < buket; i++)
     {
@@ -43,7 +44,7 @@ void HashTableList::displayHashTable()
     }
 }
 
-bool HashTableList::isItem(int item)
+bool HashTable::isItem(int item)
 {
     int index = hashFunction(item);
 
@@ -58,7 +59,7 @@ bool HashTableList::isItem(int item)
     return false;
 }
 
-int HashTableList::hashFunction(int item)
+int HashTable::hashFunction(int item)
 {
     return item % buket;
 }

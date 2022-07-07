@@ -1,4 +1,4 @@
-#include "hash_table_templated.h"
+#include "HashTableTemplated.h"
 
 template<class K, class V, class HashGenerator>
 HashTable<K, V, HashGenerator>::HashTable(int size)

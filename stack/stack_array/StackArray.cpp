@@ -1,7 +1,7 @@
 #include "StackArray.h"
 
 template <typename T>
-StackArray<T>::StackArray() 
+Stack<T>::Stack() 
     : stack(MAX_LENGTH)
 {
     //stack.resize(MAX_LENGTH);
@@ -9,7 +9,7 @@ StackArray<T>::StackArray()
 }
 
 template <typename T>
-StackArray<T>::StackArray(size_t length)
+Stack<T>::Stack(size_t length)
     : stack(length)
 {
     //stack.resize(length);
@@ -17,10 +17,10 @@ StackArray<T>::StackArray(size_t length)
 }
 
 template <typename T>
-StackArray<T>::~StackArray() {}
+Stack<T>::~Stack() {}
 
 template <typename T>
-bool StackArray<T>::push(T value)
+bool Stack<T>::push(T value)
 {
     
     if (top >= static_cast<int>(stack.size()) - 1)
@@ -35,7 +35,7 @@ bool StackArray<T>::push(T value)
 }
 
 template <typename T>
-T StackArray<T>::pop()
+T Stack<T>::pop()
 {
     if (top < 0)
     {
@@ -49,7 +49,7 @@ T StackArray<T>::pop()
 }
 
 template <typename T>
-T StackArray<T>::peek()
+T Stack<T>::peek()
 {
     if (top < 0)
     {
@@ -62,16 +62,16 @@ T StackArray<T>::peek()
 }
 
 template <typename T>
-bool StackArray<T>::isEmpty()
+bool Stack<T>::isEmpty()
 {
     return (top < 0);
 }
 
 template <typename T>
-int StackArray<T>::length()
+int Stack<T>::length()
 {
     return stack.size();
     //return sizeof stack / sizeof stack[0];
 }
 
-template class StackArray<int>;
+template class Stack<int>;

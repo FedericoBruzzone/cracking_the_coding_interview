@@ -2,15 +2,15 @@
 
 #include <list>
 
-class HashTableList
+class HashTable
 {
 private:
     int buket;
     std::list<int> *table; 
     
 public:
-    HashTableList(int buket);
-    ~HashTableList();
+    HashTable(int buket);
+    ~HashTable();
     void insertItem(int item);
     void deleteItem(int key);
     int hashFunction(int item);

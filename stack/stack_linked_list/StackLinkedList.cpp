@@ -1,16 +1,16 @@
 #include "StackLinkedList.h"
 
 template <typename T>
-StackLinkedList<T>::StackLinkedList() 
+Stack<T>::Stack() 
 {
     stack = NULL;
 }
 
 template <typename T>
-StackLinkedList<T>::~StackLinkedList() {}
+Stack<T>::~Stack() {}
 
 template <typename T>
-void StackLinkedList<T>::push(T data)
+void Stack<T>::push(T data)
 {
     Node<T>* temp = new Node<T>(data);
     temp->next = stack;
@@ -18,7 +18,7 @@ void StackLinkedList<T>::push(T data)
 }
 
 template <typename T>
-T StackLinkedList<T>::pop()
+T Stack<T>::pop()
 {
     if (isEmpty()) 
     {
@@ -32,7 +32,7 @@ T StackLinkedList<T>::pop()
 }
 
 template <typename T>
-T StackLinkedList<T>::peek()
+T Stack<T>::peek()
 {
     if (isEmpty()) 
     {
@@ -42,13 +42,13 @@ T StackLinkedList<T>::peek()
 }
 
 template <typename T>
-bool StackLinkedList<T>::isEmpty()
+bool Stack<T>::isEmpty()
 {
     return (stack == NULL);
 }
 
 template <typename T>
-void StackLinkedList<T>::print()
+void Stack<T>::print()
 {
     if (stack == NULL)
     {
