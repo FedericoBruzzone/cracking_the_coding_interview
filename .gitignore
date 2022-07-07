@@ -11,3 +11,5 @@ stack/stack_linked_list/*.exe
 hash_table/hash_table_binary_tree/*.exe
 hash_table/hash_table_list/*.exe
 hash_table/hash_table_templated/*.exe
+
+array_list/*exe
