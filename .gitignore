@@ -2,6 +2,8 @@
 .vscode
 
 #file
+cracking_the_coding_interview/*.exe
+
 linked_list/class/*.exe
 linked_list/script/*.exe
 
