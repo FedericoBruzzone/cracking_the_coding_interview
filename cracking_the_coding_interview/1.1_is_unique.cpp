@@ -26,6 +26,7 @@
 //     return true;
 // }
 
+// Second implementation
 bool isUnique(std::string s) // ASCII string ('a' to 'z')
 {
     // c++ int has 4-bytes (32-bit)

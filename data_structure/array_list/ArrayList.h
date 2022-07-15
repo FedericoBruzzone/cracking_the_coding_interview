@@ -1,5 +1,7 @@
 #pragma once
 
+#include "../../../ALL_H_FILES.h"
+
 template <typename T> 
 class ArrayList 
 {

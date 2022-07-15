@@ -1,6 +1,6 @@
 #pragma once
 
-#include <list>
+#include "../../../ALL_H_FILES.h"
 
 class HashTable
 {

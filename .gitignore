@@ -4,17 +4,17 @@
 #file
 cracking_the_coding_interview/*.exe
 
-linked_list/class/*.exe
-linked_list/script/*.exe
+data_structure/linked_list/class/*.exe
+data_structure/linked_list/script/*.exe
 
-stack/stack_array/*.exe
-stack/stack_linked_list/*.exe
+data_structure/stack/stack_array/*.exe
+data_structure/stack/stack_linked_list/*.exe
 
-hash_table/hash_table_binary_tree/*.exe
-hash_table/hash_table_list/*.exe
-hash_table/hash_table_templated/*.exe
+data_structure/hash_table/hash_table_binary_tree/*.exe
+data_structure/hash_table/hash_table_list/*.exe
+data_structure/hash_table/hash_table_templated/*.exe
 
-array_list/*exe
+data_structure/array_list/*exe
 
-string_builder/string_builder/*exe
-string_builder/string_builder_templated/*exe
+data_structure/string_builder/string_builder/*exe
+data_structure/string_builder/string_builder_templated/*exe

@@ -15,6 +15,7 @@
     
 // }
 
+// Second implementation
 bool permutation(std::string s, std::string t) // ASCII string
 {
     std::array<int, 128> aus = {};

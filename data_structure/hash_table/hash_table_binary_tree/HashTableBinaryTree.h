@@ -1,8 +1,6 @@
 #pragma once
 
-#include <vector>
-#include <string>
-#include <iostream>
+#include "../../../ALL_H_FILES.h"
 
 template <typename T>
 class BSTNode

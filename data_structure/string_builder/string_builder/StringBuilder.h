@@ -1,9 +1,6 @@
 #pragma once
 
-#include <vector>
-#include <string>
-#include <sstream>
-#include <iterator>
+#include "../../../ALL_H_FILES.h"
 
 class StringBuilder
 {
