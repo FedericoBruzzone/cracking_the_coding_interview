@@ -93,3 +93,8 @@ bool oneEditAway(std::string first, std::string second)
     }
 
 }
+
+int main()
+{
+    
+}

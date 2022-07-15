@@ -113,3 +113,8 @@ bool isPermutationOfPalindrome(std::string s)
     int bitVector = createBitVector(s);
     return checkAtMostOneBitSet(bitVector);
 }
+
+int main()
+{
+    
+}
