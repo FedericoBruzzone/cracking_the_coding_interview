@@ -86,10 +86,11 @@
 // Third implementation
 int toggle(int bitVector, int index)
 {
-    if (index == 0) return bitVector;
+    long long x = 0;
 
+    if (index == 0) return bitVector;
     int mask = 1 << index;
-    bitVector ^= mask; //XOR
+    bitVector ^= mask; //XOR logic
     return bitVector;
 }
 
@@ -105,7 +106,7 @@ int createBitVector(std::string s)
 
 bool checkAtMostOneBitSet(int bitVector)
 {
-    return (bitVector & (bitVector - 1)) == 0;
+    return (bitVector & (bitVector - 1)) == 0; //AND logic
 }
 
 bool isPermutationOfPalindrome(std::string s)
