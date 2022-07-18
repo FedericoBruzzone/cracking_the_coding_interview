@@ -67,6 +67,7 @@ void nullifyColumn(std::vector<std::vector<int>> ** m, int column)
         (**m).at(i).at(column) = 0;
     }
 }
+
 void setZeros(std::vector<std::vector<int>> * m)
 {
     bool rawHasZero = false;
@@ -125,7 +126,7 @@ int main()
                                           {2,3,0,5},
                                           {3,4,5,6},
                                           {4,5,6,7}};
-    
+
     for (int i = 0; i < matrix.size(); i++)
     {
         for (int j = 0; j < matrix[0].size(); j++)
