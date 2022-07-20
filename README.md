@@ -4,7 +4,7 @@
 **1.1 Is Unique**: 
 Implement and algorithm to determine if a string has all unique characters. What if you cannot use additional data structure?
 
-[Solution 1.1](cracking_the_coding_interview\chapter_1\1.1_is_unique.cpp)
+[Solution 1.1]([cracking_the_coding_interview\chapter_1\1.1_is_unique.cpp](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_1/1.1_is_unique.cpp))
 
 ---
 
