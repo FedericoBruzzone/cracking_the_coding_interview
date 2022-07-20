@@ -96,6 +96,7 @@ Assume you have method 'isSubstring' which checks if one word is a substring of 
 Write code to remove duplicates from an unsorted linked list
 
 FOLLOW UP
+
 How would you solve this problem if a temporary buffer is not allowed?
 
 [Solution 2.1](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_2/2.1_remove_dups.cpp)
