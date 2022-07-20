@@ -5,48 +5,48 @@
 // If the size of the linklist is known, the kth to last element is the (length - k)th element.
 
 // First implementation (recursive)
-Node* kthToLast(Node* head, int k, int& i)
-{
-    if (head == NULL) return NULL;
-
-    Node* node = kthToLast(head->next, k, i);
-
-    i = i + 1;
-    if (i == k)
-    {
-        return head;
-    }
-    return node;
-}
-
-Node* kthToLast(Node* head, int k)
-{
-    int i = 0;
-    return kthToLast(head, k, i);
-}
-
-// Second implementation (iterative)
-// Node* kthToLast(Node* head, int k)
+// Node* kthToLast(Node* head, int k, int& i)
 // {
-//     // if k = 1 reutrn the last element in the list
 //     if (head == NULL) return NULL;
 
-//     Node* p1 = head;
-//     Node* p2 = head;
-//     for (int i = 0; i < k; i++)
-//     {
-//         if (p1 == NULL) return NULL;
-//         p1 = p1->next;
-//     } 
+//     Node* node = kthToLast(head->next, k, i);
 
-//     while (p1 != NULL)
+//     i = i + 1;
+//     if (i == k)
 //     {
-//         p1 = p1->next;
-//         p2 = p2->next;
+//         return head;
 //     }
-
-//     return p2;
+//     return node;
 // }
+
+// Node* kthToLast(Node* head, int k)
+// {
+//     int i = 0;
+//     return kthToLast(head, k, i);
+// }
+
+// Second implementation (iterative)
+Node* kthToLast(Node* head, int k)
+{
+    // if k = 1 reutrn the last element in the list
+    if (head == NULL) return NULL;
+
+    Node* p1 = head;
+    Node* p2 = head;
+    for (int i = 0; i < k; i++)
+    {
+        if (p1 == NULL) return NULL;
+        p1 = p1->next;
+    } 
+
+    while (p1 != NULL)
+    {
+        p1 = p1->next;
+        p2 = p2->next;
+    }
+
+    return p2;
+}
 
 int main()
 {
