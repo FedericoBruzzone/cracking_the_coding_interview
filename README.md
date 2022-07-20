@@ -68,21 +68,21 @@ Implement a method to perform basic string compression using the counts of repea
 **1.7 Rotate Matrix**: 
 Given an image represented by an N x M matrix, where each pixel in the image is represented by an integer, write a method to rotate the image by 90 degrees. Can you do this in place?
 
-[Solution 1.7](cracking_the_coding_interview\chapter_1\1.7_rotate_matrix.cpp)
+[Solution 1.7](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_1/1.7_rotate_matrix.cpp)
 
 ---
 
 **1.8 Zero Matrix**: 
 Werite an algorithm such that if an element in an M x N matrix is 0, its entire row and column are set to 0.
 
-[Solution 1.8](cracking_the_coding_interview\chapter_1\1.8_zero_matrix.cpp)
+[Solution 1.8](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_1/1.8_zero_matrix.cpp)
 
 ---
 
 **1.9 String Rotation**:
 Assume you have method 'isSubstring' which checks if one word is a substring of another. Given two strings, s1 and s2, write code to check if s2 is a rotation of s1 using only one call to isSubstring (e.g., "waterbottle" is a rotation of "erbottlewat").
 
-[Solution 1.9](cracking_the_coding_interview\chapter_1\1.9_is_rotation.cpp)
+[Solution 1.9](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_1/1.9_is_rotation.cpp)
 
 
 # Chapter 2 - Linked Lists
@@ -93,4 +93,4 @@ Write code to remove duplicates from an unsorted linked list
 FOLLOW UP
 How would you solve this problem if a temporary buffer is not allowed?
 
-[Solution 2.1](cracking_the_coding_interview\chapter_2\2.1_remove_dups.cpp)
+[Solution 2.1](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_2/2.1_remove_dups.cpp)
