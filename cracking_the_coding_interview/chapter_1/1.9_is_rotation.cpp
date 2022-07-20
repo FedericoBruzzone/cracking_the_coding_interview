@@ -1,4 +1,4 @@
-#include "../ALL_H_FILES.h"
+#include "../../ALL_H_FILES.h"
 
 bool isRotation(std::string s1, std::string s2)
 {
