@@ -24,7 +24,7 @@ Input:   "Mr John Smith       ", 13
 
 Output:  "Mr%20John%20Smith"
 
-[Solution 1.3](cracking_the_coding_interview\chapter_1\1.3_URLify.cpp)
+[Solution 1.3](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_1/1.3_URLify.cpp)
 
 ---
 
@@ -37,7 +37,7 @@ Input:   Tact Coa
 
 Output:  True (permutation: "taco cat", "atco cta", etc.)
 
-[Solution 1.4](cracking_the_coding_interview\chapter_1\1.4_palindrome_permutation.cpp)
+[Solution 1.4](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_1/1.4_palindrome_permutation.cpp)
 
 ---
 
@@ -54,14 +54,14 @@ pale,  bale -> true
 
 pale,  bake -> false
 
-[Solution 1.5](cracking_the_coding_interview\chapter_1\1.2_check_permutation.cpp)
+[Solution 1.5](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_1/1.5_one_away.cpp)
 
 ---
 
 **1.6 String Compression**: 
 Implement a method to perform basic string compression using the counts of repeated characters. For example, the string 'aabcccccaa' would become 'a2b1c5a3'. If the "compressed" string would not become smaller than the original string, your method should return the original string. You can assume the string has only uppercase and lowercase letters (a-z).
 
-[Solution 1.6](cracking_the_coding_interview\chapter_1\1.6_string_compression.cpp)
+[Solution 1.6](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_1/1.6_string_compression.cpp)
 
 ---
 
