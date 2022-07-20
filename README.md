@@ -1,3 +1,8 @@
+# Cracking the Coding Interview
+
+In this repository there are implementations of `Cracking the Coding` interview question.
+In addition, there are the implementation of `data scructure` in c++.
+
 # Chapter 1 - Arrays and Strings
 
 
