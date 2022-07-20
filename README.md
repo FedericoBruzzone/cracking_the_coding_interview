@@ -100,3 +100,22 @@ FOLLOW UP
 How would you solve this problem if a temporary buffer is not allowed?
 
 [Solution 2.1](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_2/2.1_remove_dups.cpp)
+
+---
+
+**2.2 Return Kth to Last**:
+Implement an algorithm to find the kth to last element of a singly linked list.
+
+[Solution 2.2](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_2/2.2_return_kth_to_last.cpp)
+
+---
+
+**2.3 Delete Middle Node**:
+Implement an algorithm to delete a node in the middle (i.e. any node but the first and the last node, not necessary the exact the middle) of a singly linked list, given only access to that node.
+
+EXAMPLE
+
+Input: the node c from the linked list a -> b -> c -> d -> e -> f
+Result: nothing is returned, but the new linked list looks like a -> b -> d -> e -> f
+
+[Solution 2.3](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_2/2.3_delete_middle_node.cpp)
