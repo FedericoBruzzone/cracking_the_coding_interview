@@ -116,6 +116,7 @@ Implement an algorithm to delete a node in the middle (i.e. any node but the fir
 EXAMPLE
 
 Input: the node c from the linked list a -> b -> c -> d -> e -> f
+
 Result: nothing is returned, but the new linked list looks like a -> b -> d -> e -> f
 
 [Solution 2.3](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_2/2.3_delete_middle_node.cpp)
