@@ -2,7 +2,7 @@
 
 #include "linked_list.cpp"
 
-// First solution 
+// First implementation 
 // bool removeDups(Node* head) //O(N) time - O(N) space
 // {
 //     if (head == NULL)      return true; 
@@ -27,7 +27,7 @@
 //     return true;
 // }
 
-// Second solution
+// Second implementation
 bool removeDups(Node* head) //O(N^2) time - O(1) space
 {
     if (head == NULL)       return true; 
