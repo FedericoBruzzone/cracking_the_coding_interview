@@ -129,6 +129,7 @@ Write code to partition a linked list around a value x, such that all node less 
 EXAMPLE
 
 Input: 3 -> 5 -> 8 -> 5 -> 10 -> 2 -> 1 [partition = 5]
+
 Output: 3 -> 1 -> 2    ->    10 -> 5 -> 5 -> 8
 
 [Solution 2.4](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_2/2.4_partition.cpp)
@@ -140,13 +141,16 @@ You have two numbers represented by a linked list, where each node contains a si
 
 EXAMPLE
 Input: (7 -> 1 -> 6) + (5 -> 9 -> 2). That is, 617 + 295.
+
 Output 2 -> 1 -> 9. That is, 912.
 
 FOLLOW UP 
 Suppose the digits are stored in forward order. Repeat the above problem.
 
 EXAMPLE
+
 Input: (6 -> 1 -> 7) + (2 -> 9 -> 5). That is, 617 + 295.
+
 Output 9 -> 1 -> 2. That is, 912.
 
 [Solution 2.5](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_2/2.5_sum_list.cpp)
