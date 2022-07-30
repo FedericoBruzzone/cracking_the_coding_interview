@@ -120,3 +120,16 @@ Input: the node c from the linked list a -> b -> c -> d -> e -> f
 Result: nothing is returned, but the new linked list looks like a -> b -> d -> e -> f
 
 [Solution 2.3](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_2/2.3_delete_middle_node.cpp)
+
+--- 
+
+**2.4 Partition**:
+Write code to partition a linked list around a value x, such that all node less than x come before all node greater than or equal to x. (IMPORTANT: The partition element x can appear anywhere in the "right position"; it does not need to appear between the left and the right partition. The additional spacing in the example blow indicates the partition. Yes, the output below is one of many valid outputs!)
+
+EXAMPLE
+
+Input: 3 -> 5 -> 8 -> 5 -> 10 -> 2 -> 1 [partition = 5]
+Output: 3 -> 1 -> 2    ->    10 -> 5 -> 5 -> 8
+
+[Solution 2.4](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_2/2.4_partition.cpp)
+
