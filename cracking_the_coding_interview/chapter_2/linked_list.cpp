@@ -6,7 +6,12 @@ public:
     Node* next = NULL;
     int data;
 
-    
+    Node() 
+    {
+        data = 0;
+    }
+
+
     Node(int d)
     {
         data = d;
