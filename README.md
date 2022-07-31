@@ -2,6 +2,7 @@
 
 
 [![License](https://img.shields.io/badge/License-MIT-blue)](https://github.com/FedericoBruzzone/shimmer_effect_audio/edit/master/License)
+[![c++Make with](https://img.shields.io/badge/C%2B%2B-v12.1.0-orange)](https://en.wikipedia.org/wiki/C%2B%2B)
 
 In this repository there are implementations of `Cracking the Coding interview` question.
 In addition, there are the implementation of `data scructure` in c++.
