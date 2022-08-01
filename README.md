@@ -158,3 +158,10 @@ Input: (6 -> 1 -> 7) + (2 -> 9 -> 5). That is, 617 + 295.
 Output 9 -> 1 -> 2. That is, 912.
 
 [Solution 2.5](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_2/2.5_sum_list.cpp)
+
+--- 
+
+**2.6 Palindrome**:
+Implement a function to check if a linked list is a palindrome
+
+[Solution 2.5](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_2/2.6_palindrome.cpp)
