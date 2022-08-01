@@ -142,33 +142,33 @@ Node* addList(Node* firstNumber, Node* secondNumber)
 
 int main()
 {
-    // Node* n1 = new Node(7);
-    // n1->appendToTail(1);
-    // n1->appendToTail(6);
-    
-    // Node* n2 = new Node(5);
-    // n2->appendToTail(9);
-    // n2->appendToTail(2);
-
-    // n1->print(n1);
-    // n2->print(n2);
-
-    // Node* output = addList(n1, n2);
-    // output->print(output);
-
-    // FOLLOW UP
-    Node* n1 = new Node(6);
+    Node* n1 = new Node(7);
     n1->appendToTail(1);
-    n1->appendToTail(7);
+    n1->appendToTail(6);
     
-    Node* n2 = new Node(2);
+    Node* n2 = new Node(5);
     n2->appendToTail(9);
-    n2->appendToTail(5);
+    n2->appendToTail(2);
 
     n1->print(n1);
     n2->print(n2);
 
     Node* output = addList(n1, n2);
     output->print(output);
+
+    // FOLLOW UP
+    // Node* n1 = new Node(6);
+    // n1->appendToTail(1);
+    // n1->appendToTail(7);
+    
+    // Node* n2 = new Node(2);
+    // n2->appendToTail(9);
+    // n2->appendToTail(5);
+
+    // n1->print(n1);
+    // n2->print(n2);
+
+    // Node* output = addList(n1, n2);
+    // output->print(output);
 
 }
