@@ -38,41 +38,83 @@
 //     return addList(n1, n2, 0);
 // }
 
-
 // Second implementation
-Node* addList(Node* firstNumber, Node* secondNumber)
-{
-    int sum = 0;
-    int carry = 0;
-    Node* result = firstNumber;
+// Node* addList(Node* firstNumber, Node* secondNumber)
+// {
+//     int sum = 0;
+//     int carry = 0;
+//     Node* result = firstNumber;
     
-    while (firstNumber != NULL && secondNumber != NULL)
+//     while (firstNumber != NULL && secondNumber != NULL)
+//     {
+//         sum = ((firstNumber->data + secondNumber->data) + carry ) % 10;
+//         carry = static_cast<int>((firstNumber->data + secondNumber->data) / 10);
+        
+//         firstNumber->data = sum;
+        
+//         firstNumber = firstNumber->next;
+//         secondNumber = secondNumber->next;
+//     }
+
+//     return result;
+// }
+
+// FOLLOW UP
+class PartialSum
+{
+public:
+    Node* sum = NULL;
+    int carry = 0;
+};
+
+Node* addList(Node* n1, Node* n2)
+{
+    int len1 = n1->length();
+    int len2 = n2->length();
+
+    if (len1 > len2)
     {
-        sum = ((firstNumber->data + secondNumber->data) + carry ) % 10;
-        carry = static_cast<int>((firstNumber->data + secondNumber->data) / 10);
-        
-        firstNumber->data = sum;
-        
-        firstNumber = firstNumber->next;
-        secondNumber = secondNumber->next;
+        padList(n1, len2 - len1);
+    }
+    else 
+    {
+        padList(n2, len1 - len2);
     }
 
-    return result;
+    
+
 }
+
 
 int main()
 {
-    Node* n1 = new Node(7);
-    n1->appendToTail(1);
-    n1->appendToTail(6);
+    // Node* n1 = new Node(7);
+    // n1->appendToTail(1);
+    // n1->appendToTail(6);
     
-    Node* n2 = new Node(5);
+    // Node* n2 = new Node(5);
+    // n2->appendToTail(9);
+    // n2->appendToTail(2);
+
+    // n1->print(n1);
+    // n2->print(n2);
+
+    // Node* output = addList(n1, n2);
+    // output->print(output);
+
+    // FOLLOW UP
+    Node* n1 = new Node(6);
+    n1->appendToTail(1);
+    n1->appendToTail(7);
+    
+    Node* n2 = new Node(2);
     n2->appendToTail(9);
-    n2->appendToTail(2);
+    n2->appendToTail(5);
 
     n1->print(n1);
     n2->print(n2);
 
     Node* output = addList(n1, n2);
     output->print(output);
+
 }

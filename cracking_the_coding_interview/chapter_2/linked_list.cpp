@@ -74,6 +74,30 @@ public:
         if(temp == NULL)
             LOG("NULL");
     }
+
+    // int length(Node* head) 
+    // { 
+    //     int count = 0; 
+    //     Node* current = head;  
+    //     while (current != NULL) 
+    //     { 
+    //         count++; 
+    //         current = current->next; 
+    //     } 
+    //     return count; 
+    // } 
+    int length(Node* head)
+    {
+        if (head == NULL) 
+        {
+            return 0;
+        }
+        else 
+        {
+            return 1 + length(head->next);
+        }
+    }
+
 };
 
 // int main()
