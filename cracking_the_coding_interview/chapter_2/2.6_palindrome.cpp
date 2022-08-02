@@ -45,37 +45,82 @@
 // =============================================================
 
 // Second implementation
-bool isPalindrome(Node* head)
-{
-    Node* fast = head;
-    Node* slow = head;
+// bool isPalindrome(Node* head)
+// {
+//     Node* fast = head;
+//     Node* slow = head;
 
-    std::stack<int> stack;
-    while (fast != NULL && fast->next != NULL)
-    {
-        stack.push(slow->data);
-        slow = slow->next;
-        fast = fast->next->next;
-    }
-    
-    if (fast != NULL)
-    {
-        slow = slow->next;
-    }
+//     std::stack<int> stack;
+//     while (fast != NULL && fast->next != NULL)
+//     {
+//         stack.push(slow->data);
+//         slow = slow->next;
+//         fast = fast->next->next;
+//     }
 
-    while (slow != NULL)
-    {
-        int top = stack.top();
+//     if (fast != NULL)
+//     {
+//         slow = slow->next;
+//     }
 
-        if (top != slow->data)
-            return false;
+//     while (slow != NULL)
+//     {
+//         int top = stack.top();
+
+//         if (top != slow->data)
+//             return false;
         
         
-        stack.pop();
-        slow = slow->next;
-    }
-    return true;
-}
+//         stack.pop();
+//         slow = slow->next;
+//     }
+//     return true;
+// }
+
+// =============================================================
+
+// Third implementation (recursive)
+// class Result
+// {
+// public:
+//     Node* node;
+//     bool result;
+
+//     Result(Node* node, bool result) 
+//         : result(result), node(node) {}
+
+// };
+
+// Result isPalindromeRecurse(Node* head, int length)
+// {
+//     if (head == NULL || length <= 0)
+//     {
+//         return Result(head, true);
+//     }
+//     else if (length == 1)
+//     {
+//         return Result(head->next, true);
+//     }
+
+//     Result res = isPalindromeRecurse(head->next, length - 2);
+
+//     if (!res.result || res.node == NULL)
+//     {
+//         return res;
+//     }
+
+//     res.result = (head->data == res.node->data);
+//     res.node = res.node->next;
+
+//     return res;
+// }
+
+// bool isPalindrome(Node* head)
+// {
+//     int length = head->length(head);
+//     Result p = isPalindromeRecurse(head, length);
+//     return p.result;
+// }
 
 // =============================================================
 
