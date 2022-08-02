@@ -1,7 +1,8 @@
 #include "../../ALL_H_FILES.h"
 
 #include "linked_list.cpp"
-//overtype
+
+// =============================================================
 
 // First implementation (recursive)
 // Node* addList(Node* n1, Node* n2, int carry)
@@ -39,6 +40,8 @@
 //     return addList(n1, n2, 0);
 // }
 
+// =============================================================
+
 // Second implementation
 Node* addList(Node* firstNumber, Node* secondNumber)
 {
@@ -59,6 +62,8 @@ Node* addList(Node* firstNumber, Node* secondNumber)
 
     return result;
 }
+
+// =============================================================
 
 // FOLLOW UP
 // class PartialSum
@@ -139,6 +144,7 @@ Node* addList(Node* firstNumber, Node* secondNumber)
 //     }
 // }
 
+// =============================================================
 
 int main()
 {

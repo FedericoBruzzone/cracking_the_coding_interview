@@ -1,5 +1,7 @@
 #include "../../ALL_H_FILES.h"
 
+// =============================================================
+
 int countOfChar(std::string s, int start, int end, char target)
 {
     int aus = 0;
@@ -32,6 +34,8 @@ void replaceSpaces(std::string &s, int trueLength)
         }
     }
 }
+
+// =============================================================
 
 int main() 
 {

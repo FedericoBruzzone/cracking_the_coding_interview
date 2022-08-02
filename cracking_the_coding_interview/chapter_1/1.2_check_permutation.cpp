@@ -1,5 +1,7 @@
 #include "../../ALL_H_FILES.h"
 
+// =============================================================
+
 // First implementation
 // void sortString(std::string &s)
 // {
@@ -14,6 +16,8 @@
 //     return (s == t);
     
 // }
+
+// =============================================================
 
 // Second implementation
 bool permutation(std::string s, std::string t) // ASCII string
@@ -31,6 +35,8 @@ bool permutation(std::string s, std::string t) // ASCII string
     }
     return true;
 }
+
+// =============================================================
 
 int main()
 {

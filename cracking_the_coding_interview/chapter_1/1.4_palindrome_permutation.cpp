@@ -1,5 +1,7 @@
 #include "../../ALL_H_FILES.h"
 
+// =============================================================
+
 // First implementation
 // bool isPermutationOfPalindrome(std::string s)
 // {
@@ -43,6 +45,8 @@
 //     return true;
 // }
 
+// =============================================================
+
 // Second implementation
 // int getCharNumber(char c)
 // {
@@ -82,6 +86,8 @@
 
 //     return countOdd <= 1;
 // }
+
+// =============================================================
 
 // Third implementation
 int toggle(int bitVector, int index)

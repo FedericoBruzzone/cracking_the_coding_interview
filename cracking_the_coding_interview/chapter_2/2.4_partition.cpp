@@ -2,6 +2,8 @@
 
 #include "linked_list.cpp"
 
+// =============================================================
+
 // First implementation
 // Node* partition(Node* node, int pivot)
 // {
@@ -51,6 +53,8 @@
 //     return beforeStart;
 // }
 
+// =============================================================
+
 // Second implementation
 Node* partition(Node* node, int pivot)
 {
@@ -78,6 +82,8 @@ Node* partition(Node* node, int pivot)
 
     return head;
 }
+
+// =============================================================
 
 int main()
 {

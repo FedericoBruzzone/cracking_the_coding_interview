@@ -1,5 +1,8 @@
 #include "../../ALL_H_FILES.h"
 
+// =============================================================
+
+// First implementation
 bool rotate(std::vector<std::vector<int>>& matrix)
 {
     LOG(matrix.size());
@@ -36,6 +39,9 @@ bool rotate(std::vector<std::vector<int>>& matrix)
     return true;
 }
 
+// =============================================================
+
+// Second implementation
 // bool rotate(std::vector<std::vector<int>> * matrix)
 // {
 //     //LOG(matrix.size());
@@ -70,6 +76,8 @@ bool rotate(std::vector<std::vector<int>>& matrix)
 //     }
 //     return true;
 // }
+
+// =============================================================
 
 int main()
 {

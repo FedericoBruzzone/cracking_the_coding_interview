@@ -2,6 +2,8 @@
 
 #include "linked_list.cpp"
 
+// =============================================================
+
 // If the size of the linklist is known, the kth to last element is the (length - k)th element.
 
 // First implementation (recursive)
@@ -25,6 +27,8 @@
 //     return kthToLast(head, k, i);
 // }
 
+// =============================================================
+
 // Second implementation (iterative)
 Node* kthToLast(Node* head, int k)
 {
@@ -47,6 +51,8 @@ Node* kthToLast(Node* head, int k)
 
     return p2;
 }
+
+// =============================================================
 
 int main()
 {

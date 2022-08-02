@@ -1,5 +1,7 @@
 #include "../../ALL_H_FILES.h"
 
+// =============================================================
+
 // First implementation
 // std::string compressionString(std::string s)
 // {
@@ -18,6 +20,8 @@
 //     }
 //     return temp.size() < s.size() ? temp : s;
 // }
+
+// =============================================================
 
 // Second implementation
 std::string compressionString(std::string s)
@@ -38,6 +42,8 @@ std::string compressionString(std::string s)
     }
     return ss.str().size() < s.size() ? ss.str() : s;;
 }
+
+// =============================================================
 
 int main()
 {

@@ -1,5 +1,7 @@
 #include "../../ALL_H_FILES.h"
 
+// =============================================================
+
 // First implementation
 // char toLowerCase(char c)
 // {
@@ -26,6 +28,8 @@
 //     return true;
 // }
 
+// =============================================================
+
 // Second implementation
 bool isUnique(std::string s) // ASCII string ('a' to 'z')
 {
@@ -50,6 +54,8 @@ bool isUnique(std::string s) // ASCII string ('a' to 'z')
     return true;
 
 }
+
+// =============================================================
 
 int main()
 {

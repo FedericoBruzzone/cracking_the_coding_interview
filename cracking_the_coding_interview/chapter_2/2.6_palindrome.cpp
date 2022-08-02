@@ -2,29 +2,109 @@
 
 #include "linked_list.cpp"
 
-bool palindrome(Node* head)
+// =============================================================
+
+// First implementation
+// Node* reverseAndClone(Node* node)
+// {
+//     Node* head = NULL;
+
+//     // 1 -> 2 -> 3
+//     // 3 -> 2 -> 1
+//     while (node != NULL)
+//     {
+//         Node* n = new Node(node->data);
+//         n->next = head;
+//         head = n;
+//         node = node->next;
+//     }
+
+//     return head;
+// }
+
+// bool isEqual(Node* n1, Node* n2)
+// {
+//     while (n1 != NULL && n2 != NULL)
+//     {
+//         if (!(n1->data == n2->data)) 
+//             return false;
+
+//         n1 = n1->next;
+//         n2 = n2->next;
+//     }
+
+//     return n1 == NULL && n2 == NULL;
+// }
+
+// bool isPalindrome(Node* head)
+// {
+//     Node* reverse = reverseAndClone(head);
+//     return isEqual(head, reverse);
+// }
+
+// =============================================================
+
+// Second implementation
+bool isPalindrome(Node* head)
 {
+    Node* fast = head;
+    Node* slow = head;
+
     std::stack<int> stack;
-    Node* node = head;
+    while (fast != NULL && fast->next != NULL)
+    {
+        stack.push(slow->data);
+        slow = slow->next;
+        fast = fast->next->next;
+    }
     
-    while (node != NULL)
+    if (fast != NULL)
     {
-        stack.push(node->data);
-        node = node->next;
+        slow = slow->next;
     }
 
-    while (head->next != NULL)
+    while (slow != NULL)
     {
-        
-        if (!(stack.top() != head->data))
-        {
+        int top = stack.top();
+
+        if (top != slow->data)
             return false;
-        }
+        
+        
         stack.pop();
+        slow = slow->next;
     }
-
     return true;
 }
+
+// =============================================================
+
+// My implementation
+// bool isPalindrome(Node* head)
+// {
+//     std::stack<int> stack;
+//     Node* node = head;
+    
+//     while (node != NULL)
+//     {
+//         stack.push(node->data);
+//         node = node->next;
+//     }
+
+//     while (head != NULL)
+//     {
+//         if (!(stack.top() == head->data))
+//         {
+//             return false;
+//         }
+//         stack.pop();
+//         head = head->next;
+//     }
+
+//     return true;
+// }
+
+// =============================================================
 
 int main()
 {
@@ -34,5 +114,5 @@ int main()
     n1->appendToTail(7);
     n1->appendToTail(6);
 
-    LOG(palindrome(n1));
+    LOG(isPalindrome(n1));
 }

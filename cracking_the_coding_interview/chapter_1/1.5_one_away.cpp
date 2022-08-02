@@ -1,5 +1,7 @@
 #include "../../ALL_H_FILES.h"
 
+// =============================================================
+
 // First implemetation
 // bool oneEditAway(std::string first, std::string second)
 // {
@@ -16,7 +18,6 @@
 //         return oneEditInsert(second, first);
 //     }
 // }
-
 // bool oneEditReplace(std::string first, std::string second)
 // {
 //     bool foundDifference = false;
@@ -58,6 +59,8 @@
 //     return true;
 // }
 
+// =============================================================
+
 // Second implementation
 bool oneEditAway(std::string first, std::string second)
 {
@@ -93,6 +96,8 @@ bool oneEditAway(std::string first, std::string second)
     }
 
 }
+
+// =============================================================
 
 int main()
 {

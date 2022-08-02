@@ -2,6 +2,8 @@
 
 #include "linked_list.cpp"
 
+// =============================================================
+
 // First implementation 
 // bool removeDups(Node* head) //O(N) time - O(N) space
 // {
@@ -26,6 +28,8 @@
 //     }
 //     return true;
 // }
+
+// =============================================================
 
 // Second implementation
 bool removeDups(Node* head) //O(N^2) time - O(1) space
@@ -53,6 +57,8 @@ bool removeDups(Node* head) //O(N^2) time - O(1) space
     }
     return true; 
 }
+
+// =============================================================
 
 int main()
 {

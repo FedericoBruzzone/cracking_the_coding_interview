@@ -2,6 +2,8 @@
 
 #include "linked_list.cpp"
 
+// =============================================================
+
 bool deleteMiddleNode(Node* node)
 {
     if (node == NULL) return false;
@@ -14,6 +16,8 @@ bool deleteMiddleNode(Node* node)
 
     return true;
 }
+
+// =============================================================
 
 int main()
 {

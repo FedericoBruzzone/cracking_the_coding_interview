@@ -1,5 +1,7 @@
 #include "../../ALL_H_FILES.h"
 
+// =============================================================
+
 bool isRotation(std::string s1, std::string s2)
 {
     int lengthS1 = s1.size();
@@ -12,6 +14,8 @@ bool isRotation(std::string s1, std::string s2)
     }
     return false;
 }
+
+// =============================================================
 
 int main()
 {

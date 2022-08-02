@@ -1,6 +1,8 @@
 #include "../../ALL_H_FILES.h"
 
-// First solution
+// =============================================================
+
+// First implementation
 // void nullifyRaw(std::vector<std::vector<int>> ** m, int raw)
 // {
 //     for (int j = 0; j < (**m)[0].size(); j++)
@@ -50,6 +52,8 @@
 //         } 
 //     }
 // }
+
+// =============================================================
 
 // Second implementation
 void nullifyRaw(std::vector<std::vector<int>> ** m, int raw)
@@ -118,7 +122,7 @@ void setZeros(std::vector<std::vector<int>> * m)
     if (colHasZero) nullifyColumn(&m, 0);
 }
 
-
+// =============================================================
 
 int main()
 {
