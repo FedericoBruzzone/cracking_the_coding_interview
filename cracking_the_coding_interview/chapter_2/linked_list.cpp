@@ -17,6 +17,19 @@ public:
         data = d;
     }
     
+    void appendToTail(Node* next)
+    {
+        Node* temp = this;
+
+        while (temp->next != NULL)
+        {
+            temp = temp->next;
+        }
+
+        temp->next = next;
+    }
+
+    // Overloading
     void appendToTail(int d)
     {
         Node* end = new Node(d);
@@ -86,6 +99,7 @@ public:
     //     } 
     //     return count; 
     // } 
+    
     int length(Node* head)
     {
         if (head == NULL) 

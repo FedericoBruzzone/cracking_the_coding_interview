@@ -23,4 +23,6 @@
 
 #include <cmath>
 
+#include <memory>
+
 #endif

@@ -125,29 +125,29 @@
 // =============================================================
 
 // My implementation
-// bool isPalindrome(Node* head)
-// {
-//     std::stack<int> stack;
-//     Node* node = head;
+bool isPalindrome(Node* head)
+{
+    std::stack<int> stack;
+    Node* node = head;
     
-//     while (node != NULL)
-//     {
-//         stack.push(node->data);
-//         node = node->next;
-//     }
+    while (node != NULL)
+    {
+        stack.push(node->data);
+        node = node->next;
+    }
 
-//     while (head != NULL)
-//     {
-//         if (!(stack.top() == head->data))
-//         {
-//             return false;
-//         }
-//         stack.pop();
-//         head = head->next;
-//     }
+    while (head != NULL)
+    {
+        if (!(stack.top() == head->data))
+        {
+            return false;
+        }
+        stack.pop();
+        head = head->next;
+    }
 
-//     return true;
-// }
+    return true;
+}
 
 // =============================================================
 
