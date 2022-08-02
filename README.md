@@ -165,3 +165,10 @@ Output 9 -> 1 -> 2. That is, 912.
 Implement a function to check if a linked list is a palindrome
 
 [Solution 2.5](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_2/2.6_palindrome.cpp)
+
+--- 
+
+**2.7**:
+Given two (singly) linked list, determine if the two lists intersect. Retrun the intersecting node. Noto that the intersection is defined based on reference, not value. That is, if the kth node of the first linked list is the exact the node (by reference) as the jth node of the second linked list, than thay are intersecting.
+
+[Solution 2.5](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_2/2.7_intersection.cpp)
