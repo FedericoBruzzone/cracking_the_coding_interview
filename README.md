@@ -164,11 +164,24 @@ Output 9 -> 1 -> 2. That is, 912.
 **2.6 Palindrome**:
 Implement a function to check if a linked list is a palindrome
 
-[Solution 2.5](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_2/2.6_palindrome.cpp)
+[Solution 2.6](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_2/2.6_palindrome.cpp)
 
 --- 
 
-**2.7**:
+**2.7 Intersection**:
 Given two (singly) linked list, determine if the two lists intersect. Retrun the intersecting node. Noto that the intersection is defined based on reference, not value. That is, if the kth node of the first linked list is the exact the node (by reference) as the jth node of the second linked list, than thay are intersecting.
 
-[Solution 2.5](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_2/2.7_intersection.cpp)
+[Solution 2.7](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_2/2.7_intersection.cpp)
+
+--- 
+
+**2.7 Loop Detection**:
+Given a linkedlist which might contain a loop, implement an algorithm that returns the node at the beginning of the loop (if one exists)
+
+EXAMPLE
+
+Input: A -> B -> C -> D -> E -> C (the same C as earlier)
+
+Output C
+
+[Solution 2.8](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_2/2.8_loop_detection.cpp)
