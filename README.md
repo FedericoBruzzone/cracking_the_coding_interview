@@ -175,7 +175,7 @@ Given two (singly) linked list, determine if the two lists intersect. Retrun the
 
 --- 
 
-**2.7 Loop Detection**:
+**2.8 Loop Detection**:
 Given a linkedlist which might contain a loop, implement an algorithm that returns the node at the beginning of the loop (if one exists)
 
 EXAMPLE
