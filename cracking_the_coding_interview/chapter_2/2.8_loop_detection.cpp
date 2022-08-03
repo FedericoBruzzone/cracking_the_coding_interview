@@ -81,8 +81,6 @@ int main()
     n1->appendToTail(6);
     n1->appendToTail(common);
 
-
-
     Node* output = new Node();
     output = findBeginning(n1);
     LOG(output->data);
