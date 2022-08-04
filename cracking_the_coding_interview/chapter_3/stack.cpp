@@ -3,10 +3,10 @@
 class EmptyStackException 
     : public std::exception
 {
-  virtual const char* what() const throw()
-  {
-    return "EmptyStackException";
-  }
+    virtual const char* what() const throw()
+    {
+        return "EmptyStackException";
+    }
 };
 
 template <class T>

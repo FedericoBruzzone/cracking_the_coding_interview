@@ -3,10 +3,10 @@
 class EmptyQueueException 
     : public std::exception
 {
-  virtual const char* what() const throw()
-  {
-    return "EmptyQueueException";
-  }
+    virtual const char* what() const throw()
+    {
+        return "EmptyQueueException";
+    }
 };
 
 template <class T>

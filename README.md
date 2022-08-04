@@ -162,7 +162,7 @@ Output 9 -> 1 -> 2. That is, 912.
 --- 
 
 **2.6 Palindrome**:
-Implement a function to check if a linked list is a palindrome
+Implement a function to check if a linked list is a palindrome.
 
 [Solution 2.6](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_2/2.6_palindrome.cpp)
 
@@ -176,7 +176,7 @@ Given two (singly) linked list, determine if the two lists intersect. Retrun the
 --- 
 
 **2.8 Loop Detection**:
-Given a linkedlist which might contain a loop, implement an algorithm that returns the node at the beginning of the loop (if one exists)
+Given a linkedlist which might contain a loop, implement an algorithm that returns the node at the beginning of the loop (if one exists).
 
 EXAMPLE
 
@@ -185,3 +185,12 @@ Input: A -> B -> C -> D -> E -> C (the same C as earlier)
 Output C
 
 [Solution 2.8](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_2/2.8_loop_detection.cpp)
+
+---
+
+# Chapter 4 - Stacks and Queues
+
+**3.1**:
+Describe how you could use a single array to implement three stacks.
+
+[Solution 3.1](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_3/3.1_three_in_one.cpp)
