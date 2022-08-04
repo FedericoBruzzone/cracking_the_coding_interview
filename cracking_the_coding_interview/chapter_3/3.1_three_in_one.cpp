@@ -136,7 +136,7 @@ private:
         int lastCapacityIndex(MultiStack* multiStack) { return multiStack->adjustIndex(start + capacity - 1); }
         int lastElementIndex(MultiStack* multiStack)  { return multiStack->adjustIndex(start + size - 1); }
         
-        bool isWithStackCapacity(int index, MultiStack* multiStack)
+        bool isWithinStackCapacity(int index, MultiStack* multiStack)
         {
             if (index < 0 || index >= multiStack->values.size())
                 return false;
@@ -173,7 +173,7 @@ private:
         }
 
         int index = stack.lastCapacityIndex(this);
-        while (stack.isWithStackCapacity(index, this))
+        while (stack.isWithinStackCapacity(index, this))
         {
             values[index] = values[previusIndex(index)];
             index = previusIndex(index);
