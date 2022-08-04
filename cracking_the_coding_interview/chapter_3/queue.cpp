@@ -1,7 +1,6 @@
 #include "../../ALL_H_FILES.h"
 
-class EmptyQueueException 
-    : public std::exception
+class EmptyQueueException : public std::exception
 {
     virtual const char* what() const throw()
     {

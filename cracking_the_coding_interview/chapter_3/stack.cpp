@@ -1,7 +1,6 @@
 #include "../../ALL_H_FILES.h"
 
-class EmptyStackException 
-    : public std::exception
+class EmptyStackException : public std::exception
 {
     virtual const char* what() const throw()
     {
