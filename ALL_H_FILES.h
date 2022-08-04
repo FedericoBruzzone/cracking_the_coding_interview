@@ -12,6 +12,7 @@
 #include <vector>
 #include <list>
 #include <stack>
+#include <queue>
 
 #include <map>
 #include <set>

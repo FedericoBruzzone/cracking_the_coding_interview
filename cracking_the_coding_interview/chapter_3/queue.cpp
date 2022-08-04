@@ -17,7 +17,7 @@ public:
     { 
         this->data = data; 
     }
-    
+
     T data;
     QueueNode<T>* next = NULL;
 };
@@ -28,6 +28,56 @@ class Queue
 public:
     void add(T item)
     {
+        QueueNode<T>* t = new QueueNode<T>(item);
+
+        if (last != NULL) 
+            last->next = t;
+        
+        last = t;
+
+        if (first == NULL)
+            first = last;
+    }
+
+    T remove()
+    {
+        if (first == NULL) throw EmptyQueueException();
+        T data = first->data;
+        first = first->next;
+
+        if (first == NULL)
+        {
+            last = NULL;
+        }
+
+        return data;
+    }
+
+    T peek()
+    {
+        if (first == NULL) throw EmptyQueueException();
+        return first->data;
+    }
+
+    bool isEmpty()
+    {
+        return first == NULL;
+    }
+
+    void print()
+    {
+        QueueNode<T>* print = this->first;
+
+        if (this == NULL) throw EmptyQueueException();
+
+        while (print != NULL)
+        {
+            std::cout << print->data << "-->";
+            print = print->next;
+        }
+
+        if(print == NULL)
+            LOG("NULL");
         
     }
 
@@ -38,8 +88,15 @@ private:
 
 int main()
 {
-    Queue<int> queue;
+    Queue<int>* queue = new Queue<int>();
     
+    queue->add(10);
+    queue->print();
 
+    queue->add(20);
+    queue->print();
 
+    queue->add(30);
+    queue->print();
+    
 }  
