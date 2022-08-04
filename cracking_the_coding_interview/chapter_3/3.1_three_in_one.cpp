@@ -95,7 +95,7 @@
 // We will also design our array to be circualar, such that the final stack may start at the end of the array 
 // and wrap around to the beginning.
 
-// please note that the code for this solution is far more complex than would be appropriate for an interview.
+// Please note that the code for this solution is far more complex than would be appropriate for an interview.
 // You could be responsible for pseudocode, or perhaps the code of individual componenets, but the entire implementation
 // would be far too much work.
 
@@ -226,7 +226,7 @@ public:
             expand(stackNum);
         }
     }
-    
+
     int peek(int stackNum)
     {
         StackInfo stack = info[stackNum];
