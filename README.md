@@ -216,3 +216,10 @@ FOLLOW UP
 Implement a function `popAt(int index)` which performs a pop operations on a specific sub-stack.
 
 [Solution 3.3](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_3/3.3_stack_of_plates.cpp)
+
+---
+
+**3.3 Stack of Plates**:
+Implement MyQueue class which implements a queue using two stacks.
+
+[Solution 3.3](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_3/3.4_queue_via_stacks.cpp)
