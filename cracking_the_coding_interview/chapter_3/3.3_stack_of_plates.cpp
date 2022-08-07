@@ -147,8 +147,4 @@ public:
     {
         return leftShift(index, true);
     }
-
-
-
-    
 };
