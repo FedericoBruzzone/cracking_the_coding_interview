@@ -190,7 +190,15 @@ Output C
 
 # Chapter 4 - Stacks and Queues
 
-**3.1**:
+**3.1 Three in One**:
 Describe how you could use a single array to implement three stacks.
 
 [Solution 3.1](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_3/3.1_three_in_one.cpp)
+
+---
+
+**3.2 Stack Min**:
+How would you design a stack which, in addition to `push` and `pop`, has a function `min` which returns the minimum element? `push`, `pop` 
+and `min` should all operate in O(1) time.
+
+[Solution 3.2](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_3/3.2_stack_min.cpp)
