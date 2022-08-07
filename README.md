@@ -202,3 +202,17 @@ How would you design a stack which, in addition to `push` and `pop`, has a funct
 and `min` should all operate in O(1) time.
 
 [Solution 3.2](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_3/3.2_stack_min.cpp)
+
+---
+
+**3.3 Stack of Plates**:
+Imagine a (literal) stack of plates. If the stack gets too high, it might topple. Therefore, in real life, we would likely start a new stack
+when the previous stack exceeds some threshold. Implement a data structure `SetOfStack` that mimics this. `SetOfStack` should be composed of 
+several stack and should create a new stack once the previous one exceed capacity. `SetOfStack.push()` and `SetOfStack.pop()` should behave 
+identically to a single stack (that is, `pop()` should return the same values as it would ig there were just a single stack).
+
+FOLLOW UP
+
+Implement a function `popAt(int index)` which performs a pop operations on a specific sub-stack.
+
+[Solution 3.3](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_3/3.3_stack_of_plates.cpp)
