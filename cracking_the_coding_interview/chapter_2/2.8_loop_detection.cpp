@@ -12,38 +12,38 @@
 //                      SF
 
 // First implementation
-Node* findBeginning(Node* head)
-{
-    if (head == NULL) return NULL;
+// Node* findBeginning(Node* head)
+// {
+//     if (head == NULL) return NULL;
 
-    Node* slow = head;
-    Node* fast = head;
+//     Node* slow = head;
+//     Node* fast = head;
 
-    while (fast != NULL && fast->next != NULL)
-    {
-        slow = slow->next;
-        fast = fast->next->next;
-        if (slow == fast) 
-        {
-            break;
-        }
-    }
+//     while (fast != NULL && fast->next != NULL)
+//     {
+//         slow = slow->next;
+//         fast = fast->next->next;
+//         if (slow == fast) 
+//         {
+//             break;
+//         }
+//     }
 
-    if (fast == NULL || fast->next == NULL)
-    {
-        return NULL;
-    }
+//     if (fast == NULL || fast->next == NULL)
+//     {
+//         return NULL;
+//     }
 
-    slow = head;
+//     slow = head;
 
-    while (slow != fast)
-    {
-        slow = slow->next;
-        fast = fast->next;
-    }
+//     while (slow != fast)
+//     {
+//         slow = slow->next;
+//         fast = fast->next;
+//     }
 
-    return slow;
-}
+//     return slow;
+// }
 
 // =============================================================
 
