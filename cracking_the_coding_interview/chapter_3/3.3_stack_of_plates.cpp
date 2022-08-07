@@ -8,7 +8,6 @@ public:
     SetOfStack(int threshold)
     {
         this->threshold = threshold;
-        stacks = std::vector<Stack<int>>();
     }
 
 private:
