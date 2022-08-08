@@ -2,6 +2,8 @@
 
 #include "stack.cpp"
 
+// =============================================================
+
 template <class T>
 class MyQueue
 {
