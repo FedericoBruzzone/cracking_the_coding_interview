@@ -2,6 +2,8 @@
 
 // #include "stack.cpp"
 
+// =============================================================
+
 class EmptyStackException : public std::exception
 {
     virtual const char* what() const throw()
