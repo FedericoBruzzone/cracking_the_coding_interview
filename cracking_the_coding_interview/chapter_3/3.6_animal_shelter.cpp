@@ -13,32 +13,45 @@ class Animal
 {
 public:
     Animal() = default;
-
-    Animal(std::string name) 
-    { 
-        name = name; 
-        order = 0;
-    }
+    
+    virtual std::string getClassName() = 0;
 
     void setOrder(int order) { order = order; }
-    int getOrder()           { return order; }
+    inline int getOrder() { return order; }
+    void setOrder(std::string type) { type = type; }
+    inline std::string getType() { return type; }
 
-    bool isOlderThen(Animal a) 
+    bool Compare(Animal* a) 
     {
-        return order < a.getOrder(); 
+        return this->order > a->getOrder(); 
     }
 
+protected:
+    std::string type;
 
-    std::string name;
 private:
     int order;
 };
 
 class Dog : public Animal 
-{ public: Dog(std::string name) : Animal(name) {} };
+{ 
+public: 
+    Dog(std::string name) : name(name) {} 
+    inline std::string getClassName() { return "Dog"; }
+    inline std::string getName() { return name; }
+private:
+    std::string name;
+};
 
 class Cat : public Animal 
-{ public: Cat(std::string name) : Animal(name) {} };
+{ 
+public: 
+    Cat(std::string name) : name(name) {} 
+    inline std::string getClassName() { return "Cat"; }
+    inline std::string getName() { return name; }
+private:
+    std::string name;
+};
 
 class AnimalQueue
 {
@@ -52,7 +65,6 @@ public:
         a->setOrder(order);
         order++;
 
-        LOG("ENQUEUE")
         if ( typeid(*a) == typeid(Dog) ) { LOG("OK") dogs.push_back( (Dog*)a ); }
         if ( typeid(&a) == typeid(Cat) ) { LOG("OK") cats.push_back( (Cat*)a ); }
     }
