@@ -219,7 +219,16 @@ Implement a function `popAt(int index)` which performs a pop operations on a spe
 
 ---
 
-**3.3 Stack of Plates**:
+**3.4 Queue via Stacks**:
 Implement MyQueue class which implements a queue using two stacks.
 
-[Solution 3.3](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_3/3.4_queue_via_stacks.cpp)
+[Solution 3.4](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_3/3.4_queue_via_stacks.cpp)
+
+---
+
+**3.5 Sort Stack**:
+Write a program to sort a stack such that the smallest items are on the top. You can use an additional temporary stack, but you may not copy the elements into any other data structure (such as an array). The stack supports the following operations: `push`, `pop`, `peek` and `isEmpty`. 
+
+
+[Solution 3.4](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_3/3.5_sort_stack.cpp)
+
