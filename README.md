@@ -230,5 +230,15 @@ Implement MyQueue class which implements a queue using two stacks.
 Write a program to sort a stack such that the smallest items are on the top. You can use an additional temporary stack, but you may not copy the elements into any other data structure (such as an array). The stack supports the following operations: `push`, `pop`, `peek` and `isEmpty`. 
 
 
-[Solution 3.4](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_3/3.5_sort_stack.cpp)
+[Solution 3.5](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_3/3.5_sort_stack.cpp)
 
+---
+
+**3.6 Animal Shelter**:
+An animal shelter, which holds only dogs and cats, operates on a strictly "first in, first out" basis. People must adopt either the "oldest"
+(based on arrival time) of all animals at the shelter, or they can select whether they would prefer a dog or a cat (and will receive
+the oldest animal of that type). They cannot select which specific animal thay would like. Create the data strctures to mantain this system
+and implement operations such as `enqueue`, `dequeueAny`, `dequeueDog` and `dequeueCat`. You may use the built-in `LinkedList` data structure.
+
+
+[Solution 3.6](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_3/3.6_animal_shelter.cpp)
