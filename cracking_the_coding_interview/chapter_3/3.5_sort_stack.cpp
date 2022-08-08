@@ -35,21 +35,4 @@ void sort(std::stack<int>* stack)
 
 int main()
 {
-    std::stack<int>* stack = new std::stack<int>(); 
-
-    stack->push(2);
-    stack->push(3);
-    stack->push(4);
-    stack->push(1);
-    stack->push(5);
-
-    // input:  2 -> 3 -> 4 -> 1 -> 5 
-    //         i.peek() = 2
-    //         o.push(i.pop())
-    // output: 2 
-    
-    // input:  3 -> 4 -> 1 -> 5 
-    //         i.peek() = 3
-    //         o.push(i.pop())
-    // output: 2 
 }
