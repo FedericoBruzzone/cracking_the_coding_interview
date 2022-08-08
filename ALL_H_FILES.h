@@ -28,4 +28,6 @@
 
 #include <exception>
 
+#include <typeinfo>
+
 #endif
