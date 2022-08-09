@@ -10,8 +10,6 @@ CFLAGS  = -g -Wall
 
 DIR = C:\Users\belvs\Desktop\FedericoBruzzone\data_structure_CCI\cracking_the_coding_interview\chapter_3
 
-SHELL=cmd
-
 # The build target 
 compile: $(DIR)\3.6_animal_shelter.o
 	$(CC) $(CFLAGS) $(DIR)\3.6_animal_shelter.o -o compile
