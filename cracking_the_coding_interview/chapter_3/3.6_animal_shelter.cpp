@@ -13,89 +13,96 @@ class Animal
 {
 public:
     Animal() = default;
-    
+    virtual ~Animal() = default;
+
     virtual std::string getClassName() = 0;
 
-    void setOrder(int order) { order = order; }
-    inline int getOrder() { return order; }
-    void setOrder(std::string type) { type = type; }
-    inline std::string getType() { return type; }
+    void setOrder(int order) { _order = order; }
+    int getOrder() { return _order; }
+    void setType(std::string type) { _type = type; }
+    inline std::string getType() { return _type; }
 
-    bool Compare(Animal* a) 
+    // bool Compare(Animal* a) 
+    // {
+    //     return this->_order > a->getOrder(); 
+    // }
+
+    bool operator<(const Animal* b) const 
     {
-        return this->order > a->getOrder(); 
+        return this->_order < b->_order;
     }
 
 protected:
-    std::string type;
-
+    int _order;
 private:
-    int order;
+    std::string _type;
 };
 
 class Dog : public Animal 
 { 
 public: 
-    Dog(std::string name) : name(name) {} 
-    inline std::string getClassName() { return "Dog"; }
-    inline std::string getName() { return name; }
+    Dog(std::string name) : _name(name) {} 
+    inline std::string getClassName() override { return "Dog"; }
+    inline std::string getName() const { return _name; }
 private:
-    std::string name;
+    std::string _name;
 };
 
 class Cat : public Animal 
 { 
 public: 
-    Cat(std::string name) : name(name) {} 
-    inline std::string getClassName() { return "Cat"; }
-    inline std::string getName() { return name; }
+    Cat(std::string name) : _name(name) {} 
+    inline std::string getClassName() override { return "Cat"; }
+    inline std::string getName() const { return _name; }
 private:
-    std::string name;
+    std::string _name;
 };
 
 class AnimalQueue
 {
 public:
-    std::list<Cat*> cats = std::list<Cat*>();
-    std::list<Dog*> dogs = std::list<Dog*>();
-    int order = 0;
+    std::list<Cat*> _cats = std::list<Cat*>();
+    std::list<Dog*> _dogs = std::list<Dog*>();
+    int _order;
+
+    AnimalQueue() { _order = 0; }
 
     void enqueue(Animal* a)
     {
-        a->setOrder(order);
-        order++;
+        a->setOrder(_order);
+        _order++;
 
-        if ( typeid(*a) == typeid(Dog) ) { LOG("OK") dogs.push_back( (Dog*)a ); }
-        if ( typeid(&a) == typeid(Cat) ) { LOG("OK") cats.push_back( (Cat*)a ); }
+        if (a->getClassName() == "Dog") { _dogs.push_back( (Dog*)a ); }
+        if (a->getClassName() == "Cat") { _cats.push_back( (Cat*)a ); }
     }
 
     Cat* dequeueCats() 
     { 
-        Cat* cat = cats.back();
-        cats.pop_back(); 
+        Cat* cat = _cats.back();
+        _cats.pop_back(); 
         return cat;
     }
 
     Dog* dequeueDogs() 
     { 
-        Dog* dog = dogs.back();
-        dogs.pop_back(); 
+        Dog* dog = _dogs.back();
+        _dogs.pop_back(); 
         return dog;
     }
     
 
     Animal* dequeueAny()
     {
-        if (cats.empty()) return (Animal*)dequeueDogs();
-        if (dogs.empty()) return (Animal*)dequeueCats();
+        if (_cats.empty()) return (Animal*)dequeueDogs();
+        if (_dogs.empty()) return (Animal*)dequeueCats();
 
-        if (dogs.back()->isOlderThen(*(cats.back()))) 
+        if ((Animal*)_cats.back() < (Animal*)_dogs.back()) 
         { 
             return (Animal*)dequeueDogs();
         }
         else 
-        { 
-           return (Animal*)dequeueCats();
+        {
+            return (Animal*)dequeueCats();
         }
 
     }
@@ -107,31 +114,28 @@ int main()
 {
     AnimalQueue aq;
     
-    Dog* d1 = new Dog("d1");
-    Dog* d2 = new Dog("d2");
+    aq.enqueue(new Dog("d1"));
+    aq.enqueue(new Cat("c1"));
+    aq.enqueue(new Cat("c2"));
+    aq.enqueue(new Dog("d2"));
 
-    Cat* c1 = new Cat("d1");
-    Cat* c2 = new Cat("d2");
-
-    aq.enqueue(d1);
-    aq.enqueue(d2);
-
-    aq.enqueue(c1);
-    aq.enqueue(c2);
-
-    for (auto i : aq.cats) 
-    { 
-        LOG(i->name)
-    }
-
-    for (auto i : aq.dogs) 
-    { 
-        LOG(i->name)
-    }
+    LOG("cats")
+    for (auto i : aq._cats) { LOG(i->getName()) LOG(i->getOrder()) }
+    LOG("dogs")
+    for (auto i : aq._dogs) { LOG(i->getName()) LOG(i->getOrder()) }
 
     aq.dequeueAny();
 
-    for (auto i : aq.cats) { std::cout << i->name << std::endl; }
-    for (auto i : aq.dogs) { std::cout << i->name << std::endl; }
+    LOG("cats")
+    for (auto i : aq._cats) { LOG(i->getName()) }
+    LOG("dogs")
+    for (auto i : aq._dogs) { LOG(i->getName()) }
+
+    aq.dequeueAny();
+
+    LOG("cats")
+    for (auto i : aq._cats) { LOG(i->getName()) }
+    LOG("dogs")
+    for (auto i : aq._dogs) { LOG(i->getName()) }
 
 }
