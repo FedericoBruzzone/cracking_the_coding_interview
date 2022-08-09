@@ -8,7 +8,7 @@ CC = g++
 #  -Wall  - this flag is used to turn on most compiler warnings
 CFLAGS  = -g -Wall
 
-DIR = C:\Users\belvs\Desktop\FedericoBruzzone\data_structure_CCI\cracking_the_coding_interview\chapter_3
+DIR = .\cracking_the_coding_interview\chapter_3
 
 # The build target 
 compile: $(DIR)\3.6_animal_shelter.o
