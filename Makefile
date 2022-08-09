@@ -17,5 +17,6 @@ compile: $(DIR)\3.6_animal_shelter.o
 	compile.exe
 	
 clean: 
-	-del -fR $(DIR)\*.o *.exe
+	-rm -fR $(DIR)\*.o *.exe
+#   -del -fR $(DIR)\*.o *.exe
 .PHONY: clean
