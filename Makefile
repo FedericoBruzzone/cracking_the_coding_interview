@@ -8,15 +8,24 @@ CC = g++
 #  -Wall  - this flag is used to turn on most compiler warnings
 CFLAGS  = -g -Wall
 
-DIR = .\cracking_the_coding_interview\chapter_3
+chapter_1 = .\cracking_the_coding_interview\chapter_1
+chapter_2 = .\cracking_the_coding_interview\chapter_2
+chapter_3 = .\cracking_the_coding_interview\chapter_3
+chapter_4 = .\cracking_the_coding_interview\chapter_4
+
+name = 3.6_animal_shelter
+
+DIR = $(chapter_3)
+FILE = $(name)
 
 # The build target 
-compile: $(DIR)\3.6_animal_shelter.o
-	$(CC) $(CFLAGS) $(DIR)\3.6_animal_shelter.o -o compile
+compile: $(DIR)\$(FILE).o
+	$(CC) $(CFLAGS) $(DIR)\$(FILE).o -o compile
 	@echo --------------------Output Compile.exe--------------------
 	compile.exe
 	
-clean: 
-	-rm -fR $(DIR)\*.o *.exe
-#   -del -fR $(DIR)\*.o *.exe
+clean:
+	-del $(DIR)\*.o *.exe 
+#	-rm -fR $(DIR)\*.o *.exe
+
 .PHONY: clean
