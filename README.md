@@ -11,6 +11,7 @@ In addition, there are the implementation of `data scructure` in c++.
 
 
 **1.1 Is Unique**: 
+
 Implement and algorithm to determine if a string has all unique characters. What if you cannot use additional data structure?
 
 [Solution 1.1](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_1/1.1_is_unique.cpp)
@@ -18,6 +19,7 @@ Implement and algorithm to determine if a string has all unique characters. What
 ---
 
 **1.2 Check Permutation**: 
+
 Given two strings, write a method to decide if one is a permutation of the other.
 
 [Solution 1.2](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_1/1.2_check_permutation.cpp)
@@ -25,6 +27,7 @@ Given two strings, write a method to decide if one is a permutation of the other
 ---
 
 **1.3 URLify**: 
+
 Write a method to replace all spaces in a string with '%20'. You may assume that the string has sufficient space at the end to hold the additional characters, and that you are given the "true" length of the string. 
 
 EXAMPLE
@@ -38,6 +41,7 @@ Output:  "Mr%20John%20Smith"
 ---
 
 **1.4 Palindrome Permutation**: 
+
 Given a string, write a function to check if it is a permutation of a palindrome. A palindrome is a word or phrase that is the same forwards and backwards. A permutation is a rearrangement of letters. The palindrome does not need to be limited to just dictionary words. You can ignore casing and non-letter characters.
 
 EXAMPLE
@@ -51,6 +55,7 @@ Output:  True (permutation: "taco cat", "atco cta", etc.)
 ---
 
 **1.5 One Away**: 
+
 There are three types of edits that can be performed on strings: insert a character, remove a character. ot replace a character. Given two strings, write a function to check if they are one edit (or zero edits) away.
 
 EXAMPLE
@@ -68,6 +73,7 @@ pale,  bake -> false
 ---
 
 **1.6 String Compression**: 
+
 Implement a method to perform basic string compression using the counts of repeated characters. For example, the string 'aabcccccaa' would become 'a2b1c5a3'. If the "compressed" string would not become smaller than the original string, your method should return the original string. You can assume the string has only uppercase and lowercase letters (a-z).
 
 [Solution 1.6](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_1/1.6_string_compression.cpp)
@@ -75,6 +81,7 @@ Implement a method to perform basic string compression using the counts of repea
 ---
 
 **1.7 Rotate Matrix**: 
+
 Given an image represented by an N x M matrix, where each pixel in the image is represented by an integer, write a method to rotate the image by 90 degrees. Can you do this in place?
 
 [Solution 1.7](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_1/1.7_rotate_matrix.cpp)
@@ -82,6 +89,7 @@ Given an image represented by an N x M matrix, where each pixel in the image is 
 ---
 
 **1.8 Zero Matrix**: 
+
 Werite an algorithm such that if an element in an M x N matrix is 0, its entire row and column are set to 0.
 
 [Solution 1.8](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_1/1.8_zero_matrix.cpp)
@@ -89,6 +97,7 @@ Werite an algorithm such that if an element in an M x N matrix is 0, its entire 
 ---
 
 **1.9 String Rotation**:
+
 Assume you have method 'isSubstring' which checks if one word is a substring of another. Given two strings, s1 and s2, write code to check if s2 is a rotation of s1 using only one call to isSubstring (e.g., "waterbottle" is a rotation of "erbottlewat").
 
 [Solution 1.9](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_1/1.9_is_rotation.cpp)
@@ -97,6 +106,7 @@ Assume you have method 'isSubstring' which checks if one word is a substring of 
 # Chapter 2 - Linked Lists
 
 **2.1 Remove Dups**:
+
 Write code to remove duplicates from an unsorted linked list
 
 FOLLOW UP
@@ -108,6 +118,7 @@ How would you solve this problem if a temporary buffer is not allowed?
 ---
 
 **2.2 Return Kth to Last**:
+
 Implement an algorithm to find the kth to last element of a singly linked list.
 
 [Solution 2.2](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_2/2.2_return_kth_to_last.cpp)
@@ -115,6 +126,7 @@ Implement an algorithm to find the kth to last element of a singly linked list.
 ---
 
 **2.3 Delete Middle Node**:
+
 Implement an algorithm to delete a node in the middle (i.e. any node but the first and the last node, not necessary the exact the middle) of a singly linked list, given only access to that node.
 
 EXAMPLE
@@ -128,6 +140,7 @@ Result: nothing is returned, but the new linked list looks like a -> b -> d -> e
 --- 
 
 **2.4 Partition**:
+
 Write code to partition a linked list around a value x, such that all node less than x come before all node greater than or equal to x. (IMPORTANT: The partition element x can appear anywhere in the "right position"; it does not need to appear between the left and the right partition. The additional spacing in the example blow indicates the partition. Yes, the output below is one of many valid outputs!)
 
 EXAMPLE
@@ -141,6 +154,7 @@ Output: 3 -> 1 -> 2    ->    10 -> 5 -> 5 -> 8
 --- 
 
 **2.5 Sum List**:
+
 You have two numbers represented by a linked list, where each node contains a single digit. The digits are stored in reverse order, such that the 1's digit is at the head of the list. Write a function that adds the two numbers and returns the sum as a linked list. (You are not allowed to "cheat" and just convert the linked list to an integer.)
 
 EXAMPLE
@@ -162,6 +176,7 @@ Output 9 -> 1 -> 2. That is, 912.
 --- 
 
 **2.6 Palindrome**:
+
 Implement a function to check if a linked list is a palindrome.
 
 [Solution 2.6](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_2/2.6_palindrome.cpp)
@@ -169,6 +184,7 @@ Implement a function to check if a linked list is a palindrome.
 --- 
 
 **2.7 Intersection**:
+
 Given two (singly) linked list, determine if the two lists intersect. Retrun the intersecting node. Noto that the intersection is defined based on reference, not value. That is, if the kth node of the first linked list is the exact the node (by reference) as the jth node of the second linked list, than thay are intersecting.
 
 [Solution 2.7](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_2/2.7_intersection.cpp)
@@ -176,6 +192,7 @@ Given two (singly) linked list, determine if the two lists intersect. Retrun the
 --- 
 
 **2.8 Loop Detection**:
+
 Given a linkedlist which might contain a loop, implement an algorithm that returns the node at the beginning of the loop (if one exists).
 
 EXAMPLE
@@ -188,9 +205,10 @@ Output C
 
 ---
 
-# Chapter  - Stacks and Queues
+# Chapter 3  - Stacks and Queues
 
 **3.1 Three in One**:
+
 Describe how you could use a single array to implement three stacks.
 
 [Solution 3.1](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_3/3.1_three_in_one.cpp)
@@ -198,6 +216,7 @@ Describe how you could use a single array to implement three stacks.
 ---
 
 **3.2 Stack Min**:
+
 How would you design a stack which, in addition to `push` and `pop`, has a function `min` which returns the minimum element? `push`, `pop` 
 and `min` should all operate in O(1) time.
 
@@ -206,6 +225,7 @@ and `min` should all operate in O(1) time.
 ---
 
 **3.3 Stack of Plates**:
+
 Imagine a (literal) stack of plates. If the stack gets too high, it might topple. Therefore, in real life, we would likely start a new stack
 when the previous stack exceeds some threshold. Implement a data structure `SetOfStack` that mimics this. `SetOfStack` should be composed of 
 several stack and should create a new stack once the previous one exceed capacity. `SetOfStack.push()` and `SetOfStack.pop()` should behave 
@@ -220,6 +240,7 @@ Implement a function `popAt(int index)` which performs a pop operations on a spe
 ---
 
 **3.4 Queue via Stacks**:
+
 Implement MyQueue class which implements a queue using two stacks.
 
 [Solution 3.4](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_3/3.4_queue_via_stacks.cpp)
@@ -227,6 +248,7 @@ Implement MyQueue class which implements a queue using two stacks.
 ---
 
 **3.5 Sort Stack**:
+
 Write a program to sort a stack such that the smallest items are on the top. You can use an additional temporary stack, but you may not copy the elements into any other data structure (such as an array). The stack supports the following operations: `push`, `pop`, `peek` and `isEmpty`. 
 
 
@@ -235,6 +257,7 @@ Write a program to sort a stack such that the smallest items are on the top. You
 ---
 
 **3.6 Animal Shelter**:
+
 An animal shelter, which holds only dogs and cats, operates on a strictly "first in, first out" basis. People must adopt either the "oldest"
 (based on arrival time) of all animals at the shelter, or they can select whether they would prefer a dog or a cat (and will receive
 the oldest animal of that type). They cannot select which specific animal thay would like. Create the data strctures to mantain this system
@@ -242,3 +265,13 @@ and implement operations such as `enqueue`, `dequeueAny`, `dequeueDog` and `dequ
 
 
 [Solution 3.6](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_3/3.6_animal_shelter.cpp)
+
+---
+
+# Chapter 4  - Trees and Graphs
+
+**4.1 Route Between Nodes**:
+
+
+
+[Solution 4.1](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_4/4.1_route_between_nodes.cpp)
