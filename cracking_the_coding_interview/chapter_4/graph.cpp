@@ -2,15 +2,33 @@
 
 // =============================================================
 
+class Node
+{
+
+enum State { Unvisited, Visited, Visiting };
+
+public:
+    int _data;
+    State _state;
+    //std::vector<Node*> childern;
+
+    Node(int data)
+    {
+        this->_data = data;
+    }
+};
+
+// =============================================================
+
 class Graph{
 public:
     int _numVertices;
-     std::list<int>* _adjLists;
+     std::list<Node>* _adjLists;
 
     Graph(int numVertices) 
     {
         this->_numVertices = numVertices;
-        _adjLists = new std::list<int> [_numVertices];
+        _adjLists = new std::list<Node> [_numVertices];
     }
 
     void addEdge(int src, int dest, bool bi)
@@ -26,10 +44,10 @@ public:
     {
         for (int d = 0; d < _numVertices; ++d)
         {
-            std::cout << "\n Vertex " << d << ": ";
+            std::cout << "\n Vertex " << d << ":";
             for (int x : _adjLists[d])
             {
-                std::cout << "-> " << x;
+                std::cout << " -> " << x;
             }
             printf("\n");
         }
@@ -62,12 +80,12 @@ public:
 
 // =============================================================
 
-int main()
-{
-    Graph g(10);
+// int main()
+// {
+//     Graph g(10);
 
-    g.addEdge(1, 2, false);
-    g.addEdge(2, 3, false);
+//     g.addEdge(1, 2, false);
+//     g.addEdge(2, 3, false);
 
-    g.printGraph();
-}
+//     g.printGraph();
+// }
