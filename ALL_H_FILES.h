@@ -3,6 +3,8 @@
 
 #define LOG(x) std::cout << x << std::endl ;
 
+#include<stdio.h>
+
 #include <iostream>
 
 #include <string>

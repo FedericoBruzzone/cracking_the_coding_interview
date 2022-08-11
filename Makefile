@@ -13,9 +13,9 @@ chapter_2 = .\cracking_the_coding_interview\chapter_2
 chapter_3 = .\cracking_the_coding_interview\chapter_3
 chapter_4 = .\cracking_the_coding_interview\chapter_4
 
-name = 3.6_animal_shelter
+name = 4.1_route_between_nodes
 
-DIR = $(chapter_3)
+DIR = $(chapter_4)
 FILE = $(name)
 
 # The build target 
