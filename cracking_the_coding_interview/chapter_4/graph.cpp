@@ -2,19 +2,21 @@
 
 // =============================================================
 
-class Node
-{
-
 enum State { Unvisited, Visited, Visiting };
 
+class Node
+{
 public:
     int _data;
     State _state;
     //std::vector<Node*> childern;
 
+    Node() {}
+
     Node(int data)
     {
         this->_data = data;
+        _state = Unvisited;
     }
 };
 
@@ -31,12 +33,12 @@ public:
         _adjLists = new std::list<Node> [_numVertices];
     }
 
-    void addEdge(int src, int dest, bool bi)
+    void addEdge(Node src, Node dest, bool bi)
     {
-        _adjLists[src].push_back(dest);
+        _adjLists[src._data].push_back(dest);
         if (bi)
         {
-            _adjLists[dest].push_back(src);
+            _adjLists[dest._data].push_back(src);
         }
     }
 
@@ -45,11 +47,22 @@ public:
         for (int d = 0; d < _numVertices; ++d)
         {
             std::cout << "\n Vertex " << d << ":";
-            for (int x : _adjLists[d])
+            for (auto x : _adjLists[d])
             {
-                std::cout << " -> " << x;
+                std::cout << " -> " << x._data;
             }
             printf("\n");
+        }
+    }
+
+    void setUnvisited()
+    {
+        for (int d = 0; d < _numVertices; ++d)
+        {
+            for (auto x : _adjLists[d])
+            {
+                x._state = Unvisited;
+            }
         }
     }
 };
