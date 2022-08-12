@@ -29,20 +29,16 @@ bool searchBFS(Node* start, Node* end)
     if (start == end) return true;
 
     start->setUnvisited();
-    
-    std::list<Node*> queue;
-
     start->_state = Visited;
+    std::list<Node*> queue;
     queue.push_back(start);
- 
-    std::vector<Node*>::iterator child;
- 
+
     while (!queue.empty())
     {
         start = queue.front();
         queue.pop_front();
  
-        for (child = std::begin(start->_children); child != std::end(start->_children); ++child)
+        for (std::vector<Node*>::iterator child = std::begin(start->_children); child != std::end(start->_children); ++child)
         {
             if ((*child) == end) return true;
 
