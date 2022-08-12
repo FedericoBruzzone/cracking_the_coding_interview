@@ -11,51 +11,80 @@
 
 // =============================================================
 
+enum State { Unvisited, Visited, Visiting };
+
 class Node
 {
 public:
-    int data;
-    std::vector<Node*> children;
+    int _data;
+    State _state;
+    std::vector<Node*> _children;
 
     Node (int data)
     {
-        children = std::vector<Node*>();
-        this->data = data;
+        _children = std::vector<Node*>();
+        this->_data = data;
+        _state = Unvisited;
     }
 
     void addChildren(std::vector<Node*> children)
     {
         if (children.empty()) return;
 
-        for (auto child : children)
+        for (std::vector<Node*>::iterator child = std::begin(children); child != std::end(children); ++child)
         {
-            children.push_back(child);
+            _children.push_back(*child);
+        }
+    }
+
+    void setUnvisited()
+    {
+        this->_state = Unvisited;
+
+        for (std::vector<Node*>::iterator child = std::begin(_children); child != std::end(_children); ++child)
+        {
+            (*child)->setUnvisited();
         }
     }
 
     void print()
     {
-        std::cout << "\n Vertex " << this->data << ":";
-        for (auto child : children)
-        {
-            std::cout << " -> " << child->data;
-        }
-            printf("\n");
+        std::cout << "Root: ";
+        print(6);
+        setUnvisited();
     }
-};
 
-class Graph
-{
-public:
-    Node* root;
-
-    Graph() {}
-
-    Graph(Node* root) 
+private:
+    // DFS
+    void print(int n) 
     {
-        this->root = root;
+        std::cout << this->_data;
+        printf("\n");
+        
+        this->_state = Visited;
+
+        for (std::vector<Node*>::iterator child = std::begin(_children); child != std::end(_children); ++child)
+        {
+            for (int s = 0; s < n; ++s) { std::cout << " "; }
+            if ((*child)->_state == Unvisited)
+                (*child)->print(n+1);
+        }
     }
+
 };
+
+// class Graph
+// {
+// public:
+//     Node* _root;
+
+//     Graph() {}
+
+//     Graph(Node* root) 
+//     {
+//         this->_root = root;
+//     }
+// };
 
 // =============================================================
 
