@@ -2,73 +2,6 @@
 
 // =============================================================
 
-enum State { Unvisited, Visited, Visiting };
-
-class Node
-{
-public:
-    int _data;
-    State _state;
-    //std::vector<Node*> childern;
-
-    Node() {}
-
-    Node(int data)
-    {
-        this->_data = data;
-        _state = Unvisited;
-    }
-};
-
-// =============================================================
-
-class Graph{
-public:
-    int _numVertices;
-     std::list<Node>* _adjLists;
-
-    Graph(int numVertices) 
-    {
-        this->_numVertices = numVertices;
-        _adjLists = new std::list<Node> [_numVertices];
-    }
-
-    void addEdge(Node src, Node dest, bool bi)
-    {
-        _adjLists[src._data].push_back(dest);
-        if (bi)
-        {
-            _adjLists[dest._data].push_back(src);
-        }
-    }
-
-    void printGraph()
-    {
-        for (int d = 0; d < _numVertices; ++d)
-        {
-            std::cout << "\n Vertex " << d << ":";
-            for (auto x : _adjLists[d])
-            {
-                std::cout << " -> " << x._data;
-            }
-            printf("\n");
-        }
-    }
-
-    void setUnvisited()
-    {
-        for (int d = 0; d < _numVertices; ++d)
-        {
-            for (auto x : _adjLists[d])
-            {
-                x._state = Unvisited;
-            }
-        }
-    }
-};
-
-// =============================================================
-
 // struct Node
 // {
 //     std::string data;
@@ -78,18 +11,51 @@ public:
 
 // =============================================================
 
-// class Node
-// {
-// public:
-//     std::string name;
-//     std::vector<Node*> children;
-// };
+class Node
+{
+public:
+    int data;
+    std::vector<Node*> children;
 
-// class Graph
-// {
-// public:
-//     Node* root;
-// };
+    Node (int data)
+    {
+        children = std::vector<Node*>();
+        this->data = data;
+    }
+
+    void addChildren(std::vector<Node*> children)
+    {
+        if (children.empty()) return;
+
+        for (auto child : children)
+        {
+            children.push_back(child);
+        }
+    }
+
+    void print()
+    {
+        std::cout << "\n Vertex " << this->data << ":";
+        for (auto child : children)
+        {
+            std::cout << " -> " << child->data;
+        }
+            printf("\n");
+    }
+};
+
+class Graph
+{
+public:
+    Node* root;
+
+    Graph() {}
+
+    Graph(Node* root) 
+    {
+        this->root = root;
+    }
+};
 
 // =============================================================
 
