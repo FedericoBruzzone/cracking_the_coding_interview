@@ -33,7 +33,7 @@ std::string compressionString(std::string s)
     {
         countConsecutive++;
 
-        if (s.at(i) != s.at(i+1) || i + 1 >= s.size())
+        if (i + 1 >= s.size() || s.at(i) != s.at(i+1))
         {
             ss.put(s.at(i));
             ss.put(char(countConsecutive));
