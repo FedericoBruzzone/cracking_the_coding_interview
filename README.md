@@ -275,3 +275,11 @@ and implement operations such as `enqueue`, `dequeueAny`, `dequeueDog` and `dequ
 Given a directed graph and two nodes (S and E), design an algorithm to find whether there is a route from S to E.
 
 [Solution 4.1](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_4/4.1_route_between_nodes.cpp)
+
+---
+
+**4.2 Minimal Tree**:
+
+Given a sorted (increase oreder) array with unique integer elements, write an algorithm to create a binary search tree with minimal height.
+
+[Solution 4.2](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_4/4.2_minimal_tree.cpp)
