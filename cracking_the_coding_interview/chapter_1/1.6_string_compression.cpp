@@ -12,7 +12,7 @@
 //     {
 //         countConsecutive++;
 
-//         if (s.at(i) != s.at(i+1) || i + 1 >= s.size())
+//         if (i + 1 >= s.size() || s.at(i) != s.at(i+1))
 //         {
 //             temp += s.at(i) + std::to_string(countConsecutive);
 //             countConsecutive = 0;

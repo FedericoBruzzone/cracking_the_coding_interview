@@ -7,7 +7,7 @@
 // First implementation 
 // bool removeDups(Node* head) //O(N) time - O(N) space
 // {
-//     if (head == NULL)      return true; 
+//     if (head == NULL)       return true; 
 //     if (head->next == NULL) return true;
 
 //     std::vector<int> memory (1000);
@@ -38,15 +38,19 @@ bool removeDups(Node* head) //O(N^2) time - O(1) space
     if (head->next == NULL) return true;
     
     Node* node = head;
+    Node* runner;
+    Node* temp;
 
     while (node->next != NULL)
     {
-        Node* runner = node;
+        runner = node;
         while (runner->next != NULL)
         {
             if (node->data == runner->next->data)
             {
+                temp = runner->next;
                 runner->next = runner->next->next;
+                delete(temp);
             }
             else
             {
