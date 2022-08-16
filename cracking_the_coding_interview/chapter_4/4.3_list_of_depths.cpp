@@ -23,9 +23,10 @@ void createLevelLinkedListDFS(TNode* root, std::vector<std::list<TNode*>>* lists
     }
     else
     {   
-        list = lists->at(index);
-        list.push_back(root);
-        lists->at(index) = list;
+        lists->at(index).push_back(root);
+        // list = lists->at(index);
+        // list.push_back(root);
+        // lists->at(index) = list;
     }
 
     createLevelLinkedListDFS(root->left, lists, index + 1);
@@ -67,29 +68,29 @@ std::vector<std::list<TNode*>> createLevelLinkedListBFS(TNode* root)
 
 // =============================================================
 
-int main()
-{
-    TNode* btree = createMinimalBST({1, 2, 3, 4, 5, 6, 7, 8, 9, 10});
-    std::vector<std::list<TNode*>> listsBFS = createLevelLinkedListBFS(btree);
-    std::vector<std::list<TNode*>> listsDFS = createLevelLinkedListDFS(btree);
+// int main()
+// {
+//     TNode* btree = createMinimalBST({1, 2, 3, 4, 5, 6, 7, 8, 9, 10});
+//     std::vector<std::list<TNode*>> listsBFS = createLevelLinkedListBFS(btree);
+//     std::vector<std::list<TNode*>> listsDFS = createLevelLinkedListDFS(btree);
 
-    LOG("=== BFS ===")
-    for (std::list<TNode*> list : listsBFS)
-    {
-        for (TNode* node : list)
-        {
-            LOG(node->data)
-        }
-        printf("\n");
-    }
+//     LOG("=== BFS ===")
+//     for (std::list<TNode*> list : listsBFS)
+//     {
+//         for (TNode* node : list)
+//         {
+//             LOG(node->data)
+//         }
+//         printf("\n");
+//     }
 
-    LOG("=== DFS ===")
-    for (std::list<TNode*> list : listsDFS)
-    {
-        for (TNode* node : list)
-        {
-            LOG(node->data)
-        }
-        printf("\n");
-    }
-}
+//     LOG("=== DFS ===")
+//     for (std::list<TNode*> list : listsDFS)
+//     {
+//         for (TNode* node : list)
+//         {
+//             LOG(node->data)
+//         }
+//         printf("\n");
+//     }
+// }
