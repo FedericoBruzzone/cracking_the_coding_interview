@@ -2,7 +2,6 @@
 
 #include "tree.cpp"
 
-
 // =============================================================
 
 Node* createMinimalBST(std::vector<int> array, int start, int end)
