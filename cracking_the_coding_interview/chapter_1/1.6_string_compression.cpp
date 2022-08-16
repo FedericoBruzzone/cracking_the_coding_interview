@@ -3,23 +3,23 @@
 // =============================================================
 
 // First implementation
-// std::string compressionString(std::string s)
-// {
-//     std::string temp = "";
-//     int countConsecutive = 0;
+std::string compressionString(std::string s)
+{
+    std::string temp = "";
+    int countConsecutive = 0;
 
-//     for (int i = 0; i < s.size(); i++)
-//     {
-//         countConsecutive++;
+    for (int i = 0; i < s.size(); i++)
+    {
+        countConsecutive++;
 
-//         if (i + 1 >= s.size() || s.at(i) != s.at(i+1))
-//         {
-//             temp += s.at(i) + std::to_string(countConsecutive);
-//             countConsecutive = 0;
-//         }
-//     }
-//     return temp.size() < s.size() ? temp : s;
-// }
+        if (i + 1 >= s.size() || s.at(i) != s.at(i+1))
+        {
+            temp += s.at(i) + std::to_string(countConsecutive);
+            countConsecutive = 0;
+        }
+    }
+    return temp.size() < s.size() ? temp : s;
+}
 
 // =============================================================
 
@@ -45,8 +45,8 @@ std::string compressionString(std::string s)
 
 // =============================================================
 
-int main()
-{
-    std::string s = compressionString("aaabbbbcccc");
-    LOG(s);
-}
+// int main()
+// {
+//     std::string s = compressionString("aaabbbbcccc");
+//     LOG(s);
+// }

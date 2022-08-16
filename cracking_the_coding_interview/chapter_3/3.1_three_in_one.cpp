@@ -24,66 +24,66 @@
 
 // The code for this solution is below
 
-// class FullStackException : public std::exception
-// {
-//     virtual const char* what() const throw()
-//     {
-//         return "FullStackException";
-//     }
-// };
+class FullStackException : public std::exception
+{
+    virtual const char* what() const throw()
+    {
+        return "FullStackException";
+    }
+};
 
-// class FixedMultiStack
-// {
-// private: 
-//     int numberOfStack = 3;
-//     int stackCapacity;
-//     std::vector<int> values;
-//     std::vector<int> sizes;
+class FixedMultiStack
+{
+private: 
+    int numberOfStack = 3;
+    int stackCapacity;
+    std::vector<int> values;
+    std::vector<int> sizes;
 
-//     int indexFOfTop(int stackNum)
-//     {
-//         int offset = stackNum * stackCapacity;
-//         int size = sizes[stackNum];
-//         return size + offset - 1;
-//     }
+    int indexFOfTop(int stackNum)
+    {
+        int offset = stackNum * stackCapacity;
+        int size = sizes[stackNum];
+        return size + offset - 1;
+    }
 
-// public:
-//     FixedMultiStack(int stackSize)
-//     {
-//         stackCapacity = stackSize;
-//         values = std::vector<int>(stackSize * numberOfStack);
-//         sizes = std::vector<int>(numberOfStack);
-//     }
+public:
+    FixedMultiStack(int stackSize)
+    {
+        stackCapacity = stackSize;
+        values = std::vector<int>(stackSize * numberOfStack);
+        sizes = std::vector<int>(numberOfStack);
+    }
 
-//     bool isFull (int stackNum) { return sizes[stackNum] == stackCapacity; }
-//     bool isEmpty(int stackNum) { return sizes[stackNum] == 0; }
+    bool isFull (int stackNum) { return sizes[stackNum] == stackCapacity; }
+    bool isEmpty(int stackNum) { return sizes[stackNum] == 0; }
 
-//     void push(int stackNum, int value)
-//     {
-//         if (isFull(stackNum)) throw FullStackException();
+    void push(int stackNum, int value)
+    {
+        if (isFull(stackNum)) throw FullStackException();
         
-//         sizes[stackNum]++;
-//         values[indexFOfTop(stackNum)] = value;
-//     }
+        sizes[stackNum]++;
+        values[indexFOfTop(stackNum)] = value;
+    }
 
-//     int pop(int stackNum)
-//     {
-//         if (isEmpty(stackNum)) throw FullStackException();
+    int pop(int stackNum)
+    {
+        if (isEmpty(stackNum)) throw FullStackException();
         
-//         int top_index = indexFOfTop(stackNum);
-//         int value = values[top_index];
-//         values[top_index] = 0;
-//         sizes[stackNum]--;
-//         return value;
-//     }
+        int top_index = indexFOfTop(stackNum);
+        int value = values[top_index];
+        values[top_index] = 0;
+        sizes[stackNum]--;
+        return value;
+    }
 
-//     int peek(int stackNum)
-//     {
-//         if (isEmpty(stackNum)) throw FullStackException();
+    int peek(int stackNum)
+    {
+        if (isEmpty(stackNum)) throw FullStackException();
         
-//         return values[indexFOfTop(stackNum)];
-//     }
-// };
+        return values[indexFOfTop(stackNum)];
+    }
+};
 
 // =============================================================
 
@@ -245,7 +245,7 @@ public:
 
 // =============================================================
 
-int main()
-{
+// int main()
+// {
 
-}
+// }

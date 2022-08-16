@@ -8,7 +8,6 @@
 //    return dynamic_cast<const Base*>(ptr) != nullptr;
 // }
 
-
 class Animal
 {
 public:
@@ -110,32 +109,32 @@ public:
 
 // =============================================================
 
-int main()
-{
-    AnimalQueue aq;
+// int main()
+// {
+//     AnimalQueue aq;
     
-    aq.enqueue(new Dog("d1"));
-    aq.enqueue(new Cat("c1"));
-    aq.enqueue(new Cat("c2"));
-    aq.enqueue(new Dog("d2"));
+//     aq.enqueue(new Dog("d1"));
+//     aq.enqueue(new Cat("c1"));
+//     aq.enqueue(new Cat("c2"));
+//     aq.enqueue(new Dog("d2"));
 
-    LOG("cats")
-    for (auto i : aq._cats) { LOG(i->getName()) LOG(i->getOrder()) }
-    LOG("dogs")
-    for (auto i : aq._dogs) { LOG(i->getName()) LOG(i->getOrder()) }
+//     LOG("cats")
+//     for (auto i : aq._cats) { LOG(i->getName()) LOG(i->getOrder()) }
+//     LOG("dogs")
+//     for (auto i : aq._dogs) { LOG(i->getName()) LOG(i->getOrder()) }
 
-    aq.dequeueAny();
+//     aq.dequeueAny();
 
-    LOG("cats")
-    for (auto i : aq._cats) { LOG(i->getName()) }
-    LOG("dogs")
-    for (auto i : aq._dogs) { LOG(i->getName()) }
+//     LOG("cats")
+//     for (auto i : aq._cats) { LOG(i->getName()) }
+//     LOG("dogs")
+//     for (auto i : aq._dogs) { LOG(i->getName()) }
 
-    aq.dequeueAny();
+//     aq.dequeueAny();
 
-    LOG("cats")
-    for (auto i : aq._cats) { LOG(i->getName()) }
-    LOG("dogs")
-    for (auto i : aq._dogs) { LOG(i->getName()) }
+//     LOG("cats")
+//     for (auto i : aq._cats) { LOG(i->getName()) }
+//     LOG("dogs")
+//     for (auto i : aq._dogs) { LOG(i->getName()) }
 
-}
+// }

@@ -37,11 +37,11 @@ void replaceSpaces(std::string &s, int trueLength)
 
 // =============================================================
 
-int main() 
-{
-    std::string s1 = "Mr John Smith    ";
-    int trueLength = 13;
-    std::cout << s1 << std::endl;
-    replaceSpaces(s1, trueLength);
-    std::cout << s1 << std::endl;
-}
+// int main() 
+// {
+//     std::string s1 = "Mr John Smith    ";
+//     int trueLength = 13;
+//     std::cout << s1 << std::endl;
+//     replaceSpaces(s1, trueLength);
+//     std::cout << s1 << std::endl;
+// }

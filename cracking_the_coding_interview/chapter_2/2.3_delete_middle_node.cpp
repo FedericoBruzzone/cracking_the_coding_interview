@@ -19,14 +19,14 @@ bool deleteMiddleNode(Node* node)
 
 // =============================================================
 
-int main()
-{
-    Node* n = new Node(10);
-    n->appendToTail(20);
-    n->appendToTail(30);
-    n->appendToTail(40);
+// int main()
+// {
+//     Node* n = new Node(10);
+//     n->appendToTail(20);
+//     n->appendToTail(30);
+//     n->appendToTail(40);
 
-    n->print(n);
-    deleteMiddleNode(n->next);
-    n->print(n);
-}
+//     n->print(n);
+//     deleteMiddleNode(n->next);
+//     n->print(n);
+// }

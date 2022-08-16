@@ -1,5 +1,7 @@
 #include "../../ALL_H_FILES.h"
 
+// =============================================================
+
 class EmptyQueueException : public std::exception
 {
     virtual const char* what() const throw()
@@ -85,17 +87,19 @@ private:
     QueueNode<T>* last = NULL;
 };
 
-int main()
-{
-    Queue<int>* queue = new Queue<int>();
-    
-    queue->add(10);
-    queue->print();
+// =============================================================
 
-    queue->add(20);
-    queue->print();
-
-    queue->add(30);
-    queue->print();
+// int main()
+// {
+//     Queue<int>* queue = new Queue<int>();
     
-}  
+//     queue->add(10);
+//     queue->print();
+
+//     queue->add(20);
+//     queue->print();
+
+//     queue->add(30);
+//     queue->print();
+    
+// }  

@@ -3,61 +3,61 @@
 // =============================================================
 
 // First implemetation
-// bool oneEditAway(std::string first, std::string second)
-// {
-//     if (first.size() == second.size())
-//     {
-//         return oneEditReplace(first, second);
-//     } 
-//     else if (first.size() + 1 == second.size())
-//     {
-//         return oneEditInsert(first, second);
-//     }
-//     else if (first.size() - 1 == second.size())
-//     {
-//         return oneEditInsert(second, first);
-//     }
-// }
-// bool oneEditReplace(std::string first, std::string second)
-// {
-//     bool foundDifference = false;
-//     for (int i = 0; i < first.size(); i++)
-//     {
-//         if (first.at(i) != second.at(i))
-//         {
-//             if (foundDifference)
-//             {
-//                 return false;
-//             }
-//             else
-//             {
-//                 foundDifference = true;
-//             }
-//         }
-//     }
-//     return true;
-// }
+bool oneEditAway(std::string first, std::string second)
+{
+    if (first.size() == second.size())
+    {
+        return oneEditReplace(first, second);
+    } 
+    else if (first.size() + 1 == second.size())
+    {
+        return oneEditInsert(first, second);
+    }
+    else if (first.size() - 1 == second.size())
+    {
+        return oneEditInsert(second, first);
+    }
+}
+bool oneEditReplace(std::string first, std::string second)
+{
+    bool foundDifference = false;
+    for (int i = 0; i < first.size(); i++)
+    {
+        if (first.at(i) != second.at(i))
+        {
+            if (foundDifference)
+            {
+                return false;
+            }
+            else
+            {
+                foundDifference = true;
+            }
+        }
+    }
+    return true;
+}
 
-// bool oneEditInsert(std::string first, std::string second)
-// {
-//     int index1 = 0;
-//     int index2 = 0;
+bool oneEditInsert(std::string first, std::string second)
+{
+    int index1 = 0;
+    int index2 = 0;
 
-//     while (index1 <= first.size() && index2 <= second.size())
-//     {
-//         if (first.at(index1) != second.at(index2))
-//         {
-//             if (index1 != index2) return false;
-//             index2++;
-//         }
-//         else
-//         {
-//             index1++;
-//             index2++;
-//         }
-//     }
-//     return true;
-// }
+    while (index1 <= first.size() && index2 <= second.size())
+    {
+        if (first.at(index1) != second.at(index2))
+        {
+            if (index1 != index2) return false;
+            index2++;
+        }
+        else
+        {
+            index1++;
+            index2++;
+        }
+    }
+    return true;
+}
 
 // =============================================================
 
@@ -99,7 +99,7 @@ bool oneEditAway(std::string first, std::string second)
 
 // =============================================================
 
-int main()
-{
+// int main()
+// {
     
-}
+// }

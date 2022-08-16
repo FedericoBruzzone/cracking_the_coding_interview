@@ -3,55 +3,55 @@
 // =============================================================
 
 // First implementation
-// void nullifyRaw(std::vector<std::vector<int>> ** m, int raw)
-// {
-//     for (int j = 0; j < (**m)[0].size(); j++)
-//     {
-//         (**m).at(raw).at(j) = 0;
-//     }
-// }
+void nullifyRaw(std::vector<std::vector<int>> ** m, int raw)
+{
+    for (int j = 0; j < (**m)[0].size(); j++)
+    {
+        (**m).at(raw).at(j) = 0;
+    }
+}
 
-// void nullifyColumn(std::vector<std::vector<int>> ** m, int column)
-// {
-//     for (int i = 0; i < (**m)[0].size(); i++)
-//     {
-//         (**m).at(i).at(column) = 0;
-//     }
-// }
+void nullifyColumn(std::vector<std::vector<int>> ** m, int column)
+{
+    for (int i = 0; i < (**m)[0].size(); i++)
+    {
+        (**m).at(i).at(column) = 0;
+    }
+}
 
-// void setZeros(std::vector<std::vector<int>> * m)
-// {
-//     std::vector<bool> raw ((*m).size());
-//     std::vector<bool> column ((*m)[0].size());
+void setZeros(std::vector<std::vector<int>> * m)
+{
+    std::vector<bool> raw ((*m).size());
+    std::vector<bool> column ((*m)[0].size());
 
-//     for (int i = 0; i < (*m).size(); i++)
-//     {
-//         for (int j = 0; j < (*m).size(); j++)
-//         {
-//             if ((*m).at(i).at(j) == 0)
-//             {
-//                 raw.at(i) = true;
-//                 column.at(j) = true;
-//             }
-//         }
-//     }
+    for (int i = 0; i < (*m).size(); i++)
+    {
+        for (int j = 0; j < (*m).size(); j++)
+        {
+            if ((*m).at(i).at(j) == 0)
+            {
+                raw.at(i) = true;
+                column.at(j) = true;
+            }
+        }
+    }
 
-//     for (int i = 0; i < raw.size(); i++)
-//     {
-//         if (raw.at(i)) 
-//         {
-//             nullifyRaw(&m, i);  
-//         }
-//     }
+    for (int i = 0; i < raw.size(); i++)
+    {
+        if (raw.at(i)) 
+        {
+            nullifyRaw(&m, i);  
+        }
+    }
 
-//     for (int j = 0; j < column.size(); j++)
-//     {
-//         if (column.at(j))
-//         {
-//             nullifyColumn(&m, j); 
-//         } 
-//     }
-// }
+    for (int j = 0; j < column.size(); j++)
+    {
+        if (column.at(j))
+        {
+            nullifyColumn(&m, j); 
+        } 
+    }
+}
 
 // =============================================================
 
@@ -124,32 +124,32 @@ void setZeros(std::vector<std::vector<int>> * m)
 
 // =============================================================
 
-int main()
-{
-    std::vector<std::vector<int>> matrix {{1,2,3,4},
-                                          {2,3,0,5},
-                                          {3,4,5,6},
-                                          {4,5,6,7}};
+// int main()
+// {
+//     std::vector<std::vector<int>> matrix {{1,2,3,4},
+//                                           {2,3,0,5},
+//                                           {3,4,5,6},
+//                                           {4,5,6,7}};
 
-    for (int i = 0; i < matrix.size(); i++)
-    {
-        for (int j = 0; j < matrix[0].size(); j++)
-        {
-            std::cout << matrix[i][j];
-        }
-        std::cout << std::endl;
-    }
-    std::cout << std::endl;
+//     for (int i = 0; i < matrix.size(); i++)
+//     {
+//         for (int j = 0; j < matrix[0].size(); j++)
+//         {
+//             std::cout << matrix[i][j];
+//         }
+//         std::cout << std::endl;
+//     }
+//     std::cout << std::endl;
 
-    setZeros(&matrix);
+//     setZeros(&matrix);
     
-    for (int i = 0; i < matrix.size(); i++)
-    {
-        for (int j = 0; j < matrix[0].size(); j++)
-        {
-            std::cout << matrix[i][j];
-        }
-        std::cout << std::endl;
-    }
+//     for (int i = 0; i < matrix.size(); i++)
+//     {
+//         for (int j = 0; j < matrix[0].size(); j++)
+//         {
+//             std::cout << matrix[i][j];
+//         }
+//         std::cout << std::endl;
+//     }
     
-}
+// }

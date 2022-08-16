@@ -82,25 +82,25 @@ Node* findIntersection(Node* n1, Node* n2)
 
 // =============================================================
 
-int main()
-{
-    Node* common = new Node(10);
-    common->appendToTail(11);
-    common->appendToTail(12);
+// int main()
+// {
+//     Node* common = new Node(10);
+//     common->appendToTail(11);
+//     common->appendToTail(12);
 
-    Node* n1 = new Node(7);
-    n1->appendToTail(1);
-    n1->appendToTail(6);
-    n1->appendToTail(common);
+//     Node* n1 = new Node(7);
+//     n1->appendToTail(1);
+//     n1->appendToTail(6);
+//     n1->appendToTail(common);
 
-    Node* n2 = new Node(5);
-    n2->appendToTail(9);
-    n2->appendToTail(2);
-    n2->appendToTail(common);
+//     Node* n2 = new Node(5);
+//     n2->appendToTail(9);
+//     n2->appendToTail(2);
+//     n2->appendToTail(common);
 
-    n1->print(n1);
-    n2->print(n2);
+//     n1->print(n1);
+//     n2->print(n2);
 
-    Node* output = findIntersection(n1, n2);
-    output->print(output);
-}
+//     Node* output = findIntersection(n1, n2);
+//     output->print(output);
+// }

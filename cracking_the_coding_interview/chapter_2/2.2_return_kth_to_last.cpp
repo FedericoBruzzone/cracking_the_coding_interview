@@ -7,25 +7,25 @@
 // If the size of the linklist is known, the kth to last element is the (length - k)th element.
 
 // First implementation (recursive)
-// Node* kthToLast(Node* head, int k, int& i)
-// {
-//     if (head == NULL) return NULL;
+Node* kthToLast(Node* head, int k, int& i)
+{
+    if (head == NULL) return NULL;
 
-//     Node* node = kthToLast(head->next, k, i);
+    Node* node = kthToLast(head->next, k, i);
 
-//     i = i + 1;
-//     if (i == k)
-//     {
-//         return head;
-//     }
-//     return node;
-// }
+    i = i + 1;
+    if (i == k)
+    {
+        return head;
+    }
+    return node;
+}
 
-// Node* kthToLast(Node* head, int k)
-// {
-//     int i = 0;
-//     return kthToLast(head, k, i);
-// }
+Node* kthToLast(Node* head, int k)
+{
+    int i = 0;
+    return kthToLast(head, k, i);
+}
 
 // =============================================================
 
@@ -54,15 +54,15 @@ Node* kthToLast(Node* head, int k)
 
 // =============================================================
 
-int main()
-{
-    Node* n = new Node(10);
-    n->appendToTail(20);
-    n->appendToTail(30);
-    n->appendToTail(40);
+// int main()
+// {
+//     Node* n = new Node(10);
+//     n->appendToTail(20);
+//     n->appendToTail(30);
+//     n->appendToTail(40);
 
-    LOG(n->next->next->next);
-    n->print(n);
-    LOG(kthToLast(n, 1));
-    n->print(n);
-}
+//     LOG(n->next->next->next);
+//     n->print(n);
+//     LOG(kthToLast(n, 1));
+//     n->print(n);
+// }

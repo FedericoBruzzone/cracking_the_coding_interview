@@ -5,29 +5,29 @@
 // =============================================================
 
 // First implementation 
-// bool removeDups(Node* head) //O(N) time - O(N) space
-// {
-//     if (head == NULL)       return true; 
-//     if (head->next == NULL) return true;
+bool removeDups(Node* head) //O(N) time - O(N) space
+{
+    if (head == NULL)       return true; 
+    if (head->next == NULL) return true;
 
-//     std::vector<int> memory (1000);
-//     std::fill(memory.begin(), memory.end(), 0);
-//     Node* node = head;
+    std::vector<int> memory (1000);
+    std::fill(memory.begin(), memory.end(), 0);
+    Node* node = head;
 
-//     while (node->next != NULL)
-//     {
-//         if (memory[node->data] >= 1)
-//         {
-//             node->deleteNode(head, node->data);
-//         }
-//         else
-//         {
-//             memory[node->data]++;
-//         }
-//         node = node->next;
-//     }
-//     return true;
-// }
+    while (node->next != NULL)
+    {
+        if (memory[node->data] >= 1)
+        {
+            node->deleteNode(head, node->data);
+        }
+        else
+        {
+            memory[node->data]++;
+        }
+        node = node->next;
+    }
+    return true;
+}
 
 // =============================================================
 
@@ -64,19 +64,19 @@ bool removeDups(Node* head) //O(N^2) time - O(1) space
 
 // =============================================================
 
-int main()
-{
-    Node* n = new Node(10);
+// int main()
+// {
+//     Node* n = new Node(10);
     
-    n->appendToTail(20);
+//     n->appendToTail(20);
     
-    n->appendToTail(30); n->appendToTail(30); n->appendToTail(30); 
+//     n->appendToTail(30); n->appendToTail(30); n->appendToTail(30); 
 
-    n->appendToTail(40); 
+//     n->appendToTail(40); 
     
-    n->print(n);
+//     n->print(n);
 
-    removeDups(n);
+//     removeDups(n);
     
-    n->print(n);
-}
+//     n->print(n);
+// }

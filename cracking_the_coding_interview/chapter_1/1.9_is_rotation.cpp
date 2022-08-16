@@ -17,10 +17,10 @@ bool isRotation(std::string s1, std::string s2)
 
 // =============================================================
 
-int main()
-{
-    std::string s1 = "waterbottle";
-    std::string s2 = "erbottlewat";
+// int main()
+// {
+//     std::string s1 = "waterbottle";
+//     std::string s2 = "erbottlewat";
 
-    LOG(isRotation(s1,s2));
-}
+//     LOG(isRotation(s1,s2));
+// }

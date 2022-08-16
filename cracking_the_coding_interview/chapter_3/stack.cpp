@@ -1,5 +1,7 @@
 #include "../../ALL_H_FILES.h"
 
+// =============================================================
+
 class EmptyStackException : public std::exception
 {
     virtual const char* what() const throw()
@@ -74,21 +76,21 @@ private:
 
 };
 
-int main()
-{
-    Stack<int>* stack = new Stack<int>();
+// =============================================================
+
+// int main()
+// {
+//     Stack<int>* stack = new Stack<int>();
     
-    LOG(stack->isEmpty())
-    stack->push(10);
-    LOG(stack->peek())
-    stack->push(20);
-    stack->push(30);
-    stack->push(40);
-    LOG(stack->peek())
-    LOG(stack->pop())
-    LOG(stack->peek())
+//     LOG(stack->isEmpty())
+//     stack->push(10);
+//     LOG(stack->peek())
+//     stack->push(20);
+//     stack->push(30);
+//     stack->push(40);
+//     LOG(stack->peek())
+//     LOG(stack->pop())
+//     LOG(stack->peek())
 
-    //stack.print();
-
-
-}  
+//     //stack.print();
+// }  

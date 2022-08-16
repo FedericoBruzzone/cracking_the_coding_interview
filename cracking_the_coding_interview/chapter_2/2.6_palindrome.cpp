@@ -5,122 +5,122 @@
 // =============================================================
 
 // First implementation
-// Node* reverseAndClone(Node* node)
-// {
-//     Node* head = NULL;
+Node* reverseAndClone(Node* node)
+{
+    Node* head = NULL;
 
-//     // 1 -> 2 -> 3
-//     // 3 -> 2 -> 1
-//     while (node != NULL)
-//     {
-//         Node* n = new Node(node->data);
-//         n->next = head;
-//         head = n;
-//         node = node->next;
-//     }
+    // 1 -> 2 -> 3
+    // 3 -> 2 -> 1
+    while (node != NULL)
+    {
+        Node* n = new Node(node->data);
+        n->next = head;
+        head = n;
+        node = node->next;
+    }
 
-//     return head;
-// }
+    return head;
+}
 
-// bool isEqual(Node* n1, Node* n2)
-// {
-//     while (n1 != NULL && n2 != NULL)
-//     {
-//         if (!(n1->data == n2->data)) 
-//             return false;
+bool isEqual(Node* n1, Node* n2)
+{
+    while (n1 != NULL && n2 != NULL)
+    {
+        if (!(n1->data == n2->data)) 
+            return false;
 
-//         n1 = n1->next;
-//         n2 = n2->next;
-//     }
+        n1 = n1->next;
+        n2 = n2->next;
+    }
 
-//     return n1 == NULL && n2 == NULL;
-// }
+    return n1 == NULL && n2 == NULL;
+}
 
-// bool isPalindrome(Node* head)
-// {
-//     Node* reverse = reverseAndClone(head);
-//     return isEqual(head, reverse);
-// }
+bool isPalindrome(Node* head)
+{
+    Node* reverse = reverseAndClone(head);
+    return isEqual(head, reverse);
+}
 
 // =============================================================
 
 // Second implementation
-// bool isPalindrome(Node* head)
-// {
-//     Node* fast = head;
-//     Node* slow = head;
+bool isPalindrome(Node* head)
+{
+    Node* fast = head;
+    Node* slow = head;
 
-//     std::stack<int> stack;
-//     while (fast != NULL && fast->next != NULL)
-//     {
-//         stack.push(slow->data);
-//         slow = slow->next;
-//         fast = fast->next->next;
-//     }
+    std::stack<int> stack;
+    while (fast != NULL && fast->next != NULL)
+    {
+        stack.push(slow->data);
+        slow = slow->next;
+        fast = fast->next->next;
+    }
 
-//     if (fast != NULL)
-//     {
-//         slow = slow->next;
-//     }
+    if (fast != NULL)
+    {
+        slow = slow->next;
+    }
 
-//     while (slow != NULL)
-//     {
-//         int top = stack.top();
+    while (slow != NULL)
+    {
+        int top = stack.top();
 
-//         if (top != slow->data)
-//             return false;
+        if (top != slow->data)
+            return false;
         
         
-//         stack.pop();
-//         slow = slow->next;
-//     }
-//     return true;
-// }
+        stack.pop();
+        slow = slow->next;
+    }
+    return true;
+}
 
 // =============================================================
 
 // Third implementation (recursive)
-// class Result
-// {
-// public:
-//     Node* node;
-//     bool result;
+class Result
+{
+public:
+    Node* node;
+    bool result;
 
-//     Result(Node* node, bool result) 
-//         : result(result), node(node) {}
+    Result(Node* node, bool result) 
+        : result(result), node(node) {}
 
-// };
+};
 
-// Result isPalindromeRecurse(Node* head, int length)
-// {
-//     if (head == NULL || length <= 0)
-//     {
-//         return Result(head, true);
-//     }
-//     else if (length == 1)
-//     {
-//         return Result(head->next, true);
-//     }
+Result isPalindromeRecurse(Node* head, int length)
+{
+    if (head == NULL || length <= 0)
+    {
+        return Result(head, true);
+    }
+    else if (length == 1)
+    {
+        return Result(head->next, true);
+    }
 
-//     Result res = isPalindromeRecurse(head->next, length - 2);
+    Result res = isPalindromeRecurse(head->next, length - 2);
 
-//     if (!res.result || res.node == NULL)
-//     {
-//         return res;
-//     }
+    if (!res.result || res.node == NULL)
+    {
+        return res;
+    }
 
-//     res.result = (head->data == res.node->data);
-//     res.node = res.node->next;
+    res.result = (head->data == res.node->data);
+    res.node = res.node->next;
 
-//     return res;
-// }
+    return res;
+}
 
-// bool isPalindrome(Node* head)
-// {
-//     int length = head->length(head);
-//     Result p = isPalindromeRecurse(head, length);
-//     return p.result;
-// }
+bool isPalindrome(Node* head)
+{
+    int length = head->length(head);
+    Result p = isPalindromeRecurse(head, length);
+    return p.result;
+}
 
 // =============================================================
 
@@ -151,13 +151,13 @@ bool isPalindrome(Node* head)
 
 // =============================================================
 
-int main()
-{
-    Node* n1 = new Node(6);
-    n1->appendToTail(7);
-    n1->appendToTail(1);
-    n1->appendToTail(7);
-    n1->appendToTail(6);
+// int main()
+// {
+//     Node* n1 = new Node(6);
+//     n1->appendToTail(7);
+//     n1->appendToTail(1);
+//     n1->appendToTail(7);
+//     n1->appendToTail(6);
 
-    LOG(isPalindrome(n1));
-}
+//     LOG(isPalindrome(n1));
+// }

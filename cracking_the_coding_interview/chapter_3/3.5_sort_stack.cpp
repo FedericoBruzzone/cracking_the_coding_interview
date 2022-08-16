@@ -1,7 +1,5 @@
 #include "../../ALL_H_FILES.h"
 
-//#include "stack.cpp"
-
 // =============================================================
 
 void sort(std::stack<int>* stack)
@@ -33,7 +31,7 @@ void sort(std::stack<int>* stack)
 
 // =============================================================
 
-int main()
-{
+// int main()
+// {
     
-}
+// }

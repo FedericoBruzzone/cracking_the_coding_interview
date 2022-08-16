@@ -3,30 +3,30 @@
 // =============================================================
 
 // First implementation
-// char toLowerCase(char c)
-// {
-//     return static_cast<char>(static_cast<int>(c) + 32); 
-// }s
+char toLowerCase(char c)
+{
+    return static_cast<char>(static_cast<int>(c) + 32); 
+}
 
-// bool isUnique(std::string s) // ASCII string
-// {
-//     if (s.empty()) return 0; // s = ""
-//     if (s == " ") return 0;
+bool isUnique(std::string s) // ASCII string
+{
+    if (s.empty()) return 0; // s = ""
+    if (s == " ") return 0;
 
-//     std::array<bool, 128> aus = {};
+    std::array<bool, 128> aus = {};
 
-//     for (auto c : s)
-//     {
-//         if (static_cast<int>(c) >= 65 && static_cast<int>(c) <= 90)
-//             c = toLowerCase(c);
-//         if (aus[static_cast<int>(c)]) 
-//         {
-//             return false;
-//         }
-//         aus[c] = true;
-//     }
-//     return true;
-// }
+    for (auto c : s)
+    {
+        if (static_cast<int>(c) >= 65 && static_cast<int>(c) <= 90)
+            c = toLowerCase(c);
+        if (aus[static_cast<int>(c)]) 
+        {
+            return false;
+        }
+        aus[c] = true;
+    }
+    return true;
+}
 
 // =============================================================
 
@@ -57,12 +57,12 @@ bool isUnique(std::string s) // ASCII string ('a' to 'z')
 
 // =============================================================
 
-int main()
-{
-    std::string s1("ciao");
-    std::string s2("ciaoo");
-    std::string val1 = isUnique(s1) ? "true" : "false";
-    std::cout << s1 << " is unique? " << val1 << std::endl;
-    std::string val2 = isUnique(s2) ? "true" : "false";
-    std::cout << s2 << " is unique? " << val2 << std::endl;
-}
+// int main()
+// {
+//     std::string s1("ciao");
+//     std::string s2("ciaoo");
+//     std::string val1 = isUnique(s1) ? "true" : "false";
+//     std::cout << s1 << " is unique? " << val1 << std::endl;
+//     std::string val2 = isUnique(s2) ? "true" : "false";
+//     std::cout << s2 << " is unique? " << val2 << std::endl;
+// }

@@ -5,40 +5,40 @@
 // =============================================================
 
 // First implementation
-// class NodeWithMin
-// {
-// public:
-//     int value;
-//     int min;
+class NodeWithMin
+{
+public:
+    int value;
+    int min;
 
-//     NodeWithMin(int value, int min)
-//     {
-//         value = value;
-//         this->min = min;
-//     }
-// };
+    NodeWithMin(int value, int min)
+    {
+        value = value;
+        this->min = min;
+    }
+};
 
-// class StackWithMin : public Stack<NodeWithMin>
-// {
-// public:
-//     void push(int data) 
-//     {
-//         int newMin = std::min(data, min());
-//         Stack::push(NodeWithMin(data, newMin));
-//     }
+class StackWithMin : public Stack<NodeWithMin>
+{
+public:
+    void push(int data) 
+    {
+        int newMin = std::min(data, min());
+        Stack::push(NodeWithMin(data, newMin));
+    }
 
-//     int min() 
-//     {
-//         if (isEmpty()) 
-//         {
-//             return NULL; // Error
-//         }
-//         else
-//         {
-//             return peek().min;
-//         }
-//     }
-// };
+    int min() 
+    {
+        if (isEmpty()) 
+        {
+            return NULL; // Error
+        }
+        else
+        {
+            return peek().min;
+        }
+    }
+};
 
 // =============================================================
 
@@ -74,7 +74,7 @@ public:
 
 // =============================================================
 
-int main()
-{
+// int main()
+// {
 
-}
+// }

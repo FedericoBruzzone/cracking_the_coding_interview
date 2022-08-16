@@ -3,89 +3,102 @@
 // =============================================================
 
 // First implementation
-// bool isPermutationOfPalindrome(std::string s)
-// {
-//     std::vector<int> table = buildCharFrequencyTable(s);
-//     return checkMaxOneOdd(table);
-// }
+int getCharNumber(char c)
+{
+    int a = static_cast<int>('a');
+    int z = static_cast<int>('z');
+    int val = static_cast<int>(c);
 
-// std::vector<int> buildCharFrequencyTable(std::string s)
-// {
-//     std::vector<int> table(static_cast<int>('z') - 
-//                            static_cast<int>('a') + 1);
-//     int count = 0;
+    if (val <= z && val >= a)
+    {
+        return val - a;
+    }
+    return -1;
+}
 
-//     for (char c : s)
-//     {
-//         int index = getCharNumber(c);
-//         if (index != -1) table[index]++;
-//     }
+bool isPermutationOfPalindrome(std::string s)
+{
+    std::vector<int> table = buildCharFrequencyTable(s);
+    return checkMaxOneOdd(table);
+}
 
-//     return table;
-// }
+std::vector<int> buildCharFrequencyTable(std::string s)
+{
+    std::vector<int> table(static_cast<int>('z') - 
+                           static_cast<int>('a') + 1);
+    int count = 0;
 
-// bool checkMaxOneOdd(std::vector<int> table)
-// {
-//     bool foundOdd = false;
+    for (char c : s)
+    {
+        int index = getCharNumber(c);
+        if (index != -1) table[index]++;
+    }
 
-//     for (int i = 0; i < table.size(); i++)
-//     {
-//         if (table[i] % 2 != 0)
-//         {
-//             if (foundOdd)
-//             {
-//                 return false;
-//             }
-//             else
-//             {
-//                 foundOdd = true;
-//             }
-//         }
-//     }
-//     return true;
-// }
+    return table;
+}
+
+bool checkMaxOneOdd(std::vector<int> table)
+{
+    bool foundOdd = false;
+
+    for (int i = 0; i < table.size(); i++)
+    {
+        if (table[i] % 2 != 0)
+        {
+            if (foundOdd)
+            {
+                return false;
+            }
+            else
+            {
+                foundOdd = true;
+            }
+        }
+    }
+    return true;
+}
 
 // =============================================================
 
 // Second implementation
-// int getCharNumber(char c)
-// {
-//     int a = static_cast<int>('a');
-//     int z = static_cast<int>('z');
-//     int val = static_cast<int>(c);
+int getCharNumber(char c)
+{
+    int a = static_cast<int>('a');
+    int z = static_cast<int>('z');
+    int val = static_cast<int>(c);
 
-//     if (val <= z && val >= a)
-//     {
-//         return val - a;
-//     }
-//     return -1;
-// }
+    if (val <= z && val >= a)
+    {
+        return val - a;
+    }
+    return -1;
+}
 
-// bool isPermutationOfPalindrome(std::string s)
-// {
-//     std::vector<int> table(static_cast<int>('z') - 
-//                            static_cast<int>('a') + 1);
-//     int countOdd = 0;
+bool isPermutationOfPalindrome(std::string s)
+{
+    std::vector<int> table(static_cast<int>('z') - 
+                           static_cast<int>('a') + 1);
+    int countOdd = 0;
 
-//     for (char c : s)
-//     {
-//         int index = getCharNumber(c);
-//         if (index != -1)
-//         {
-//             table[index]++;
-//             if (table[index] % 2 == 1)
-//             {
-//                 countOdd++;
-//             }
-//             else
-//             {
-//                 countOdd--;
-//             }
-//         }
-//     }
+    for (char c : s)
+    {
+        int index = getCharNumber(c);
+        if (index != -1)
+        {
+            table[index]++;
+            if (table[index] % 2 == 1)
+            {
+                countOdd++;
+            }
+            else
+            {
+                countOdd--;
+            }
+        }
+    }
 
-//     return countOdd <= 1;
-// }
+    return countOdd <= 1;
+}
 
 // =============================================================
 
@@ -121,7 +134,9 @@ bool isPermutationOfPalindrome(std::string s)
     return checkAtMostOneBitSet(bitVector);
 }
 
-int main()
-{
+// =============================================================
+
+// int main()
+// {
     
-}
+// }

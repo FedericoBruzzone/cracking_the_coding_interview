@@ -5,53 +5,53 @@
 // =============================================================
 
 // First implementation
-// Node* partition(Node* node, int pivot)
-// {
-//     Node* beforeStart = NULL;
-//     Node* beforeEnd = NULL;
-//     Node* afterStart = NULL;
-//     Node* afterEnd = NULL;
+Node* partition(Node* node, int pivot)
+{
+    Node* beforeStart = NULL;
+    Node* beforeEnd = NULL;
+    Node* afterStart = NULL;
+    Node* afterEnd = NULL;
 
-//     while (node != NULL)
-//     {
-//         Node* next = node->next;
-//         node->next = NULL;
+    while (node != NULL)
+    {
+        Node* next = node->next;
+        node->next = NULL;
 
-//         if (node->data < pivot)
-//         {
-//             if (beforeStart == NULL)
-//             {
-//                 beforeStart = node;
-//                 beforeEnd = beforeStart;
-//             }
-//             else
-//             {
-//                 beforeEnd->next = node;
-//                 beforeEnd = node;
-//             }
-//         }
-//         else
-//         {
-//             if (afterStart == NULL)
-//             {
-//                 afterStart = node;
-//                 afterEnd = afterStart;
-//             }
-//             else
-//             {
-//                 afterEnd->next = node;
-//                 afterEnd = node;
-//             }
-//         }
-//         node = next;
-//     }
+        if (node->data < pivot)
+        {
+            if (beforeStart == NULL)
+            {
+                beforeStart = node;
+                beforeEnd = beforeStart;
+            }
+            else
+            {
+                beforeEnd->next = node;
+                beforeEnd = node;
+            }
+        }
+        else
+        {
+            if (afterStart == NULL)
+            {
+                afterStart = node;
+                afterEnd = afterStart;
+            }
+            else
+            {
+                afterEnd->next = node;
+                afterEnd = node;
+            }
+        }
+        node = next;
+    }
 
-//     if (beforeStart == NULL) return afterStart;
+    if (beforeStart == NULL) return afterStart;
 
-//     beforeEnd->next = afterStart;
+    beforeEnd->next = afterStart;
     
-//     return beforeStart;
-// }
+    return beforeStart;
+}
 
 // =============================================================
 
@@ -85,20 +85,20 @@ Node* partition(Node* node, int pivot)
 
 // =============================================================
 
-int main()
-{
-    Node* n = new Node(1);
-    n->appendToTail(2);
-    n->appendToTail(3);
-    n->appendToTail(4);
-    n->appendToTail(8);
-    n->appendToTail(6);
-    n->appendToTail(7);
-    n->appendToTail(4);
-    n->appendToTail(9);
+// int main()
+// {
+//     Node* n = new Node(1);
+//     n->appendToTail(2);
+//     n->appendToTail(3);
+//     n->appendToTail(4);
+//     n->appendToTail(8);
+//     n->appendToTail(6);
+//     n->appendToTail(7);
+//     n->appendToTail(4);
+//     n->appendToTail(9);
 
 
-    n->print(n);
-    Node* output = partition(n, 4);
-    output->print(output);
-}
+//     n->print(n);
+//     Node* output = partition(n, 4);
+//     output->print(output);
+// }
