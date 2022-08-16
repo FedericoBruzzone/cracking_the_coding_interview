@@ -15,9 +15,46 @@
 class Node
 {
 public:
-    std::string data;
+    //std::string data;
+    int data;
     Node* left;
     Node* right;
+
+    Node() {}
+
+    Node (int data)
+    {
+        this->data = data;
+        this->left = NULL;
+        this->right = NULL;
+    }
+
+    void inOrder()
+    {
+        if (this == NULL)
+            return;
+        this->left->inOrder();
+        std::cout << this->data << " ";
+        this->right->inOrder();
+    }
+
+    void preOrder()
+    {
+        if (this == NULL)
+            return;
+        std::cout << this->data << " ";
+        this->left->preOrder();
+        this->right->preOrder();
+    }
+
+    void postOrder()
+    {
+        if (this == NULL)
+            return;
+        this->left->postOrder();
+        this->right->postOrder();
+        std::cout << this->data << " ";
+    }
 };
 
 // =============================================================
