@@ -21,7 +21,7 @@ bool searchDFS(GNode* start, GNode* end)
     return false;
 }
 
-// // =============================================================
+// =============================================================
 
 // Breadth-First Search
 bool searchBFS(GNode* start, GNode* end)
