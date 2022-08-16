@@ -5,7 +5,7 @@
 // =============================================================
 
 // Depth-First Search
-bool searchDFS(Node* start, Node* end)
+bool searchDFS(GNode* start, GNode* end)
 {
     if (start == end) return true;
     
@@ -17,20 +17,20 @@ bool searchDFS(Node* start, Node* end)
             if (searchDFS((*child), end))
                 return true;
     }
-    start->setUnvisited();
+    
     return false;
 }
 
 // // =============================================================
 
 // Breadth-First Search
-bool searchBFS(Node* start, Node* end)
+bool searchBFS(GNode* start, GNode* end)
 {
     if (start == end) return true;
 
     start->setUnvisited();
     start->_state = Visited;
-    std::list<Node*> queue;
+    std::list<GNode*> queue;
     queue.push_back(start);
 
     while (!queue.empty())
@@ -38,7 +38,7 @@ bool searchBFS(Node* start, Node* end)
         start = queue.front();
         queue.pop_front();
  
-        for (std::vector<Node*>::iterator child = std::begin(start->_children); child != std::end(start->_children); ++child)
+        for (std::vector<GNode*>::iterator child = std::begin(start->_children); child != std::end(start->_children); ++child)
         {
             if ((*child) == end) return true;
 
@@ -56,16 +56,16 @@ bool searchBFS(Node* start, Node* end)
 
 int main()
 {
-    Node* n1 = new Node(1);
-    Node* n2 = new Node(2);
-    Node* n3 = new Node(3);
-    Node* n4 = new Node(4);
-    Node* n5 = new Node(5);
-    Node* n6 = new Node(6);
-    Node* n7 = new Node(7);
-    Node* n8 = new Node(8);
-    Node* n9 = new Node(9);
-    Node* n10 = new Node(10);
+    GNode* n1 = new GNode(1);
+    GNode* n2 = new GNode(2);
+    GNode* n3 = new GNode(3);
+    GNode* n4 = new GNode(4);
+    GNode* n5 = new GNode(5);
+    GNode* n6 = new GNode(6);
+    GNode* n7 = new GNode(7);
+    GNode* n8 = new GNode(8);
+    GNode* n9 = new GNode(9);
+    GNode* n10 = new GNode(10);
 
     n1->addChildren({n2, n3, n4}); //std::vector<Node*> children = std::vector<Node*>({n1, n2, n3});
     n2->addChildren({n5, n6, n7});

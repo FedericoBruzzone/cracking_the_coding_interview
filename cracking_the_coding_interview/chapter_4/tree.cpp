@@ -12,17 +12,17 @@
 
 // =============================================================
 
-class Node
+class TNode
 {
 public:
     //std::string data;
     int data;
-    Node* left;
-    Node* right;
+    TNode* left;
+    TNode* right;
 
-    Node() {}
+    TNode() {}
 
-    Node (int data)
+    TNode (int data)
     {
         this->data = data;
         this->left = NULL;

@@ -13,25 +13,25 @@
 
 enum State { Unvisited, Visited, Visiting };
 
-class Node
+class GNode
 {
 public:
     int _data;
     State _state;
-    std::vector<Node*> _children;
+    std::vector<GNode*> _children;
 
-    Node (int data)
+    GNode (int data)
     {
-        _children = std::vector<Node*>();
+        _children = std::vector<GNode*>();
         this->_data = data;
         _state = Unvisited;
     }
 
-    void addChildren(std::vector<Node*> children)
+    void addChildren(std::vector<GNode*> children)
     {
         if (children.empty()) return;
 
-        for (std::vector<Node*>::iterator child = std::begin(children); child != std::end(children); ++child)
+        for (std::vector<GNode*>::iterator child = std::begin(children); child != std::end(children); ++child)
         {
             _children.push_back(*child);
         }
@@ -41,7 +41,7 @@ public:
     {
         this->_state = Unvisited;
 
-        for (std::vector<Node*>::iterator child = std::begin(_children); child != std::end(_children); ++child)
+        for (std::vector<GNode*>::iterator child = std::begin(_children); child != std::end(_children); ++child)
         {
             (*child)->setUnvisited();
         }
@@ -63,7 +63,7 @@ private:
         
         this->_state = Visited;
 
-        for (std::vector<Node*>::iterator child = std::begin(_children); child != std::end(_children); ++child)
+        for (std::vector<GNode*>::iterator child = std::begin(_children); child != std::end(_children); ++child)
         {
             for (int s = 0; s < n; ++s) { std::cout << " "; }
             if ((*child)->_state == Unvisited)

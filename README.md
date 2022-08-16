@@ -283,3 +283,11 @@ Given a directed graph and two nodes (S and E), design an algorithm to find whet
 Given a sorted (increase oreder) array with unique integer elements, write an algorithm to create a binary search tree with minimal height.
 
 [Solution 4.2](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_4/4.2_minimal_tree.cpp)
+
+---
+
+**4.3 List of Depths**:
+
+Given a binary tree, design an algorithm which created a linked list of all the nodes at each depth (e.g., if you have a tree with depth D, tou will have D linked list)
+
+[Solution 4.3](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_4/4.3_list_of_depths.cpp)
