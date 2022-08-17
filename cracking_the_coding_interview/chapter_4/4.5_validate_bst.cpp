@@ -29,8 +29,6 @@ bool isBinarySearchTree(TNode* root)
 
 // Second implementation
 
-// ...
-
 // =============================================================
 
 int main()
