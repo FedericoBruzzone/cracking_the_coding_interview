@@ -17,10 +17,12 @@ data_structure/hash_table/hash_table_binary_tree/*.exe
 data_structure/hash_table/hash_table_list/*.exe
 data_structure/hash_table/hash_table_templated/*.exe
 
-data_structure/array_list/*exe
+data_structure/array_list/*.exe
 
-data_structure/string_builder/string_builder/*exe
-data_structure/string_builder/string_builder_templated/*exe
+data_structure/string_builder/string_builder/*.exe
+data_structure/string_builder/string_builder_templated/*.exe
+
+compile.exe
 
 cracking_the_coding_interview/chapter_1/*.o
 cracking_the_coding_interview/chapter_2/*.o
@@ -37,7 +39,7 @@ data_structure/hash_table/hash_table_binary_tree/*.o
 data_structure/hash_table/hash_table_list/*.o
 data_structure/hash_table/hash_table_templated/*.o
 
-data_structure/array_list/*o
+data_structure/array_list/*.o
 
-data_structure/string_builder/string_builder/*o
-data_structure/string_builder/string_builder_templated/*o
+data_structure/string_builder/string_builder/*.o
+data_structure/string_builder/string_builder_templated/*.o
