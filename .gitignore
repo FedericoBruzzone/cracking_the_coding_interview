@@ -21,3 +21,23 @@ data_structure/array_list/*exe
 
 data_structure/string_builder/string_builder/*exe
 data_structure/string_builder/string_builder_templated/*exe
+
+cracking_the_coding_interview/chapter_1/*.o
+cracking_the_coding_interview/chapter_2/*.o
+cracking_the_coding_interview/chapter_3/*.o
+cracking_the_coding_interview/chapter_4/*.o
+
+data_structure/linked_list/class/*.o
+data_structure/linked_list/script/*.o
+
+data_structure/stack/stack_array/*.o
+data_structure/stack/stack_linked_list/*.o
+
+data_structure/hash_table/hash_table_binary_tree/*.o
+data_structure/hash_table/hash_table_list/*.o
+data_structure/hash_table/hash_table_templated/*.o
+
+data_structure/array_list/*o
+
+data_structure/string_builder/string_builder/*o
+data_structure/string_builder/string_builder_templated/*o
