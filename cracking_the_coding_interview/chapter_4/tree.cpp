@@ -89,6 +89,25 @@ TNode* createBinaryTree(int nNodes)
     return root;
 }
 
+TNode* createBinarySearchTree(std::vector<int> array, int start, int end)
+{
+    if (end < start) return NULL;
+
+    int mid = (start + end) / 2;
+
+    TNode* root = new TNode(array[mid]); 
+
+    root->left = createBinarySearchTree(array, start, mid - 1); 
+    root->right = createBinarySearchTree(array, mid + 1, end);   
+
+    return root;
+}
+
+TNode* createBinarySearchTree(std::vector<int> array)
+{
+    return createBinarySearchTree(array, 0, array.size() - 1);
+}
+
 // =============================================================
 
 // class Tree

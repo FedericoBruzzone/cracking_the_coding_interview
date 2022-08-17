@@ -2,8 +2,6 @@
 
 #include "tree.cpp"
 
-#include "4.2_minimal_tree.cpp"
-
 // =============================================================
 
 // First implementation
@@ -60,7 +58,7 @@ bool isBalanced(TNode* root)
 
 // int main()
 // {
-//     TNode* btree = createMinimalBST({1, 2, 3, 4, 5, 6, 7, 8, 9, 10});
+//     TNode* btree = createBinarySearchTree({1, 2, 3, 4, 5, 6, 7, 8, 9, 10});
 //     TNode* btree_not_balanced = createBinaryTree(4);
 
 //     LOG(getHeight(btree))

@@ -2,8 +2,6 @@
 
 #include "tree.cpp"
 
-#include "4.2_minimal_tree.cpp"
-
 // std::list was used as a Linked List
 
 // =============================================================
@@ -70,7 +68,7 @@ std::vector<std::list<TNode*>> createLevelLinkedListBFS(TNode* root)
 
 // int main()
 // {
-//     TNode* btree = createMinimalBST({1, 2, 3, 4, 5, 6, 7, 8, 9, 10});
+//     TNode* btree = createBinarySearchTree({1, 2, 3, 4, 5, 6, 7, 8, 9, 10});
 //     std::vector<std::list<TNode*>> listsBFS = createLevelLinkedListBFS(btree);
 //     std::vector<std::list<TNode*>> listsDFS = createLevelLinkedListDFS(btree);
 
