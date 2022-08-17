@@ -21,21 +21,38 @@ bool isBinarySearchTree(TNode* root, int* lastVisited)
 
 bool isBinarySearchTree(TNode* root)
 {
-    int* lastVisited = NULL;
-    return isBinarySearchTree(root, lastVisited);
+    return isBinarySearchTree(root, NULL);
 }
 
 // =============================================================
 
 // Second implementation
+bool isBinarySearchTree(TNode* root, int* min, int* max)
+{
+    if (root == NULL) return true;
+
+    if ((min != NULL && root->data <= *min) || (max != NULL && root->data > *max)) 
+        return false;
+
+    if ((!isBinarySearchTree(root->left, min, &(root->data))) || (!isBinarySearchTree(root->right, &(root->data), max)))
+        return false;
+
+    return true; 
+
+}
+
+bool isBinarySearchTree(TNode* root)
+{
+    return isBinarySearchTree(root, NULL, NULL);
+}
 
 // =============================================================
 
-int main()
-{
-    TNode* btree = createBinaryTree(10);
-    TNode* bst = createBinarySearchTree({1,2,3,4,5,6,7,8,9,10,11});
+// int main()
+// {
+//     TNode* btree = createBinaryTree(10);
+//     TNode* bst = createBinarySearchTree({1,2,3,4,5,6,7,8,9,10,11});
 
-    LOG(isBinarySearchTree(btree))
-    LOG(isBinarySearchTree(bst))
-}
+//     LOG(isBinarySearchTree(btree))
+//     LOG(isBinarySearchTree(bst))
+// }
