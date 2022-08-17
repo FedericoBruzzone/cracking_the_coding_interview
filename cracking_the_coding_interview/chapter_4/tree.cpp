@@ -59,6 +59,36 @@ public:
     }
 };
 
+TNode* createBinaryTree(TNode* root, int nNodes)
+{
+    if (nNodes <= 0) return NULL;
+
+    root = new TNode(std::rand() % 100); 
+    switch(std::rand() % 3) {
+        case 0:
+            root->left = createBinaryTree(root->left, nNodes / 2);
+            break;
+        case 1:
+            root->right = createBinaryTree(root->left, nNodes / 2); 
+            break;
+        case 2:
+            root->left = createBinaryTree(root->left, nNodes / 2);
+            root->right = createBinaryTree(root->left, nNodes / 2);
+            break;
+        default:
+            break;
+    
+    }
+    return root;
+}
+
+TNode* createBinaryTree(int nNodes)
+{
+    TNode* root = new TNode();
+    root = createBinaryTree(root, nNodes);
+    return root;
+}
+
 // =============================================================
 
 // class Tree

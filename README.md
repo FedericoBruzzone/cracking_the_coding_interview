@@ -291,3 +291,11 @@ Given a sorted (increase oreder) array with unique integer elements, write an al
 Given a binary tree, design an algorithm which created a linked list of all the nodes at each depth (e.g., if you have a tree with depth D, tou will have D linked list)
 
 [Solution 4.3](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_4/4.3_list_of_depths.cpp)
+
+---
+
+**4.4 Check Balanced**:
+
+Implement a function to check if a binary tree is balanced. For the purposes of this question, a balanced tree is defined to be a tree such that the heights of the two subtrees of any node never differ by more than one.
+
+[Solution 4.3](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_4/4.4_check_balanced.cpp)
