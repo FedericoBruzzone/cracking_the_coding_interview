@@ -21,6 +21,7 @@ public:
     int data;
     TNode* left;
     TNode* right;
+    TNode* parent;
 
     TNode() {}
 
@@ -29,6 +30,7 @@ public:
         this->data = data;
         this->left = NULL;
         this->right = NULL;
+        this->parent = NULL;
     }
 
     void inOrder()
@@ -58,6 +60,8 @@ public:
         std::cout << this->data << " ";
     }
 };
+
+// Create Binary Tree
 
 TNode* createBinaryTree(TNode* root, int nNodes)
 {
@@ -89,6 +93,8 @@ TNode* createBinaryTree(int nNodes)
     return root;
 }
 
+// Create Binary Search Tree
+
 TNode* createBinarySearchTree(std::vector<int> array, int start, int end)
 {
     if (end < start) return NULL;
@@ -106,6 +112,28 @@ TNode* createBinarySearchTree(std::vector<int> array, int start, int end)
 TNode* createBinarySearchTree(std::vector<int> array)
 {
     return createBinarySearchTree(array, 0, array.size() - 1);
+}
+
+// Create Binary Search Tree With Parent
+
+TNode* createBinarySearchTreeWithParent(std::vector<int> array, int start, int end, TNode* parent)
+{
+    if (end < start) return NULL;
+
+    int mid = (start + end) / 2;
+
+    TNode* root = new TNode(array[mid]); 
+
+    root->left = createBinarySearchTreeWithParent(array, start, mid - 1, root); 
+    root->right = createBinarySearchTreeWithParent(array, mid + 1, end, root);   
+    root->parent = parent;
+
+    return root;
+}
+
+TNode* createBinarySearchTreeWithParent(std::vector<int> array)
+{
+    return createBinarySearchTreeWithParent(array, 0, array.size() - 1, NULL);
 }
 
 // =============================================================
