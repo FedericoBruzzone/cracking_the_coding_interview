@@ -22,6 +22,13 @@ public:
     State _state;
     std::vector<GNode*> _children;
 
+    GNode() 
+    {
+        _children = std::vector<GNode*>();
+        this->_data = NULL;
+        _state = Unvisited;
+    }
+
     GNode (int data)
     {
         _children = std::vector<GNode*>();

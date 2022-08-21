@@ -32,9 +32,11 @@ Write a method to replace all spaces in a string with '%20'. You may assume that
 
 EXAMPLE
 
-Input:   "Mr John Smith       ", 13
+Input:   
+- "Mr John Smith       ", 13
 
-Output:  "Mr%20John%20Smith"
+Output:  
+- "Mr%20John%20Smith"
 
 [Solution 1.3](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_1/1.3_URLify.cpp)
 
@@ -46,9 +48,11 @@ Given a string, write a function to check if it is a permutation of a palindrome
 
 EXAMPLE
 
-Input:   Tact Coa
+Input:   
+- Tact Coa
 
-Output:  True (permutation: "taco cat", "atco cta", etc.)
+Output:  
+- True (permutation: "taco cat", "atco cta", etc.)
 
 [Solution 1.4](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_1/1.4_palindrome_permutation.cpp)
 
@@ -131,9 +135,11 @@ Implement an algorithm to delete a node in the middle (i.e. any node but the fir
 
 EXAMPLE
 
-Input: the node c from the linked list a -> b -> c -> d -> e -> f
+Input: 
+- the node c from the linked list a -> b -> c -> d -> e -> f
 
-Result: nothing is returned, but the new linked list looks like a -> b -> d -> e -> f
+Result: 
+- nothing is returned, but the new linked list looks like a -> b -> d -> e -> f
 
 [Solution 2.3](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_2/2.3_delete_middle_node.cpp)
 
@@ -145,9 +151,11 @@ Write code to partition a linked list around a value x, such that all node less 
 
 EXAMPLE
 
-Input: 3 -> 5 -> 8 -> 5 -> 10 -> 2 -> 1 [partition = 5]
+Input: 
+- 3 -> 5 -> 8 -> 5 -> 10 -> 2 -> 1 [partition = 5]
 
-Output: 3 -> 1 -> 2    ->    10 -> 5 -> 5 -> 8
+Output: 
+- 3 -> 1 -> 2    ->    10 -> 5 -> 5 -> 8
 
 [Solution 2.4](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_2/2.4_partition.cpp)
 
@@ -158,18 +166,22 @@ Output: 3 -> 1 -> 2    ->    10 -> 5 -> 5 -> 8
 You have two numbers represented by a linked list, where each node contains a single digit. The digits are stored in reverse order, such that the 1's digit is at the head of the list. Write a function that adds the two numbers and returns the sum as a linked list. (You are not allowed to "cheat" and just convert the linked list to an integer.)
 
 EXAMPLE
-Input: (7 -> 1 -> 6) + (5 -> 9 -> 2). That is, 617 + 295.
+Input: 
+- (7 -> 1 -> 6) + (5 -> 9 -> 2). That is, 617 + 295.
 
-Output 2 -> 1 -> 9. That is, 912.
+Output 
+- 2 -> 1 -> 9. That is, 912.
 
 FOLLOW UP 
 Suppose the digits are stored in forward order. Repeat the above problem.
 
 EXAMPLE
 
-Input: (6 -> 1 -> 7) + (2 -> 9 -> 5). That is, 617 + 295.
+Input: 
+- (6 -> 1 -> 7) + (2 -> 9 -> 5). That is, 617 + 295.
 
-Output 9 -> 1 -> 2. That is, 912.
+Output 
+- 9 -> 1 -> 2. That is, 912.
 
 [Solution 2.5](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_2/2.5_sum_list.cpp)
 
@@ -197,7 +209,8 @@ Given a linkedlist which might contain a loop, implement an algorithm that retur
 
 EXAMPLE
 
-Input: A -> B -> C -> D -> E -> C (the same C as earlier)
+Input: 
+- A -> B -> C -> D -> E -> C (the same C as earlier)
 
 Output C
 
@@ -315,3 +328,21 @@ Implement a function to check if a binary tree is a binary search tree.
 Write an algorithm to find the "next" node (i.e., in-order successor) of a given node in a binary search tree. You may assume that each node has a link to its parent. 
 
 [Solution 4.6](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_4/4.6_successor.cpp.cpp)
+
+---
+
+**4.7 Build Order**:
+
+You are given a list of projects and a list of dependencies (which is a list of pairs of project, where the second projects is dependent on the first proect). All of a project's dependencies must be before the project is. Find a build order that will allow the projects to be built. If there is no valid build oreder, return an error.
+
+EXAMPLE
+
+Input:
+- projects: a, b, c, d, e, f
+- dependecies: (a, d), (f, b), (b, d), (f, a), (d, c)
+
+Output: 
+- f, e, a, b, d, c 
+
+[Solution 4.7](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_4/4.7_build_order.cpp)
+
