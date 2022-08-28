@@ -4,105 +4,106 @@
 
 // =============================================================
 
-// struct Node
-// {
-//     std::string data;
-//     std::vector<struct Node*> children;
-// };
-// typedef struct Node Node;
+template<typename T>
+struct WeakPtrHash : public std::unary_function<std::weak_ptr<T>, size_t>
+{
+    size_t operator()(const std::weak_ptr<T>& wp) const
+    {
+        auto sp = wp.lock();
+        return std::hash<decltype(sp)>()(sp);
+    }
+};
 
-// =============================================================
+template<typename T>
+struct WeakPtrEqual : public std::unary_function<std::weak_ptr<T>, bool>
+{
+    bool operator()(const std::weak_ptr<T>& left, const std::weak_ptr<T>& right) const
+    {
+        return !left.owner_before(right) && !right.owner_before(left);
+    }
+};
 
-enum State { Unvisited, Visited, Visiting };
-
-class GNode
+template <typename State>
+class Graph
 {
 public:
-    int _data;
-    State _state;
-    std::vector<GNode*> _children;
-
-    GNode() 
+    class Node
     {
-        _children = std::vector<GNode*>();
-        this->_data = NULL;
-        _state = Unvisited;
-    }
+    public:
+        Node(const std::string &n) : name(n) {}
+        virtual ~Node() {}
 
-    GNode (int data)
-    {
-        _children = std::vector<GNode*>();
-        this->_data = data;
-        _state = Unvisited;
-    }
-
-    void addChildren(std::vector<GNode*> children)
-    {
-        if (children.empty()) return;
-
-        for (std::vector<GNode*>::iterator child = std::begin(children); child != std::end(children); ++child)
+        bool isAdjacentFor(const std::shared_ptr<Node> &other) const
         {
-            _children.push_back(*child);
+            return childs.find(other) != childs.end();
         }
-    }
 
-    void setUnvisited()
-    {
-        this->_state = Unvisited;
-
-        for (std::vector<GNode*>::iterator child = std::begin(_children); child != std::end(_children); ++child)
+        void addChild(const std::shared_ptr<Node> &other)
         {
-            (*child)->setUnvisited();
+            childs.insert(other);
         }
+
+        const std::unordered_set<std::weak_ptr<Node>, WeakPtrHash<Node>, WeakPtrEqual<Node>> &getAdjacent() const
+        {
+            return childs;
+        }
+
+        const std::string &Name() const
+        {
+            return name;
+        }
+
+        mutable State state;
+        std::string name;
+
+    private:
+        std::unordered_set<std::weak_ptr<Node>, WeakPtrHash<Node>, WeakPtrEqual<Node>> childs;
+    };
+
+    bool matrix(size_t i, size_t j) const
+    {
+        if (i == j)
+            return false;
+
+        const auto &s = nodes[i];
+        const auto &d = nodes[j];
+        return s->isAdjacentFor(d);
     }
 
-    void print()
+    std::shared_ptr<Node> &addNode(const std::string &name = std::string())
     {
-        std::cout << "Root: ";
-        print(6);
-        setUnvisited();
+        nodes.emplace_back(std::make_shared<Node>(name));
+        if (!name.empty())
+            namedNodes[name] = nodes.back();
+        return nodes.back();
+    }
+
+    const std::shared_ptr<Node> &operator[] (size_t i) const
+    {
+        return nodes[i];
+    }
+
+    const std::shared_ptr<Node> &operator[] (const std::string &name) const
+    {
+        return namedNodes.at(name);
+    }
+
+    const std::deque<std::shared_ptr<Node>> &getNodes() const
+    {
+        return nodes;
     }
 
 private:
-    // DFS
-    void print(int n) 
-    {
-        std::cout << this->_data;
-        printf("\n");
-        
-        this->_state = Visited;
-
-        for (std::vector<GNode*>::iterator child = std::begin(_children); child != std::end(_children); ++child)
-        {
-            for (int s = 0; s < n; ++s) { std::cout << " "; }
-            if ((*child)->_state == Unvisited)
-                (*child)->print(n+1);
-        }
-    }
-
+    std::deque<std::shared_ptr<Node>> nodes;
+    std::unordered_map<std::string, std::shared_ptr<Node>> namedNodes;
 };
 
-// class Graph
-// {
-// public:
-//     Node* _root;
-
-//     Graph() {}
-
-//     Graph(Node* root) 
-//     {
-//         this->_root = root;
-//     }
-// };
+template <typename State>
+using Node = std::shared_ptr<typename Graph<State>::Node>;
 
 // =============================================================
 
-// int main()
-// {
-//     Graph g(10);
-
-//     g.addEdge(1, 2, false);
-//     g.addEdge(2, 3, false);
-
-//     g.printGraph();
-// }
+int main()
+{
+    
+}

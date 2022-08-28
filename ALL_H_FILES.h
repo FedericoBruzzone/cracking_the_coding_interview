@@ -15,6 +15,7 @@
 #include <list>
 #include <stack>
 #include <queue>
+#include <deque>
 
 #include <map>
 #include <set>
@@ -31,5 +32,7 @@
 #include <exception>
 
 #include <typeinfo>
+
+#include <cassert>
 
 #endif
