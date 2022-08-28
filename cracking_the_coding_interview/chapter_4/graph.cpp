@@ -5,9 +5,9 @@
 // =============================================================
 
 template<typename T>
-struct WeakPtrHash : public std::unary_function<std::weak_ptr<T>, size_t>
+struct WeakPtrHash : public std::unary_function<std::weak_ptr<T>, std::size_t>
 {
-    size_t operator()(const std::weak_ptr<T>& wp) const
+    std::size_t operator()(const std::weak_ptr<T>& wp) const
     {
         auto sp = wp.lock();
         return std::hash<decltype(sp)>()(sp);
@@ -60,7 +60,7 @@ public:
         std::unordered_set<std::weak_ptr<Node>, WeakPtrHash<Node>, WeakPtrEqual<Node>> childs;
     };
 
-    bool matrix(size_t i, size_t j) const
+    bool matrix(std::size_t i, std::size_t j) const
     {
         if (i == j)
             return false;
@@ -78,7 +78,7 @@ public:
         return nodes.back();
     }
 
-    const std::shared_ptr<Node> &operator[] (size_t i) const
+    const std::shared_ptr<Node> &operator[] (std::size_t i) const
     {
         return nodes[i];
     }
@@ -101,9 +101,10 @@ private:
 template <typename State>
 using Node = std::shared_ptr<typename Graph<State>::Node>;
 
+
 // =============================================================
 
-int main()
-{
+// int main()
+// {
     
-}
+// }
