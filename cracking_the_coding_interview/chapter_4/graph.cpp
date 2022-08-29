@@ -106,11 +106,3 @@ private:
 
 template <typename State>
 using Node = std::shared_ptr<typename Graph<State>::Node>;
-
-
-// =============================================================
-
-// int main()
-// {
-    
-// }
