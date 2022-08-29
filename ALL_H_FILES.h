@@ -41,6 +41,7 @@
 #include <exception>
 #include <typeinfo>
 #include <cassert>
+#include <numeric>
 
 // multi-threding
 #include <atomic>

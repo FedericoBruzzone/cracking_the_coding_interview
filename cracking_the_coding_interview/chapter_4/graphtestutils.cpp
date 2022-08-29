@@ -6,7 +6,7 @@ namespace TestUtils
 {
     template<typename State>
     Graph<State> createGraph(std::initializer_list<std::string> projects,
-                            std::initializer_list<std::array<const std::string, 2>> deps)
+                             std::initializer_list<std::array<const std::string, 2>> deps)
     {
         Graph<State> graph;
         for (auto &n : projects)

@@ -24,9 +24,7 @@ struct WeakPtrEqual // : public std::unary_function<std::weak_ptr<T>, bool>
     typedef bool result_type;
 
     bool operator()(const std::weak_ptr<T>& left, const std::weak_ptr<T>& right) const
-    {
-        return !left.owner_before(right) && !right.owner_before(left);
-    }
+    { return !left.owner_before(right) && !right.owner_before(left); }
 };
 
 template <typename State>
@@ -39,25 +37,13 @@ public:
         Node(const std::string &n) : name(n) {}
         virtual ~Node() {}
 
-        bool isAdjacentFor(const std::shared_ptr<Node> &other) const
-        {
-            return childs.find(other) != childs.end();
-        }
+        bool isAdjacentFor(const std::shared_ptr<Node> &other) const { return childs.find(other) != childs.end(); }
 
-        void addChild(const std::shared_ptr<Node> &other)
-        {
-            childs.insert(other);
-        }
+        void addChild(const std::shared_ptr<Node> &other) { childs.insert(other); }
 
-        const std::unordered_set<std::weak_ptr<Node>, WeakPtrHash<Node>, WeakPtrEqual<Node>> &getAdjacent() const
-        {
-            return childs;
-        }
+        const std::unordered_set<std::weak_ptr<Node>, WeakPtrHash<Node>, WeakPtrEqual<Node>> &getAdjacent() const { return childs; }
 
-        const std::string &Name() const
-        {
-            return name;
-        }
+        const std::string &Name() const { return name; }
 
         mutable State state;
         std::string name;
@@ -84,20 +70,11 @@ public:
         return nodes.back();
     }
 
-    const std::shared_ptr<Node> &operator[] (std::size_t i) const
-    {
-        return nodes[i];
-    }
+    const std::shared_ptr<Node> &operator[] (std::size_t i) const { return nodes[i]; }
 
-    const std::shared_ptr<Node> &operator[] (const std::string &name) const
-    {
-        return namedNodes.at(name);
-    }
+    const std::shared_ptr<Node> &operator[] (const std::string &name) const { return namedNodes.at(name); }
 
-    const std::deque<std::shared_ptr<Node>> &getNodes() const
-    {
-        return nodes;
-    }
+    const std::deque<std::shared_ptr<Node>> &getNodes() const { return nodes; }
 
 private:
     std::deque<std::shared_ptr<Node>> nodes;

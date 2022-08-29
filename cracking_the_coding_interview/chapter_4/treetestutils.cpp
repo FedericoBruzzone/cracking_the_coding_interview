@@ -4,8 +4,7 @@
 
 // =============================================================
 
-template <typename T, bool NodeWithParent,
-          template<typename, bool> class Node>
+template <typename T, bool NodeWithParent, template <typename, bool> class Node>
 class Tree;
 
 template <typename T, bool WithParent>
@@ -80,8 +79,7 @@ namespace TestUtils
     }
 
     // The function treeFromArray from the task 4.2 helps us to fill test trees.
-    template <typename T, bool NodeWithParent = false,
-              template<typename, bool> class N = Node>
+    template <typename T, bool NodeWithParent = false, template<typename, bool> class N = Node>
     auto treeFromArray(const T *array, size_t size)
     {
         using NodePtr = typename Tree<T, NodeWithParent, N>::NodePtr;
@@ -104,15 +102,13 @@ namespace TestUtils
         return tree;
     }
 
-    template <typename T, bool NodeWithParent = false,
-              template<typename, bool> class N = Node>
+    template <typename T, bool NodeWithParent = false, template<typename, bool> class N = Node>
     auto treeFromArray(std::initializer_list<T> array)
     {
         return treeFromArray<T, NodeWithParent, N>(array.begin(), array.size()); 
     }
 
-    template <typename T, bool NodeWithParent = false,
-              template<typename, bool> class N = Node>
+    template <typename T, bool NodeWithParent = false, template<typename, bool> class N = Node>
     auto getSampleTree(size_t nodeCount)
     {
         std::vector<T> v(nodeCount) ;
