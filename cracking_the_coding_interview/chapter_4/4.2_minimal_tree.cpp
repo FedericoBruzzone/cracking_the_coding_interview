@@ -49,7 +49,7 @@ int main()
 
     for (auto &i : {1, 2, 3, 6, 7, 8, 14, 15, 16, 29, 30, 31})
     {
-        auto tree = createMinimalBST(&array[0], i);
+        auto tree = createMinimalBST<decltype(+array[0])>(&array[0], i);
         // auto tree = createMinimalBST<std::remove_reference<decltype(array)>::type>(&array, i);
         TestUtils::printTree(tree);
     }
