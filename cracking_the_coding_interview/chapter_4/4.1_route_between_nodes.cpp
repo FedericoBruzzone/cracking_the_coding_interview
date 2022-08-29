@@ -3,9 +3,9 @@
 #include "graph.cpp"
 #include "graphtestutils.cpp"
 
-// =============================================================
-
 enum State {Unvisited, Visiting, Visited};
+
+// =============================================================
 
 bool searchBFS(const Graph<State> &graph, const Node<State> &from, const Node<State> &to)
 {
@@ -28,7 +28,7 @@ bool searchBFS(const Graph<State> &graph, const Node<State> &from, const Node<St
             auto v = c.lock();
             if (v && v->state == Unvisited)
             {
-                if (v == to)
+                if (v == to) 
                     return true;
                 else
                 {
@@ -42,17 +42,48 @@ bool searchBFS(const Graph<State> &graph, const Node<State> &from, const Node<St
     return false;
 }
 
+// =============================================================
+
+bool searchDFS(const Graph<State> &graph, const Node<State> &from, const Node<State> &to)
+{
+    if (from == to)
+        return true;
+
+    from->state = Visited;
+
+    for (auto &c : from->getAdjacent())
+    {
+        auto node = c.lock();
+        if (node && node->state != Visited)
+        {
+            if (searchDFS(graph, node, to))
+                return true;
+        }
+    }
+    return false;
+}
+
+bool searchDFSR(const Graph<State> &graph, const Node<State> &from, const Node<State> &to)
+{
+    for (auto &n : graph.getNodes())
+        n->state = Unvisited;
+
+    return searchDFS(graph, from, to);
+}
+
+// =============================================================
 
 bool test(const Graph<State> &graph, size_t from, size_t to)
 {
-    auto &fromNode = graph[from], &toNode = graph[to];
+    auto &fromNode = graph[from];
+    auto &toNode = graph[to];
 
     bool result = searchBFS(graph, fromNode, toNode);
-    //bool resultR = searchDFS(graph, fromNode, toNode);
+    bool resultR = searchDFSR(graph, fromNode, toNode);
 
-    // assert(result == resultR);
-    std::cout << toNode->Name() << " is " << (result ? "" : "NOT ") << "reachable from " << fromNode->Name() << std::endl;
-    // std::cout << toNode->Name() << " is " << (resultR ? "" : "NOT ") << "reachable from " << fromNode->Name() << std::endl;
+    assert(result == resultR);
+    std::cout << "BFS: " << toNode->Name() << " is " << (result ? "" : "NOT ") << "reachable from " << fromNode->Name() << std::endl;
+    std::cout << "DFS: " <<toNode->Name() << " is " << (resultR ? "" : "NOT ") << "reachable from " << fromNode->Name() << std::endl;
     return result;
 }
 
@@ -73,6 +104,9 @@ void testGraph(const Graph<State> &graph)
 int main()
 {
     testGraph(TestUtils::getExampleGraph<State>());
-    // testGraph(TestUtils::getExampleGraph2<State>());
-    // testGraph(TestUtils::getExampleGraph3<State>());
+    std::cout << "============================================================="; printf("\n");printf("\n");
+    testGraph(TestUtils::getExampleGraph2<State>());
+    std::cout << "============================================================="; printf("\n");printf("\n");
+    testGraph(TestUtils::getExampleGraph3<State>());
+    std::cout << "============================================================="; printf("\n");printf("\n");
 }

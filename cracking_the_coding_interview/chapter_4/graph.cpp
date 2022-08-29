@@ -5,8 +5,11 @@
 // =============================================================
 
 template<typename T>
-struct WeakPtrHash : public std::unary_function<std::weak_ptr<T>, std::size_t>
+struct WeakPtrHash // : public std::unary_function<std::weak_ptr<T>, std::size_t>
 {
+    typedef T argument_type;
+    typedef std::size_t result_type;
+
     std::size_t operator()(const std::weak_ptr<T>& wp) const
     {
         auto sp = wp.lock();
@@ -15,8 +18,11 @@ struct WeakPtrHash : public std::unary_function<std::weak_ptr<T>, std::size_t>
 };
 
 template<typename T>
-struct WeakPtrEqual : public std::unary_function<std::weak_ptr<T>, bool>
+struct WeakPtrEqual // : public std::unary_function<std::weak_ptr<T>, bool>
 {
+    typedef T argument_type;
+    typedef bool result_type;
+
     bool operator()(const std::weak_ptr<T>& left, const std::weak_ptr<T>& right) const
     {
         return !left.owner_before(right) && !right.owner_before(left);
