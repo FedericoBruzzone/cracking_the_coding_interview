@@ -13,7 +13,7 @@ void createLevelLinkedListDFS(TNode* root, std::vector<std::list<TNode*>>* lists
 
     std::list<TNode*> list;
 
-    if (lists->size() == index)
+    if (lists->size() == index) 
     {
         list = std::list<TNode*>();
         list.push_back(root);
