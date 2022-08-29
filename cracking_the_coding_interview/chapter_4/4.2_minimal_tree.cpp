@@ -28,7 +28,6 @@ template <typename T>
 Tree<T> createMinimalBST(const T* array, size_t size)
 {
     Tree<T> tree;
-    // tree.setRoot(createMinimalBSTNode(array, 0, size - 1));
     tree.setRoot(createMinimalBSTNode(array, size));
     return tree;
 }
@@ -50,7 +49,8 @@ int main()
 
     for (auto &i : {1, 2, 3, 6, 7, 8, 14, 15, 16, 29, 30, 31})
     {
-        auto tree = createMinimalBST(&array[0], i);
+        auto tree = createMinimalBST<decltype(+array[0])>(&array[0], i);
+        // auto tree = createMinimalBST<std::remove_reference<decltype(array)>::type>(&array, i);
         TestUtils::printTree(tree);
     }
 }

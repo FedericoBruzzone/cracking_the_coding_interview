@@ -52,5 +52,7 @@
 #include <functional>
 #include <limits>
 
+// my
+#include <type_traits>
 
 #endif
