@@ -6,7 +6,7 @@
 // =============================================================
 
 template <typename T>
-NodePtr<T> createMinimalBSTNode(const T* array, size_t start, size_t end)
+NodePtr<T> createMinimalBSTNode(const T* array, int start, int end)
 {
     if (end < start) return nullptr;
 
@@ -19,13 +19,13 @@ NodePtr<T> createMinimalBSTNode(const T* array, size_t start, size_t end)
 }
 
 template <typename T>
-NodePtr<T> createMinimalBSTNode(const T* array, size_t size)
+NodePtr<T> createMinimalBSTNode(const T* array, std::size_t size)
 {
     return createMinimalBSTNode(array, 0, size - 1);
 }
 
 template <typename T>
-Tree<T> createMinimalBST(const T* array, size_t size)
+Tree<T> createMinimalBST(const T* array, std::size_t size)
 {
     Tree<T> tree;
     tree.setRoot(createMinimalBSTNode(array, size));
@@ -49,7 +49,7 @@ int main()
 
     for (auto &i : {1, 2, 3, 6, 7, 8, 14, 15, 16, 29, 30, 31})
     {
-        auto tree = createMinimalBST(&array[0], size_t(i));
+        auto tree = createMinimalBST(&array[0], i);
         // auto tree = createMinimalBST<std::remove_reference<decltype(array)>::type>(&array, i);
         TestUtils::printTree(tree);
     }
