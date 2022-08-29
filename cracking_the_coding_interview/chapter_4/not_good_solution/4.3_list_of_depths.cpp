@@ -51,13 +51,13 @@ std::vector<std::list<TNode*>> createLevelLinkedListBFS(TNode* root)
     while (current.size() > 0)
     {
         lists.push_back(current);
-        std::list<TNode*> parents = current;
+        std::list<TNode*> childs = current;
         current.clear();
 
-        for (TNode* parent : parents)
+        for (TNode* child : childs)
         {
-            if (parent->left != NULL) current.push_back(parent->left);
-            if (parent->right != NULL) current.push_back(parent->right);
+            if (child->left != NULL) current.push_back(child->left);
+            if (child->right != NULL) current.push_back(child->right);
         }
     }
 
