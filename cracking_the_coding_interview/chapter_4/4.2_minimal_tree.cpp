@@ -6,7 +6,7 @@
 // =============================================================
 
 template <typename T>
-NodePtr<T> createMinimalBSTNode(const T* array, int start, int end)
+NodePtr<T> createMinimalBSTNode(const T* array, size_t start, size_t end)
 {
     if (end < start) return nullptr;
 
