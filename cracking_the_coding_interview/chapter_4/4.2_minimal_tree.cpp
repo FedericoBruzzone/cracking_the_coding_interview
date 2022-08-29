@@ -29,6 +29,7 @@ Tree<T> createMinimalBST(const T* array, std::size_t size)
 {
     Tree<T> tree;
     tree.setRoot(createMinimalBSTNode(array, size));
+    
     return tree;
 }
 
