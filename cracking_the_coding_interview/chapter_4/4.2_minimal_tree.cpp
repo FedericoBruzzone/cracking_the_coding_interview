@@ -53,4 +53,4 @@ int main()
         // auto tree = createMinimalBST<std::remove_reference<decltype(array)>::type>(&array, i);
         TestUtils::printTree(tree);
     }
-};
+}
