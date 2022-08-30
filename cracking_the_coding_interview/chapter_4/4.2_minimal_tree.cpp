@@ -43,14 +43,14 @@ Tree<T> createMinimalBST(const T* array, std::size_t size)
 
 // =============================================================
 
-int main()
-{
-    std::array<int, 63> array;
-    std::iota(array.begin(), array.end(), 0); 
+// int main()
+// {
+//     std::array<int, 63> array;
+//     std::iota(array.begin(), array.end(), 0); 
 
-    for (auto &i : {1, 2, 3, 6, 7, 8, 14, 15, 16, 29, 30, 31})
-    {
-        auto tree = createMinimalBST<decltype(+array[0])>(&array[0], i);
-        TestUtils::printTree(tree);
-    }
-}
+//     for (auto &i : {1, 2, 3, 6, 7, 8, 14, 15, 16, 29, 30, 31})
+//     {
+//         auto tree = createMinimalBST<decltype(+array[0])>(&array[0], i);
+//         TestUtils::printTree(tree);
+//     }
+// }

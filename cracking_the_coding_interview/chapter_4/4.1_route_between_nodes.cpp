@@ -101,12 +101,12 @@ void testGraph(const Graph<State> &graph)
 }
 // =============================================================
 
-int main()
-{
-    testGraph(TestUtils::getExampleGraph<State>());
-    std::cout << "============================================================="; printf("\n");printf("\n");
-    testGraph(TestUtils::getExampleGraph2<State>());
-    std::cout << "============================================================="; printf("\n");printf("\n");
-    testGraph(TestUtils::getExampleGraph3<State>());
-    std::cout << "============================================================="; printf("\n");printf("\n");
-}
+// int main()
+// {
+//     testGraph(TestUtils::getExampleGraph<State>());
+//     std::cout << "============================================================="; printf("\n");printf("\n");
+//     testGraph(TestUtils::getExampleGraph2<State>());
+//     std::cout << "============================================================="; printf("\n");printf("\n");
+//     testGraph(TestUtils::getExampleGraph3<State>());
+//     std::cout << "============================================================="; printf("\n");printf("\n");
+// }
