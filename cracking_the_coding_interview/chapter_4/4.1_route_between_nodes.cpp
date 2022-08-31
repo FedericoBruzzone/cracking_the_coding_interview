@@ -7,6 +7,7 @@ enum State {Unvisited, Visiting, Visited};
 
 // =============================================================
 
+// Breath-First Search
 bool searchBFS(const Graph<State> &graph, const Node<State> &from, const Node<State> &to)
 {
     if (from == to) { return true; }
@@ -44,6 +45,7 @@ bool searchBFS(const Graph<State> &graph, const Node<State> &from, const Node<St
 
 // =============================================================
 
+// Depth-First Search
 bool searchDFS(const Graph<State> &graph, const Node<State> &from, const Node<State> &to)
 {
     if (from == to)

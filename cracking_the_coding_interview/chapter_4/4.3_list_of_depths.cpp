@@ -5,6 +5,7 @@
 
 // =============================================================
 
+// Breadth-First Search
 template <typename T>
 using ListOfDepths = std::list<std::list<NodePtr<T>>>;
 
@@ -38,6 +39,7 @@ ListOfDepths<T> createLevelLinkedListBFS1(const Tree<T> &tree)
     return result;
 }
 
+// Breadth-First Search
 template <typename T>
 ListOfDepths<T> createLevelLinkedListBFS2(const Tree<T> &tree)
 {
@@ -64,6 +66,7 @@ ListOfDepths<T> createLevelLinkedListBFS2(const Tree<T> &tree)
 
 // =============================================================
 
+// Depth-First Search
 template <typename T>
 using VectorOfDepths = std::vector<std::list<NodePtr<T>>>;
 

@@ -13,7 +13,9 @@ bool deleteMiddleNode(Node* node)
 
     node->data = current->data;
     node->next = current->next;
-
+    
+    delete current;
+    
     return true;
 }
 

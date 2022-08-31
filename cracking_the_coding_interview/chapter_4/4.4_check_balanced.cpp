@@ -5,6 +5,7 @@
 
 // =============================================================
 
+// First implementation
 template <typename T>
 int getHeight(const NodePtr<T> &root)
 {
@@ -30,6 +31,7 @@ bool isBalanced(const NodePtr<T> &root)
 
 // =============================================================
 
+// Second implementation
 template <typename T>
 int checkHeight(const NodePtr<T> &node) 
 {
