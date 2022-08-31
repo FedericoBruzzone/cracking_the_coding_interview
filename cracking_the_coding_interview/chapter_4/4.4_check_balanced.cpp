@@ -54,28 +54,28 @@ bool isBalanced(const Tree<T> &tree)
 
 // =============================================================
 
-int main()
-{
-    auto tree = TestUtils::getSampleTree<int>(20);
-    std::cout << "Tree is " << (isBalanced<int>(tree.getRoot()) ? "" : "NOT ") << "balanced" << std::endl;
+// int main()
+// {
+//     auto tree = TestUtils::getSampleTree<int>(20);
+//     std::cout << "Tree is " << (isBalanced<int>(tree.getRoot()) ? "" : "NOT ") << "balanced" << std::endl;
 
-    auto r = tree.getRoot()->getRight();
-    tree.getRoot()->getRight() = std::make_shared<Node<int>>(100);
-    std::cout << "Tree is " << (isBalanced<int>(tree.getRoot()) ? "" : "NOT ") << "balanced" << std::endl;
+//     auto r = tree.getRoot()->getRight();
+//     tree.getRoot()->getRight() = std::make_shared<Node<int>>(100);
+//     std::cout << "Tree is " << (isBalanced<int>(tree.getRoot()) ? "" : "NOT ") << "balanced" << std::endl;
 
-    tree.getRoot()->getRight() = r; 
-    std::cout << "Tree is " << (isBalanced<int>(tree.getRoot()) ? "" : "NOT ") << "balanced" << std::endl;
+//     tree.getRoot()->getRight() = r; 
+//     std::cout << "Tree is " << (isBalanced<int>(tree.getRoot()) ? "" : "NOT ") << "balanced" << std::endl;
 
-    std::cout << "=============================================================" << std::endl;
+//     std::cout << "=============================================================" << std::endl;
 
-    tree = TestUtils::getSampleTree<int>(20);
-    std::cout << "Tree is " << (isBalanced<int>(tree) ? "" : "NOT ") << "balanced" << std::endl;
+//     tree = TestUtils::getSampleTree<int>(20);
+//     std::cout << "Tree is " << (isBalanced<int>(tree) ? "" : "NOT ") << "balanced" << std::endl;
 
-    r = tree.getRoot()->getRight();
-    tree.getRoot()->getRight() = std::make_shared<Node<int>>(100);
-    std::cout << "Tree is " << (isBalanced<int>(tree) ? "" : "NOT ") << "balanced" << std::endl;
+//     r = tree.getRoot()->getRight();
+//     tree.getRoot()->getRight() = std::make_shared<Node<int>>(100);
+//     std::cout << "Tree is " << (isBalanced<int>(tree) ? "" : "NOT ") << "balanced" << std::endl;
 
-    tree.getRoot()->getRight() = r; 
-    std::cout << "Tree is " << (isBalanced<int>(tree) ? "" : "NOT ") << "balanced" << std::endl;
-    return 0;
-}
+//     tree.getRoot()->getRight() = r; 
+//     std::cout << "Tree is " << (isBalanced<int>(tree) ? "" : "NOT ") << "balanced" << std::endl;
+//     return 0;
+// }
