@@ -39,7 +39,7 @@ bool checkBST(const NodePtr<T> &node, const T *min, const T *max)
     if (max && node->getValue() > *max) { return false; }
 
     return checkBST<T>(node->getLeft(), min, &node->getValue()) &&
-           checkBST<T>(node->getRight(), min, &node->getValue());
+           checkBST<T>(node->getRight(), max, &node->getValue());
 }
 
 template <typename T>
