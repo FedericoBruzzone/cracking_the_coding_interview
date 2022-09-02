@@ -6,18 +6,21 @@
 // =============================================================
 
 // First implementation
+template <typename T> 
+const T *lastVisited = nullptr;
+
 template <typename T>
-bool checkBSTInOrder(const NodePtr<T> &node, const T *lastVisited)
+bool checkBSTInOrder(const NodePtr<T> &node)
 {
     if (node == nullptr) { return true; }
 
-    if (!checkBSTInOrder<T>(node->getLeft(), lastVisited)) { return false; }
+    if (!checkBSTInOrder<T>(node->getLeft())) { return false; }
 
-    if (lastVisited != nullptr && node->getValue() <= *lastVisited) { return false; }
+    if (lastVisited<T> != nullptr && node->getValue() <= *lastVisited<T>) { return false; }
 
-    lastVisited = &(node->getValue()); 
+    lastVisited<T> = &(node->getValue()); 
 
-    if (!checkBSTInOrder<T>(node->getRight(), lastVisited)) { return false; }
+    if (!checkBSTInOrder<T>(node->getRight())) { return false; }
 
     return true;
 }
@@ -25,7 +28,7 @@ bool checkBSTInOrder(const NodePtr<T> &node, const T *lastVisited)
 template <typename T>
 bool checkBSTInOrder(const Tree<T> &tree)
 {
-    return checkBSTInOrder<T>(tree.getRoot(), nullptr);
+    return checkBSTInOrder<T>(tree.getRoot());
 }
 
 // =============================================================
@@ -50,20 +53,20 @@ bool checkBST(const Tree<T> &tree)
 
 // =============================================================
 
-// int main()
-// {
-//     auto tree = TestUtils::getSampleTree<int>(20);
-//     TestUtils::printTree(tree);
-//     std::cout << "First implementation: The tree is " << (checkBSTInOrder<int>(tree) ? "" : "NOT ") << "binary search tree" << std::endl;
-//     std::cout << "Second implementation: The tree is " << (checkBST<int>(tree) ? "" : "NOT ") << "binary search tree" << std::endl;
+int main()
+{
+    auto tree = TestUtils::getSampleTree<int>(20);
+    TestUtils::printTree(tree);
+    std::cout << "First implementation: The tree is " << (checkBSTInOrder<int>(tree) ? "" : "NOT ") << "binary search tree" << std::endl;
+    std::cout << "Second implementation: The tree is " << (checkBST<int>(tree) ? "" : "NOT ") << "binary search tree" << std::endl;
 
-//     tree.getRoot()->getRight()->getRight()->getRight()->setLeftChild(std::make_shared<Node<int>>(19));
-//     TestUtils::printTree(tree);
-//     std::cout << "First implementation: The tree is " << (checkBSTInOrder<int>(tree) ? "" : "NOT ") << "binary search tree" << std::endl;
-//     std::cout << "Second implementation: The tree is " << (checkBST<int>(tree) ? "" : "NOT ") << "binary search tree" << std::endl;
+    tree.getRoot()->getRight()->getRight()->getRight()->setLeftChild(std::make_shared<Node<int>>(19));
+    TestUtils::printTree(tree);
+    std::cout << "First implementation: The tree is " << (checkBSTInOrder<int>(tree) ? "" : "NOT ") << "binary search tree" << std::endl;
+    std::cout << "Second implementation: The tree is " << (checkBST<int>(tree) ? "" : "NOT ") << "binary search tree" << std::endl;
 
-//     tree.getRoot()->getRight()->getRight()->getRight()->setLeftChild(std::make_shared<Node<int>>(15));
-//     TestUtils::printTree(tree);
-//     std::cout << "First implementation: The tree is " << (checkBSTInOrder<int>(tree) ? "" : "NOT ") << "binary search tree" << std::endl;
-//     std::cout << "Second implementation: The tree is " << (checkBST<int>(tree) ? "" : "NOT ") << "binary search tree" << std::endl;
-// }
+    tree.getRoot()->getRight()->getRight()->getRight()->setLeftChild(std::make_shared<Node<int>>(15));
+    TestUtils::printTree(tree);
+    std::cout << "First implementation: The tree is " << (checkBSTInOrder<int>(tree) ? "" : "NOT ") << "binary search tree" << std::endl;
+    std::cout << "Second implementation: The tree is " << (checkBST<int>(tree) ? "" : "NOT ") << "binary search tree" << std::endl;
+}
