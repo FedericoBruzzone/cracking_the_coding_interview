@@ -35,19 +35,19 @@ NodePtr<T, true> inorderSucc(NodePtr<T, true> node)
 
 // =============================================================
 
-int main()
-{
-    auto tree = TestUtils::getSampleTree<int, true>(20);
-    TestUtils::printTree(tree);
-    auto node = leftMostChild<int>(tree.getRoot());
-    node = inorderSucc<int>(node);
-    std::cout << " --> " << node->getValue();
-    
-    // if (node)
-    // {
-    //     std::cout << node->getValue();
-    //     for (node = inorderSucc<int>(node); node; node = inorderSucc<int>(node))
-    //         std::cout << " --> " << node->getValue();
-    //     std::cout << std::endl;
-    // }
-}
+// int main()
+// {
+//     auto tree = TestUtils::getSampleTree<int, true>(20);
+//     TestUtils::printTree(tree);
+//     auto node = leftMostChild<int>(tree.getRoot());
+//     node = inorderSucc<int>(node);
+//     std::cout << " --> " << node->getValue();
+
+//     // if (node)
+//     // {
+//     //     std::cout << node->getValue();
+//     //     for (node = inorderSucc<int>(node); node; node = inorderSucc<int>(node))
+//     //         std::cout << " --> " << node->getValue();
+//     //     std::cout << std::endl;
+//     // }
+// }
