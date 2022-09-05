@@ -346,3 +346,12 @@ Output:
 
 [Solution 4.7](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_4/4.7_build_order.cpp)
 
+---
+
+**4.8 First Common Ancestor**:
+
+Design an algorithm and write code to find the first common ancestor of teo nodes in a binary tree. Avoid storing additional nodes in a data strcture. NOTE: This is not necessarily a binary search tree.
+
+[Solution 4.8](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_4/4.8_first_common_ancestor.cpp)
+
+
