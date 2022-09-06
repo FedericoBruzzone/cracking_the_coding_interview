@@ -354,4 +354,20 @@ Design an algorithm and write code to find the first common ancestor of teo node
 
 [Solution 4.8](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_4/4.8_first_common_ancestor.cpp)
 
+---
+
+**4.9 BST Sequences**:
+
+A binary search tree was created by traversing through an array from left to right and instering each element. Given a binary search tree with distinct elements, print all possibile arrays that could have led to this tree.
+
+Input:
+
+bst => 2: [1, 3]
+
+Output:
+
+{2, 1, 3}, {2, 3, 1}
+
+[Solution 4.9](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_4/4.9_bst_sequences.cpp)
+
 
