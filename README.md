@@ -380,4 +380,4 @@ A tree T2 is a subtree of T1 if there exists a node n in T1 such that the subtre
 
 That is, if you cut off the tree at node n, the two trees would be identical.
 
-[Solution 4.9](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_4/4.10_check_subtree.cpp)
+[Solution 4.10](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_4/4.10_check_subtree.cpp)

@@ -1,1 +1,2 @@
 git add . && git commit -m "..." && git push
+mingw32-make 

@@ -13,7 +13,7 @@ chapter_2 = .\cracking_the_coding_interview\chapter_2
 chapter_3 = .\cracking_the_coding_interview\chapter_3
 chapter_4 = .\cracking_the_coding_interview\chapter_4
 
-name = 4.9_bst_sequences
+name = 4.10_check_subtree
 
 DIR = $(chapter_4)
 FILE = $(name)
