@@ -42,6 +42,8 @@
 #include <typeinfo>
 #include <cassert>
 #include <numeric>
+#include <random>
+#include <chrono>
 
 // multi-threding
 #include <atomic>
@@ -54,5 +56,7 @@
 
 // my
 #include <type_traits>
+
+
 
 #endif

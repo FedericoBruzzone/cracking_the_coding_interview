@@ -350,7 +350,9 @@ Output:
 
 **4.8 First Common Ancestor**:
 
-Design an algorithm and write code to find the first common ancestor of teo nodes in a binary tree. Avoid storing additional nodes in a data strcture. NOTE: This is not necessarily a binary search tree.
+Design an algorithm and write code to find the first common ancestor of teo nodes in a binary tree. Avoid storing additional nodes in a data strcture. 
+
+NOTE: This is not necessarily a binary search tree.
 
 [Solution 4.8](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_4/4.8_first_common_ancestor.cpp)
 
@@ -381,3 +383,12 @@ A tree T2 is a subtree of T1 if there exists a node n in T1 such that the subtre
 That is, if you cut off the tree at node n, the two trees would be identical.
 
 [Solution 4.10](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_4/4.10_check_subtree.cpp)
+
+---
+
+**4.11 Random Node**:
+
+You are implementing a binary search tree class from scratch which, in addition to inster, find and delete, has a method `getRandomNode()` which returns a random node from the tree. All nodes should be equally likely to be chosen. Design and implement an algorithm for `getRandomNode`, and explain how you would implement the rest of the methods.
+
+
+[Solution 4.11](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_4/4.11_random_node.cpp)

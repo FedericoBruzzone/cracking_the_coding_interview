@@ -64,23 +64,23 @@ std::list<std::deque<T>> weaveLists(std::deque<T> &prefix, std::deque<T> &left, 
 }
 // =============================================================
 
-int main()
-{
-    auto tree = TestUtils::treeFromArray({5, 10, 15, 20, 25, 50, 60, 65, 70, 80});
-    TestUtils::printTree(tree);
-    // auto tree = TestUtils::treeFromArray({2, 3, 1});
-    auto result = allSequences<int>(tree.getRoot());
+// int main()
+// {
+//     auto tree = TestUtils::treeFromArray({5, 10, 15, 20, 25, 50, 60, 65, 70, 80});
+//     TestUtils::printTree(tree);
+//     // auto tree = TestUtils::treeFromArray({2, 3, 1});
+//     auto result = allSequences<int>(tree.getRoot());
 
-    for (auto &array : result)
-    {
-        std::string sep;
-        std::cout << "{";
-        for (auto &n : array)
-        {
-            std::cout << sep << n;
-            if (sep.empty())
-                sep = ", ";
-        }
-        std::cout << "}" << std::endl;
-    }
-}
+//     for (auto &array : result)
+//     {
+//         std::string sep;
+//         std::cout << "{";
+//         for (auto &n : array)
+//         {
+//             std::cout << sep << n;
+//             if (sep.empty())
+//                 sep = ", ";
+//         }
+//         std::cout << "}" << std::endl;
+//     }
+// }

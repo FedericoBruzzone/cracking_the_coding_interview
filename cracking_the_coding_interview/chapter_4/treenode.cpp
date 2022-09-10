@@ -17,7 +17,6 @@ private:
     std::weak_ptr<Node> parent;
 };
 
-// Specialization for tree node containing no reference to parent 
 template <typename Node>
 class NodeBase<Node, false>
 {

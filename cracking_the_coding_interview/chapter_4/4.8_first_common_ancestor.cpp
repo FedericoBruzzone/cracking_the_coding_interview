@@ -131,20 +131,20 @@ NodePtr<T, true> commonAncestor(const Tree<T, true> &tree, NodePtr<T, true> one,
 // }
 
 // With Links to Parent
-int main()
-{
-    auto tree = TestUtils::treeFromArray<int, true>({10, 1, 12, 3, 14, 25, 16, 27, 18, 29, 10, 13, 2, 15, 4, 5, 17, 7, 19, 9});
-    TestUtils::printTree(tree);
+// int main()
+// {
+//     auto tree = TestUtils::treeFromArray<int, true>({10, 1, 12, 3, 14, 25, 16, 27, 18, 29, 10, 13, 2, 15, 4, 5, 17, 7, 19, 9});
+//     TestUtils::printTree(tree);
 
-    for (auto one : tree)
-    {
-        if (one == tree.getRoot()) { continue; } 
-        for (auto two : tree)
-        {
-            if (two == tree.getRoot() || two == one) { continue; }
-            auto ancestor = commonAncestor<int>(tree, one, two);
-            std::cout << one->getValue() << ", " << two->getValue() << " <-- ";
-            std::cout << (ancestor ? std::to_string(ancestor->getValue()) : "NOT FOUND") << std::endl;
-        }
-    }
-}
+//     for (auto one : tree)
+//     {
+//         if (one == tree.getRoot()) { continue; } 
+//         for (auto two : tree)
+//         {
+//             if (two == tree.getRoot() || two == one) { continue; }
+//             auto ancestor = commonAncestor<int>(tree, one, two);
+//             std::cout << one->getValue() << ", " << two->getValue() << " <-- ";
+//             std::cout << (ancestor ? std::to_string(ancestor->getValue()) : "NOT FOUND") << std::endl;
+//         }
+//     }
+// }
