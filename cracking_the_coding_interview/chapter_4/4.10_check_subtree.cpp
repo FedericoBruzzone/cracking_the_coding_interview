@@ -43,38 +43,37 @@ bool matchTree(const NodePtr<T> &left, const NodePtr<T> &right)
 
 // second implementation
 template <typename T>
-bool compareTrees(const NodePtr<T> &left, const NodePtr<T> &right);
+bool subTree(const NodePtr<T> &root, const NodePtr<T> &subtreeRoot);
 
 template <typename T>
-bool subTree(const NodePtr<T> &root, const NodePtr<T> &subtreeRoot);
+bool compareTrees(const NodePtr<T> &left, const NodePtr<T> &right);
+
 
 template <typename T>
 bool containsTree(const Tree<T> &tree, const Tree<T> &subtree)
 {
-    if (!subtree.getRoot())
-        return true; 
+    if (!subtree.getRoot()) { return true; }
     return subTree<T>(tree.getRoot(), subtree.getRoot());
-}
-
-template <typename T>
-bool matchTree(const NodePtr<T> &left, const NodePtr<T> &right)
-{
-    if (!left && !right) return true;
-    if (!left || !right) return false;
-    if (left->getValue() == right->getValue())
-        return matchTree<T>(left->getLeft(), right->getLeft()) && matchTree<T>(left->getRight(), right->getRight());
-    return false;
 }
 
 template <typename T>
 bool subTree(const NodePtr<T> &root, const NodePtr<T> &subtreeRoot)
 {
-    if (!root)
-        return false;
-    if (root->getValue() == subtreeRoot->getValue() && matchTree<T>(root, subtreeRoot))
-        return true;
+    if (!root) { return false; }
+    if (root->getValue() == subtreeRoot->getValue() && matchTree<T>(root, subtreeRoot)) { return true; }
     return subTree<T>(root->getLeft(), subtreeRoot) || subTree<T>(root->getRight(), subtreeRoot);
 }
+
+template <typename T>
+bool matchTree(const NodePtr<T> &left, const NodePtr<T> &right)
+{
+    if (!left && !right) { return true; }
+    if (!left || !right) { return false; }
+    if (left->getValue() == right->getValue())
+        return matchTree<T>(left->getLeft(), right->getLeft()) && matchTree<T>(left->getRight(), right->getRight());
+    return false;
+}
+
 
 // =============================================================
 
