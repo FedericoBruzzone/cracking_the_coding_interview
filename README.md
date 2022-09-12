@@ -392,3 +392,11 @@ You are implementing a binary search tree class from scratch which, in addition 
 
 
 [Solution 4.11](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_4/4.11_random_node.cpp)
+
+---
+
+**4.12 Paths with Sum**:
+
+You are given a binary tree in which each node contains an integer value (which might be positive or negative). Design an algorithm to count the number of paths that sum to a given value. The path does not need to start or end ar the root or leaf, but it must go downwards (traveling only from parent nodes to child nodes).
+
+[Solution 4.12](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_4/4.12_paths_with_sum.cpp)
