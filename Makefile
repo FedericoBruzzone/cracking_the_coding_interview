@@ -12,8 +12,9 @@ chapter_1 = .\cracking_the_coding_interview\chapter_1
 chapter_2 = .\cracking_the_coding_interview\chapter_2
 chapter_3 = .\cracking_the_coding_interview\chapter_3
 chapter_4 = .\cracking_the_coding_interview\chapter_4
+chapter_5 = .\cracking_the_coding_interview\chapter_5
 
-name = 4.12_paths_with_sum
+name = 
 
 DIR = $(chapter_4)
 FILE = $(name)

@@ -218,7 +218,7 @@ Output C
 
 ---
 
-# Chapter 3  - Stacks and Queues
+# Chapter 3 - Stacks and Queues
 
 **3.1 Three in One**:
 
@@ -281,7 +281,7 @@ and implement operations such as `enqueue`, `dequeueAny`, `dequeueDog` and `dequ
 
 ---
 
-# Chapter 4  - Trees and Graphs
+# Chapter 4 - Trees and Graphs
 
 **4.1 Route Between Nodes**:
 
@@ -400,3 +400,11 @@ You are implementing a binary search tree class from scratch which, in addition 
 You are given a binary tree in which each node contains an integer value (which might be positive or negative). Design an algorithm to count the number of paths that sum to a given value. The path does not need to start or end ar the root or leaf, but it must go downwards (traveling only from parent nodes to child nodes).
 
 [Solution 4.12](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_4/4.12_paths_with_sum.cpp)
+
+---
+
+# Chapter 5 - Bit Manipulation
+
+**5.1 ...**:
+
+[Solution 5.1](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_4/5.1_....cpp)
