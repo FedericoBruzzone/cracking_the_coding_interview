@@ -406,5 +406,5 @@ You are given a binary tree in which each node contains an integer value (which 
 # Chapter 5 - Bit Manipulation
 
 **5.1 ...**:
-
+You are given two 32-bit number, ...
 [Solution 5.1](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_4/5.1_....cpp)
