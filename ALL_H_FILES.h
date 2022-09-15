@@ -4,6 +4,7 @@
 #define LOG(x) std::cout << x << std::endl ;
 
 #include <stdio.h>
+using namespace std;
 
 // input/output 
 #include <iostream>
@@ -56,7 +57,6 @@
 
 // my
 #include <type_traits>
-
-
+#include <bitset>
 
 #endif

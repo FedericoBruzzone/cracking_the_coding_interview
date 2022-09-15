@@ -14,9 +14,9 @@ chapter_3 = .\cracking_the_coding_interview\chapter_3
 chapter_4 = .\cracking_the_coding_interview\chapter_4
 chapter_5 = .\cracking_the_coding_interview\chapter_5
 
-name = 
+name = 5.1_insertion
 
-DIR = $(chapter_4)
+DIR = $(chapter_5)
 FILE = $(name)
 
 # The build target 
