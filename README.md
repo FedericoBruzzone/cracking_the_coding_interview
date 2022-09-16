@@ -216,7 +216,6 @@ Output C
 
 [Solution 2.8](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_2/2.8_loop_detection.cpp)
 
----
 
 # Chapter 3 - Stacks and Queues
 
@@ -279,7 +278,6 @@ and implement operations such as `enqueue`, `dequeueAny`, `dequeueDog` and `dequ
 
 [Solution 3.6](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_3/3.6_animal_shelter.cpp)
 
----
 
 # Chapter 4 - Trees and Graphs
 
@@ -401,7 +399,6 @@ You are given a binary tree in which each node contains an integer value (which 
 
 [Solution 4.12](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_4/4.12_paths_with_sum.cpp)
 
----
 
 # Chapter 5 - Bit Manipulation
 
@@ -417,3 +414,15 @@ Input: N = 10000000000, M = 10011, i = 2, j = 6
 Output: N = 10001001100
 
 [Solution 5.1](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_4/5.1_insertion.cpp)
+
+--- 
+
+**5.2 Binary to String**
+
+Given a real number between 0 and 1 (e.g., 0.72) that is passed in as a double, print the binary representation. If the number cannot be represented accurately in binary with at most 32 characters, print "ERROR."
+
+[Solution 5.2](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_4/5.2_binary_to_string.cpp)
+
+
+
+
