@@ -14,7 +14,7 @@ chapter_3 = .\cracking_the_coding_interview\chapter_3
 chapter_4 = .\cracking_the_coding_interview\chapter_4
 chapter_5 = .\cracking_the_coding_interview\chapter_5
 
-name = 5.1_insertion
+name = 5.2_binary_to_string
 
 DIR = $(chapter_5)
 FILE = $(name)
