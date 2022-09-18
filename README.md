@@ -423,6 +423,20 @@ Given a real number between 0 and 1 (e.g., 0.72) that is passed in as a double, 
 
 [Solution 5.2](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_4/5.2_binary_to_string.cpp)
 
+--- 
+
+**5.3 Flip Bit to Win**
+
+You have an integer and you can flip exaclt one bit from a 0 to a 1. Write code to find the length of the longest sequence of 1s you could create.
+
+EXAMPLE
+
+Input: 1775 (or: 11011101111)
+
+Output: 8
+
+[Solution 5.3](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_4/5.3_flip_bit_to_win.cpp)
+
 
 
 
