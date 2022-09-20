@@ -2,24 +2,50 @@
 
 // =============================================================
 
-std::array<uint32_t, 2> nextNumber(uint32_t number)
+int getNext(int n)
 {
-    // number = {0000-0000-0011-0000}
-    // largest = {0000-0000-0110-0000}
-    // largest = {0000-0000-0001-1000}
+    int c = n;
+    int c0 = 0;
+    int c1 = 0;
 
-    // number = {0000-0000-0011-0000}
-    // largest = {0000-0000-0110-0000}
-    // largest = {0000-0000-0001-1000}
-    
-    std::array<uint32_t, 2> result = std::array<uint32_t, 2>();
-    
+    while (((c & 1) == 0) && (c != 0))
+    {
+        ++c0;
+        c >>= 1;
+    }
 
+    while ((c & 1) == 1)
+    {
+        ++c1;
+        c >>= 1;
+    }
+
+    if (c0 + c1 == 31 || c0 + c1 == 0) { return -1; }
+
+    int p = c0 + c1;
+
+    n |= (1 << p); // Flip rightmost non-trailing zero
     
+    {
+        int a = 1 << p;
+        int b = a - 1;
+        int mask = ~b;
+        n &= mask;
+        // n &= ~((1 << p) - 1)
+    } // Clear all bits to the right of p
+
+    {
+        int a = 1 << (c1 - 1);
+        int b = a - 1;
+        n |= b;
+        // n |= (1 << (c1 - 1)) - 1
+    } // Insert (c1 - 1) ones on the right
+
+    return n;
 }
 
 // =============================================================
 int main()
 {
-
+    LOG(getNext(10))
 }
