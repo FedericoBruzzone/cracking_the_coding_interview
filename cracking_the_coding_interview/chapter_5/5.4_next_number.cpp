@@ -2,8 +2,19 @@
 
 // =============================================================
 
-int32_t nextNumber(int32_t number)
+std::array<uint32_t, 2> nextNumber(uint32_t number)
 {
+    // number = {0000-0000-0011-0000}
+    // largest = {0000-0000-0110-0000}
+    // largest = {0000-0000-0001-1000}
+
+    // number = {0000-0000-0011-0000}
+    // largest = {0000-0000-0110-0000}
+    // largest = {0000-0000-0001-1000}
+    
+    std::array<uint32_t, 2> result = std::array<uint32_t, 2>();
+    
+
     
 }
 
