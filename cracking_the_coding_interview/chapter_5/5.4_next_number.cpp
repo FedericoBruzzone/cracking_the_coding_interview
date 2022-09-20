@@ -2,6 +2,7 @@
 
 // =============================================================
 
+// Bit manipulation implementation
 int getNext(int n)
 {
     int c = n;
@@ -44,8 +45,49 @@ int getNext(int n)
     return n;
 }
 
-// =============================================================
-int main()
+int getPrevious(int n)
 {
-    LOG(getNext(10))
+    int c = n;
+    int c0 = 0;
+    int c1 = 0;
+
+    while ((c & 1) == 1)
+    {
+        c >>= 1;
+        ++c1;
+    }
+
+    if (c == 0) { return -1; }
+
+    while((c & 1) == 0 && (c != 0))
+    {
+        c >>= 1;
+        ++c0;
+    }
+
+    int p = c0 + c1;
+    
+    {
+        int a = ~0;
+        int b = a << (c1 + 1);
+        n &= b;
+        // n &= ((~0) << (c1 + 1))
+    } // Clears from bit p onwards
+
+    {
+        int a = 1 << (c1 + 1);
+        int b = a - 1;
+        int mask = b << (c0 - 1);
+        n |= mask;
+        // n |= ((1 << (c1 + 1)) - 1) << (c0 - 1))
+    } // Sequence of (c1 + 1) ones
+    return n;
 }
+
+// =============================================================
+
+// int main()
+// {
+//     LOG(getNext(100))
+//     LOG(getPrevious(100))
+// }
