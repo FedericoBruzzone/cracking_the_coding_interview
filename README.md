@@ -449,6 +449,20 @@ Given a positive integer, print the next smallest and the next largest number th
 
 **5.5 Debugger**
 
-Explain what the following code does: ((n & (n-1)) == 0)
+Explain what the following code does: ((n & (n-1)) == 0).
 
 [Solution 5.5](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_4/5.5_debugger.cpp)
+
+---
+
+**5.6 Conversion**
+
+Write a function to determine the number of bits you would need to flip to convert interger A to integer B.
+
+EXAMPLE:
+
+Input: 29 (or: 11101), 15 (or: 01111)
+
+Output: 2
+
+[Solution 5.5](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_4/5.6_conversion.cpp)
