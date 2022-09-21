@@ -444,3 +444,11 @@ Output: 8
 Given a positive integer, print the next smallest and the next largest number that have the same number of 1 in their binary representation.
 
 [Solution 5.4](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_4/5.4_next_number.cpp)
+
+---
+
+**5.5 Debugger**
+
+Explain what the following code does: ((n & (n-1)) == 0)
+
+[Solution 5.5](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_4/5.5_debugger.cpp)
