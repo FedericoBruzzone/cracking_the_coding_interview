@@ -14,7 +14,7 @@ chapter_3 = .\cracking_the_coding_interview\3_stacks-and-queues
 chapter_4 = .\cracking_the_coding_interview\4_trees-and-graphs
 chapter_5 = .\cracking_the_coding_interview\5_bit-manipulation
 
-name = 5.6_conversion
+name = 5.7_pairwise_swap
 
 DIR = $(chapter_5)
 FILE = $(name)

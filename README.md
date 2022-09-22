@@ -465,4 +465,12 @@ Input: 29 (or: 11101), 15 (or: 01111)
 
 Output: 2
 
-[Solution 5.5](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_4/5.6_conversion.cpp)
+[Solution 5.6](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_4/5.6_conversion.cpp)
+
+---
+
+**5.7 Pairwise Swap**
+
+Write a program to swap odd and even bits in an integer with as few instructions as possible (e.g., bit 0 and bit 1 are swapped, bit 2 and bit 3 are swapped and so on)
+
+[Solution 5.7](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/chapter_4/5.7_pairwise_swap.cpp)
