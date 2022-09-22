@@ -12,9 +12,9 @@ int swapOddEvenBits(int x)
 
 // =============================================================
 
-int main()
-{
-    // (10_d)1010_b => (5_d)0101_b
-    LOG(bits(100))
-    LOG(bits(swapOddEvenBits(100)))
-}
+// int main()
+// {
+//     // (10_d)1010_b => (5_d)0101_b
+//     LOG(bits(100))
+//     LOG(bits(swapOddEvenBits(100)))
+// }
