@@ -14,7 +14,7 @@ In addition, there are implementations of `data scructure` in c++.
 
 Implement and algorithm to determine if a string has all unique characters. What if you cannot use additional data structure?
 
-[Solution 1.1](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/1_array-and-string/1.1_is_unique.cpp)
+[Solution 1.1](https://github.com/FedericoBruzzone/cracking_the_coding_interview/blob/master/cracking_the_coding_interview/1_array-and-string/1.1_is_unique.cpp)
 
 ---
 
@@ -22,7 +22,7 @@ Implement and algorithm to determine if a string has all unique characters. What
 
 Given two strings, write a method to decide if one is a permutation of the other.
 
-[Solution 1.2](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/1_array-and-string/1.2_check_permutation.cpp)
+[Solution 1.2](https://github.com/FedericoBruzzone/cracking_the_coding_interview/blob/master/cracking_the_coding_interview/1_array-and-string/1.2_check_permutation.cpp)
 
 ---
 
@@ -38,7 +38,7 @@ Input:
 Output:  
 - "Mr%20John%20Smith"
 
-[Solution 1.3](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/1_array-and-string/1.3_URLify.cpp)
+[Solution 1.3](https://github.com/FedericoBruzzone/cracking_the_coding_interview/blob/master/cracking_the_coding_interview/1_array-and-string/1.3_URLify.cpp)
 
 ---
 
@@ -54,7 +54,7 @@ Input:
 Output:  
 - True (permutation: "taco cat", "atco cta", etc.)
 
-[Solution 1.4](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/1_array-and-string/1.4_palindrome_permutation.cpp)
+[Solution 1.4](https://github.com/FedericoBruzzone/cracking_the_coding_interview/blob/master/cracking_the_coding_interview/1_array-and-string/1.4_palindrome_permutation.cpp)
 
 ---
 
@@ -72,7 +72,7 @@ pale,  bale -> true
 
 pale,  bake -> false
 
-[Solution 1.5](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/1_array-and-string/1.5_one_away.cpp)
+[Solution 1.5](https://github.com/FedericoBruzzone/cracking_the_coding_interview/blob/master/cracking_the_coding_interview/1_array-and-string/1.5_one_away.cpp)
 
 ---
 
@@ -80,7 +80,7 @@ pale,  bake -> false
 
 Implement a method to perform basic string compression using the counts of repeated characters. For example, the string 'aabcccccaa' would become 'a2b1c5a3'. If the "compressed" string would not become smaller than the original string, your method should return the original string. You can assume the string has only uppercase and lowercase letters (a-z).
 
-[Solution 1.6](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/1_array-and-string/1.6_string_compression.cpp)
+[Solution 1.6](https://github.com/FedericoBruzzone/cracking_the_coding_interview/blob/master/cracking_the_coding_interview/1_array-and-string/1.6_string_compression.cpp)
 
 ---
 
@@ -88,7 +88,7 @@ Implement a method to perform basic string compression using the counts of repea
 
 Given an image represented by an N x M matrix, where each pixel in the image is represented by an integer, write a method to rotate the image by 90 degrees. Can you do this in place?
 
-[Solution 1.7](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/1_array-and-string/1.7_rotate_matrix.cpp)
+[Solution 1.7](https://github.com/FedericoBruzzone/cracking_the_coding_interview/blob/master/cracking_the_coding_interview/1_array-and-string/1.7_rotate_matrix.cpp)
 
 ---
 
@@ -96,7 +96,7 @@ Given an image represented by an N x M matrix, where each pixel in the image is 
 
 Werite an algorithm such that if an element in an M x N matrix is 0, its entire row and column are set to 0.
 
-[Solution 1.8](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/1_array-and-string/1.8_zero_matrix.cpp)
+[Solution 1.8](https://github.com/FedericoBruzzone/cracking_the_coding_interview/blob/master/cracking_the_coding_interview/1_array-and-string/1.8_zero_matrix.cpp)
 
 ---
 
@@ -104,7 +104,7 @@ Werite an algorithm such that if an element in an M x N matrix is 0, its entire 
 
 Assume you have method 'isSubstring' which checks if one word is a substring of another. Given two strings, s1 and s2, write code to check if s2 is a rotation of s1 using only one call to isSubstring (e.g., "waterbottle" is a rotation of "erbottlewat").
 
-[Solution 1.9](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/1_array-and-string/1.9_is_rotation.cpp)
+[Solution 1.9](https://github.com/FedericoBruzzone/cracking_the_coding_interview/blob/master/cracking_the_coding_interview/1_array-and-string/1.9_is_rotation.cpp)
 
 
 # Chapter 2 - Linked Lists
@@ -117,7 +117,7 @@ FOLLOW UP
 
 How would you solve this problem if a temporary buffer is not allowed?
 
-[Solution 2.1](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/2_linked-list/2.1_remove_dups.cpp)
+[Solution 2.1](https://github.com/FedericoBruzzone/cracking_the_coding_interview/blob/master/cracking_the_coding_interview/2_linked-list/2.1_remove_dups.cpp)
 
 ---
 
@@ -125,7 +125,7 @@ How would you solve this problem if a temporary buffer is not allowed?
 
 Implement an algorithm to find the kth to last element of a singly linked list.
 
-[Solution 2.2](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/2_linked-list/2.2_return_kth_to_last.cpp)
+[Solution 2.2](https://github.com/FedericoBruzzone/cracking_the_coding_interview/blob/master/cracking_the_coding_interview/2_linked-list/2.2_return_kth_to_last.cpp)
 
 ---
 
@@ -141,7 +141,7 @@ Input:
 Result: 
 - nothing is returned, but the new linked list looks like a -> b -> d -> e -> f
 
-[Solution 2.3](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/2_linked-list/2.3_delete_middle_node.cpp)
+[Solution 2.3](https://github.com/FedericoBruzzone/cracking_the_coding_interview/blob/master/cracking_the_coding_interview/2_linked-list/2.3_delete_middle_node.cpp)
 
 --- 
 
@@ -157,7 +157,7 @@ Input:
 Output: 
 - 3 -> 1 -> 2    ->    10 -> 5 -> 5 -> 8
 
-[Solution 2.4](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/2_linked-list/2.4_partition.cpp)
+[Solution 2.4](https://github.com/FedericoBruzzone/cracking_the_coding_interview/blob/master/cracking_the_coding_interview/2_linked-list/2.4_partition.cpp)
 
 --- 
 
@@ -183,7 +183,7 @@ Input:
 Output 
 - 9 -> 1 -> 2. That is, 912.
 
-[Solution 2.5](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/2_linked-list/2.5_sum_list.cpp)
+[Solution 2.5](https://github.com/FedericoBruzzone/cracking_the_coding_interview/blob/master/cracking_the_coding_interview/2_linked-list/2.5_sum_list.cpp)
 
 --- 
 
@@ -191,7 +191,7 @@ Output
 
 Implement a function to check if a linked list is a palindrome.
 
-[Solution 2.6](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/2_linked-list/2.6_palindrome.cpp)
+[Solution 2.6](https://github.com/FedericoBruzzone/cracking_the_coding_interview/blob/master/cracking_the_coding_interview/2_linked-list/2.6_palindrome.cpp)
 
 --- 
 
@@ -199,7 +199,7 @@ Implement a function to check if a linked list is a palindrome.
 
 Given two (singly) linked list, determine if the two lists intersect. Retrun the intersecting node. Noto that the intersection is defined based on reference, not value. That is, if the kth node of the first linked list is the exact the node (by reference) as the jth node of the second linked list, than thay are intersecting.
 
-[Solution 2.7](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/2_linked-list/2.7_intersection.cpp)
+[Solution 2.7](https://github.com/FedericoBruzzone/cracking_the_coding_interview/blob/master/cracking_the_coding_interview/2_linked-list/2.7_intersection.cpp)
 
 --- 
 
@@ -214,7 +214,7 @@ Input:
 
 Output C
 
-[Solution 2.8](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/2_linked-list/2.8_loop_detection.cpp)
+[Solution 2.8](https://github.com/FedericoBruzzone/cracking_the_coding_interview/blob/master/cracking_the_coding_interview/2_linked-list/2.8_loop_detection.cpp)
 
 
 # Chapter 3 - Stacks and Queues
@@ -223,7 +223,7 @@ Output C
 
 Describe how you could use a single array to implement three stacks.
 
-[Solution 3.1](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/3_stacks-and-queues/3.1_three_in_one.cpp)
+[Solution 3.1](https://github.com/FedericoBruzzone/cracking_the_coding_interview/blob/master/cracking_the_coding_interview/3_stacks-and-queues/3.1_three_in_one.cpp)
 
 ---
 
@@ -232,7 +232,7 @@ Describe how you could use a single array to implement three stacks.
 How would you design a stack which, in addition to `push` and `pop`, has a function `min` which returns the minimum element? `push`, `pop` 
 and `min` should all operate in O(1) time.
 
-[Solution 3.2](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/3_stacks-and-queues/3.2_stack_min.cpp)
+[Solution 3.2](https://github.com/FedericoBruzzone/cracking_the_coding_interview/blob/master/cracking_the_coding_interview/3_stacks-and-queues/3.2_stack_min.cpp)
 
 ---
 
@@ -247,7 +247,7 @@ FOLLOW UP
 
 Implement a function `popAt(int index)` which performs a pop operations on a specific sub-stack.
 
-[Solution 3.3](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/3_stacks-and-queues/3.3_stack_of_plates.cpp)
+[Solution 3.3](https://github.com/FedericoBruzzone/cracking_the_coding_interview/blob/master/cracking_the_coding_interview/3_stacks-and-queues/3.3_stack_of_plates.cpp)
 
 ---
 
@@ -255,7 +255,7 @@ Implement a function `popAt(int index)` which performs a pop operations on a spe
 
 Implement MyQueue class which implements a queue using two stacks.
 
-[Solution 3.4](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/3_stacks-and-queues/3.4_queue_via_stacks.cpp)
+[Solution 3.4](https://github.com/FedericoBruzzone/cracking_the_coding_interview/blob/master/cracking_the_coding_interview/3_stacks-and-queues/3.4_queue_via_stacks.cpp)
 
 ---
 
@@ -264,7 +264,7 @@ Implement MyQueue class which implements a queue using two stacks.
 Write a program to sort a stack such that the smallest items are on the top. You can use an additional temporary stack, but you may not copy the elements into any other data structure (such as an array). The stack supports the following operations: `push`, `pop`, `peek` and `isEmpty`. 
 
 
-[Solution 3.5](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/3_stacks-and-queues/3.5_sort_stack.cpp)
+[Solution 3.5](https://github.com/FedericoBruzzone/cracking_the_coding_interview/blob/master/cracking_the_coding_interview/3_stacks-and-queues/3.5_sort_stack.cpp)
 
 ---
 
@@ -276,7 +276,7 @@ the oldest animal of that type). They cannot select which specific animal thay w
 and implement operations such as `enqueue`, `dequeueAny`, `dequeueDog` and `dequeueCat`. You may use the built-in `LinkedList` data structure.
 
 
-[Solution 3.6](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/3_stacks-and-queues/3.6_animal_shelter.cpp)
+[Solution 3.6](https://github.com/FedericoBruzzone/cracking_the_coding_interview/blob/master/cracking_the_coding_interview/3_stacks-and-queues/3.6_animal_shelter.cpp)
 
 
 # Chapter 4 - Trees and Graphs
@@ -285,7 +285,7 @@ and implement operations such as `enqueue`, `dequeueAny`, `dequeueDog` and `dequ
 
 Given a directed graph and two nodes (S and E), design an algorithm to find whether there is a route from S to E.
 
-[Solution 4.1](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/4_trees-and-graphs/4.1_route_between_nodes.cpp)
+[Solution 4.1](https://github.com/FedericoBruzzone/cracking_the_coding_interview/blob/master/cracking_the_coding_interview/4_trees-and-graphs/4.1_route_between_nodes.cpp)
 
 ---
 
@@ -293,7 +293,7 @@ Given a directed graph and two nodes (S and E), design an algorithm to find whet
 
 Given a sorted (increase oreder) array with unique integer elements, write an algorithm to create a binary search tree with minimal height.
 
-[Solution 4.2](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/4_trees-and-graphs/4.2_minimal_tree.cpp)
+[Solution 4.2](https://github.com/FedericoBruzzone/cracking_the_coding_interview/blob/master/cracking_the_coding_interview/4_trees-and-graphs/4.2_minimal_tree.cpp)
 
 ---
 
@@ -301,7 +301,7 @@ Given a sorted (increase oreder) array with unique integer elements, write an al
 
 Given a binary tree, design an algorithm which created a linked list of all the nodes at each depth (e.g., if you have a tree with depth D, tou will have D linked list)
 
-[Solution 4.3](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/4_trees-and-graphs/4.3_list_of_depths.cpp)
+[Solution 4.3](https://github.com/FedericoBruzzone/cracking_the_coding_interview/blob/master/cracking_the_coding_interview/4_trees-and-graphs/4.3_list_of_depths.cpp)
 
 ---
 
@@ -309,7 +309,7 @@ Given a binary tree, design an algorithm which created a linked list of all the 
 
 Implement a function to check if a binary tree is balanced. For the purposes of this question, a balanced tree is defined to be a tree such that the heights of the two subtrees of any node never differ by more than one.
 
-[Solution 4.4](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/4_trees-and-graphs/4.4_check_balanced.cpp)
+[Solution 4.4](https://github.com/FedericoBruzzone/cracking_the_coding_interview/blob/master/cracking_the_coding_interview/4_trees-and-graphs/4.4_check_balanced.cpp)
 
 ---
 
@@ -317,7 +317,7 @@ Implement a function to check if a binary tree is balanced. For the purposes of 
 
 Implement a function to check if a binary tree is a binary search tree.
 
-[Solution 4.5](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/4_trees-and-graphs/4.5_validate_bst.cpp)
+[Solution 4.5](https://github.com/FedericoBruzzone/cracking_the_coding_interview/blob/master/cracking_the_coding_interview/4_trees-and-graphs/4.5_validate_bst.cpp)
 
 ---
 
@@ -325,7 +325,7 @@ Implement a function to check if a binary tree is a binary search tree.
 
 Write an algorithm to find the "next" node (i.e., in-order successor) of a given node in a binary search tree. You may assume that each node has a link to its parent. 
 
-[Solution 4.6](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/4_trees-and-graphs/4.6_successor.cpp.cpp)
+[Solution 4.6](https://github.com/FedericoBruzzone/cracking_the_coding_interview/blob/master/cracking_the_coding_interview/4_trees-and-graphs/4.6_successor.cpp.cpp)
 
 ---
 
@@ -342,7 +342,7 @@ Input:
 Output: 
 - f, e, a, b, d, c 
 
-[Solution 4.7](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/4_trees-and-graphs/4.7_build_order.cpp)
+[Solution 4.7](https://github.com/FedericoBruzzone/cracking_the_coding_interview/blob/master/cracking_the_coding_interview/4_trees-and-graphs/4.7_build_order.cpp)
 
 ---
 
@@ -352,7 +352,7 @@ Design an algorithm and write code to find the first common ancestor of teo node
 
 NOTE: This is not necessarily a binary search tree.
 
-[Solution 4.8](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/4_trees-and-graphs/4.8_first_common_ancestor.cpp)
+[Solution 4.8](https://github.com/FedericoBruzzone/cracking_the_coding_interview/blob/master/cracking_the_coding_interview/4_trees-and-graphs/4.8_first_common_ancestor.cpp)
 
 ---
 
@@ -368,7 +368,7 @@ Output:
 
 {2, 1, 3}, {2, 3, 1}
 
-[Solution 4.9](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/4_trees-and-graphs/4.9_bst_sequences.cpp)
+[Solution 4.9](https://github.com/FedericoBruzzone/cracking_the_coding_interview/blob/master/cracking_the_coding_interview/4_trees-and-graphs/4.9_bst_sequences.cpp)
 
 ---
 
@@ -380,7 +380,7 @@ A tree T2 is a subtree of T1 if there exists a node n in T1 such that the subtre
 
 That is, if you cut off the tree at node n, the two trees would be identical.
 
-[Solution 4.10](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/4_trees-and-graphs/4.10_check_subtree.cpp)
+[Solution 4.10](https://github.com/FedericoBruzzone/cracking_the_coding_interview/blob/master/cracking_the_coding_interview/4_trees-and-graphs/4.10_check_subtree.cpp)
 
 ---
 
@@ -389,7 +389,7 @@ That is, if you cut off the tree at node n, the two trees would be identical.
 You are implementing a binary search tree class from scratch which, in addition to inster, find and delete, has a method `getRandomNode()` which returns a random node from the tree. All nodes should be equally likely to be chosen. Design and implement an algorithm for `getRandomNode`, and explain how you would implement the rest of the methods.
 
 
-[Solution 4.11](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/4_trees-and-graphs/4.11_random_node.cpp)
+[Solution 4.11](https://github.com/FedericoBruzzone/cracking_the_coding_interview/blob/master/cracking_the_coding_interview/4_trees-and-graphs/4.11_random_node.cpp)
 
 ---
 
@@ -397,7 +397,7 @@ You are implementing a binary search tree class from scratch which, in addition 
 
 You are given a binary tree in which each node contains an integer value (which might be positive or negative). Design an algorithm to count the number of paths that sum to a given value. The path does not need to start or end ar the root or leaf, but it must go downwards (traveling only from parent nodes to child nodes).
 
-[Solution 4.12](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/4_trees-and-graphs/4.12_paths_with_sum.cpp)
+[Solution 4.12](https://github.com/FedericoBruzzone/cracking_the_coding_interview/blob/master/cracking_the_coding_interview/4_trees-and-graphs/4.12_paths_with_sum.cpp)
 
 
 # Chapter 5 - Bit Manipulation
@@ -413,7 +413,7 @@ Input: N = 10000000000, M = 10011, i = 2, j = 6
 
 Output: N = 10001001100
 
-[Solution 5.1](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/5_bit-manipulation/5.1_insertion.cpp)
+[Solution 5.1](https://github.com/FedericoBruzzone/cracking_the_coding_interview/blob/master/cracking_the_coding_interview/5_bit-manipulation/5.1_insertion.cpp)
 
 --- 
 
@@ -421,7 +421,7 @@ Output: N = 10001001100
 
 Given a real number between 0 and 1 (e.g., 0.72) that is passed in as a double, print the binary representation. If the number cannot be represented accurately in binary with at most 32 characters, print "ERROR."
 
-[Solution 5.2](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/5_bit-manipulation/5.2_binary_to_string.cpp)
+[Solution 5.2](https://github.com/FedericoBruzzone/cracking_the_coding_interview/blob/master/cracking_the_coding_interview/5_bit-manipulation/5.2_binary_to_string.cpp)
 
 --- 
 
@@ -435,7 +435,7 @@ Input: 1775 (or: 11011101111)
 
 Output: 8
 
-[Solution 5.3](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/5_bit-manipulation/5.3_flip_bit_to_win.cpp)
+[Solution 5.3](https://github.com/FedericoBruzzone/cracking_the_coding_interview/blob/master/cracking_the_coding_interview/5_bit-manipulation/5.3_flip_bit_to_win.cpp)
 
 --- 
 
@@ -443,7 +443,7 @@ Output: 8
 
 Given a positive integer, print the next smallest and the next largest number that have the same number of 1 in their binary representation.
 
-[Solution 5.4](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/5_bit-manipulation/5.4_next_number.cpp)
+[Solution 5.4](https://github.com/FedericoBruzzone/cracking_the_coding_interview/blob/master/cracking_the_coding_interview/5_bit-manipulation/5.4_next_number.cpp)
 
 ---
 
@@ -451,7 +451,7 @@ Given a positive integer, print the next smallest and the next largest number th
 
 Explain what the following code does: ((n & (n-1)) == 0).
 
-[Solution 5.5](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/5_bit-manipulation/5.5_debugger.cpp)
+[Solution 5.5](https://github.com/FedericoBruzzone/cracking_the_coding_interview/blob/master/cracking_the_coding_interview/5_bit-manipulation/5.5_debugger.cpp)
 
 ---
 
@@ -465,7 +465,7 @@ Input: 29 (or: 11101), 15 (or: 01111)
 
 Output: 2
 
-[Solution 5.6](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/5_bit-manipulation/5.6_conversion.cpp)
+[Solution 5.6](https://github.com/FedericoBruzzone/cracking_the_coding_interview/blob/master/cracking_the_coding_interview/5_bit-manipulation/5.6_conversion.cpp)
 
 ---
 
@@ -473,7 +473,7 @@ Output: 2
 
 Write a program to swap odd and even bits in an integer with as few instructions as possible (e.g., bit 0 and bit 1 are swapped, bit 2 and bit 3 are swapped and so on)
 
-[Solution 5.7](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/5_bit-manipulation/5.7_pairwise_swap.cpp)
+[Solution 5.7](https://github.com/FedericoBruzzone/cracking_the_coding_interview/blob/master/cracking_the_coding_interview/5_bit-manipulation/5.7_pairwise_swap.cpp)
 
 ---
 
@@ -485,4 +485,4 @@ The method signature should look something like:
 
 `drawLine(byte[] screen, int width, int x1, int x2, int y)`
 
-[Solution 5.8](https://github.com/FedericoBruzzone/data_structure_CCI/blob/master/cracking_the_coding_interview/5_bit-manipulation/5.8_draw_line.cpp)
+[Solution 5.8](https://github.com/FedericoBruzzone/cracking_the_coding_interview/blob/master/cracking_the_coding_interview/5_bit-manipulation/5.8_draw_line.cpp)
